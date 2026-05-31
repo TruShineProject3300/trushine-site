@@ -483,18 +483,71 @@ select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
       <p class="sd" style="margin-top:16px;">Browsing late? Fill out the form and we'll call you at whatever time works best. Most assessments are scheduled within 48 hours of request.</p>
     </div>
     <div class="bcta-form">
-      <h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
-<p style="font-size:14px;color:var(--m);margin-bottom:24px;line-height:1.6">Response within 2 business hours. Assessments scheduled within 48 hours.</p>
-<form id="ts-form" style="display:flex;flex-direction:column;gap:12px" onsubmit="return submitToGHL(event)">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><input type="text" name="full_name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none"><input type="tel" name="phone" placeholder="Phone *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none"></div>
-<input type="email" name="email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none">
-<input type="text" name="business_name" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none">
-<input type="text" name="address" placeholder="Business Address" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><input type="text" name="city" placeholder="City" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none"><input type="text" name="state" placeholder="State" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none"></div>
-<textarea name="message" placeholder="Share some details about the job *" rows="3" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical"></textarea>
-<button type="submit" id="ts-submit" style="padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s">Request Free Assessment →</button>
-<div id="ts-success" style="display:none;padding:16px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);border-radius:8px;text-align:center;color:#34D399;font-weight:600">Assessment requested! We'll contact you within 2 hours.</div>
-</form>
+      <div id="ts-form-wrap" data-source="TruShine Website - Hood Cleaning">
+<h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
+<p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">Takes 30 seconds. We respond within 2 hours.</p>
+
+<!-- PROGRESS BAR -->
+<div style="display:flex;gap:8px;margin-bottom:24px">
+<div id="step-bar-1" style="flex:1;height:3px;border-radius:2px;background:var(--c);transition:all .3s"></div>
+<div id="step-bar-2" style="flex:1;height:3px;border-radius:2px;background:var(--b);transition:all .3s"></div>
+</div>
+
+<!-- STEP 1: Contact Info -->
+<div id="ts-step1">
+<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 1 — Contact Info</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<input type="text" id="f-name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="tel" id="f-phone" placeholder="Phone Number *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="email" id="f-email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-biz" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<button type="button" onclick="goStep2()" style="padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px">Continue — Almost Done <span style="font-size:18px">→</span></button>
+</div>
+</div>
+
+<!-- STEP 2: Job Details -->
+<div id="ts-step2" style="display:none">
+<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 2 — Tell Us About the Job</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<select id="f-service" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--m);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<option value="" disabled selected>What service do you need?</option>
+<option value="Hood Cleaning">Hood Cleaning</option>
+<option value="Fire Suppression Inspection">Fire Suppression Inspection</option>
+<option value="Grease Trap Service">Grease Trap Service</option>
+<option value="UCO / Oil Management">UCO / Oil Management</option>
+<option value="Oil Filtration (Fry360)">Oil Filtration (Fry360°)</option>
+<option value="Deep Cleaning">Deep Cleaning</option>
+<option value="Janitorial Program">Janitorial Program</option>
+<option value="Drain Jetting">Drain Jetting</option>
+<option value="Full Compliance Package">Full Compliance Package</option>
+<option value="Multi-Location Program">Multi-Location Program</option>
+<option value="Not Sure">Not Sure — Assess My Kitchen</option>
+</select>
+<input type="text" id="f-addr" placeholder="Street Address" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<input type="text" id="f-city" placeholder="City" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-state" placeholder="State" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+</div>
+<textarea id="f-details" placeholder="Share some details about the job — number of hoods, locations, current provider, urgency..." rows="3" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'"></textarea>
+<div style="display:flex;gap:10px;align-items:flex-start">
+<input type="checkbox" id="f-terms" style="margin-top:4px;accent-color:#40C8E0;cursor:pointer">
+<label for="f-terms" style="font-size:12px;color:var(--dm);line-height:1.5;cursor:pointer">I agree to terms & conditions. By providing my phone number, I agree to receive text messages from the business.</label>
+</div>
+<div style="display:flex;gap:12px">
+<button type="button" onclick="goStep1()" style="padding:16px 24px;background:transparent;color:var(--m);border:1px solid var(--b);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer">← Back</button>
+<button type="button" id="ts-submit-btn" onclick="submitForm()" style="flex:1;padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s">Submit Assessment Request →</button>
+</div>
+</div>
+</div>
+
+<!-- SUCCESS -->
+<div id="ts-success" style="display:none;padding:32px;text-align:center">
+<div style="width:56px;height:56px;border-radius:50%;background:rgba(52,211,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+<div style="font-size:20px;font-weight:700;color:var(--w);margin-bottom:8px">Assessment Requested!</div>
+<div style="font-size:14px;color:var(--m);line-height:1.6">We'll contact you within 2 business hours to schedule your free facility walkthrough. Check your email for confirmation.</div>
+</div>
+</div>
+
 <div style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:12px;color:var(--dm)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Free walkthrough · No obligation · 2-hour response · Night & weekend service</div>
     </div>
   </div>
@@ -546,5 +599,51 @@ document.querySelectorAll('.faq-q').forEach(q => {
 
 <!-- GHL CHAT WIDGET -->
 <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1baecb7645b2ba9a1b4d71"></script>
+
+<script>
+function goStep2(){
+var n=document.getElementById('f-name').value;
+var p=document.getElementById('f-phone').value;
+var e=document.getElementById('f-email').value;
+var b=document.getElementById('f-biz').value;
+if(!n||!p||!e||!b){alert('Please fill in all required fields.');return;}
+document.getElementById('ts-step1').style.display='none';
+document.getElementById('ts-step2').style.display='block';
+document.getElementById('step-bar-2').style.background='#40C8E0';
+}
+function goStep1(){
+document.getElementById('ts-step2').style.display='none';
+document.getElementById('ts-step1').style.display='block';
+document.getElementById('step-bar-2').style.background='rgba(64,200,224,.12)';
+}
+function submitForm(){
+var btn=document.getElementById('ts-submit-btn');
+btn.textContent='Sending...';btn.disabled=true;
+var src=document.getElementById('ts-form-wrap').getAttribute('data-source')||'TruShine Website';
+var d=new FormData();
+d.append('formId','pGzNpfTaWFi6ikjEWDRq');
+d.append('full_name',document.getElementById('f-name').value);
+d.append('phone',document.getElementById('f-phone').value);
+d.append('email',document.getElementById('f-email').value);
+d.append('business_name',document.getElementById('f-biz').value);
+d.append('address1',document.getElementById('f-addr').value);
+d.append('city',document.getElementById('f-city').value);
+d.append('state',document.getElementById('f-state').value);
+d.append('message',document.getElementById('f-details').value);
+d.append('source',src);
+d.append('page_url',window.location.href);
+var sv=document.getElementById('f-service');
+if(sv.value)d.append('service_needed',sv.value);
+fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{
+method:'POST',body:d,mode:'no-cors'
+}).then(function(){
+document.getElementById('ts-step2').style.display='none';
+document.getElementById('ts-success').style.display='block';
+}).catch(function(){
+document.getElementById('ts-step2').style.display='none';
+document.getElementById('ts-success').style.display='block';
+});
+}
+</script>
 </body>
 </html>
