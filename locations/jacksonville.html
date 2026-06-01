@@ -354,13 +354,36 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
 input::placeholder,textarea::placeholder{color:rgba(255,255,255,.35)!important}
 select{color:rgba(255,255,255,.35)!important}
 input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!important}
+
+/* SOLUTIONS DROPDOWN */
+.nav-dd{position:relative}
+.nav-dd>a{cursor:pointer}
+.dd-menu{display:none;position:absolute;top:100%;left:-20px;background:rgba(6,14,31,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(64,200,224,.12);border-radius:12px;padding:12px 0;min-width:280px;z-index:200;box-shadow:0 20px 60px rgba(0,0,0,.5);margin-top:8px}
+.nav-dd:hover .dd-menu{display:block}
+.dd-menu a{display:flex;align-items:center;gap:12px;padding:10px 20px;color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+.dd-menu a:hover{background:rgba(64,200,224,.06);color:#40C8E0}
+.dd-menu a .dd-ic{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dd-menu a .dd-ic svg{width:14px;height:14px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dd-div{height:1px;background:rgba(64,200,224,.08);margin:8px 20px}
+@media(max-width:640px){.dd-menu{display:none !important}}
 </style>
 </head>
 <body>
 
 <nav class="nav"><div class="nav-inner">
 <a href="/" class="logo"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span><span class="logo-div"></span><span class="logo-tag">Kitchen Compliance Platform</span></a>
-<div class="nav-links"><a href="/">Home</a><a href="/solutions/hood-cleaning">Solutions</a><a href="#services">Services</a><a href="#areas">Service Areas</a><a href="#contact">Contact</a></div>
+<div class="nav-links"><a href="/">Home</a><div class="nav-dd"><a href="/#services">Solutions ▾</a><div class="dd-menu">
+<a href="/solutions/hood-cleaning.html"><span class="dd-ic" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></span>Hood Cleaning</a>
+<a href="/solutions/fire-suppression.html"><span class="dd-ic" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Fire Suppression</a>
+<a href="/solutions/grease-trap.html"><span class="dd-ic" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></span>Grease Trap Service</a>
+<a href="/solutions/uco-management.html"><span class="dd-ic" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></span>UCO Management</a>
+<div class="dd-div"></div>
+<a href="/solutions/deep-cleaning.html"><span class="dd-ic" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></span>Deep Cleaning</a>
+<a href="/solutions/janitorial.html"><span class="dd-ic" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Janitorial Program</a>
+<a href="/solutions/drain-jetting.html"><span class="dd-ic" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Drain Jetting</a>
+<div class="dd-div"></div>
+<a href="/#contact" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Full Compliance Package</a>
+</div></div><a href="#services">Services</a><a href="#areas">Service Areas</a><a href="#contact">Contact</a></div>
 <div class="nav-r"><a href="#bottom-form" class="nav-btn">Free Assessment</a></div>
 </div></nav>
 
@@ -369,7 +392,7 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 <div class="hero-ov"></div>
 <div class="hero-inner">
 <div>
-<nav class="bread" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/locations/atlanta">Locations</a><span>›</span><span class="cur">Jacksonville, FL</span></nav>
+<nav class="bread" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/locations/atlanta.html">Locations</a><span>›</span><span class="cur">Jacksonville, FL</span></nav>
 <h1>Northeast Florida Kitchens Deserve the Same Standard Protecting Mercedes-Benz <em>Stadium.</em></h1>
 <p class="hero-desc">The same crews, systems, and compliance standards protecting major NFL stadiums and 500+ commercial kitchens across 8 states are now serving the Jacksonville market. Florida DBPR and local fire marshals and local fire marshals don't lower the bar for the Jacksonville metro — and neither do we. Eight service lines. One vendor. Total kitchen compliance for every restaurant in the region.</p>
 <div class="hero-ctas">
@@ -397,13 +420,13 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 <h2 class="st">Eight Service Lines. One Vendor. Total Kitchen Protection in the Jacksonville metro.</h2>
 <p class="sd">Every service available à la carte or bundled. All services include digital compliance documentation.</p>
 <div class="scope-grid" style="margin-top:48px">
-<a href="/solutions/hood-cleaning" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></div><h3>Hood Cleaning</h3><p>NFPA 96 compliant exhaust hood, duct, and fan cleaning. $475-$1,100 by hood size. Overnight service.</p></a>
-<a href="/solutions/fire-suppression" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Fire Suppression</h3><p>Brand-certified semi-annual inspection and repair. Ansul, Amerex, Badger, Pyrochem, Buckeye, Captive Aire.</p></a>
-<a href="/solutions/grease-trap" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></div><h3>Grease Trap Service</h3><p>Pumping, cleaning, and compliant disposal. Prevents FOG violations and Florida DBPR and local fire marshals fines. $325-$1,050.</p></a>
-<a href="/solutions/uco-management" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></div><h3>UCO Management</h3><p>Used cooking oil collection, IoT tank monitoring, and biodiesel recycling through TruShine Environmental.</p></a>
-<a href="/solutions/deep-cleaning" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3>Deep Cleaning</h3><p>Full kitchen restoration — walls, floors, equipment, walk-ins. BOH and FOH. $650-$3,500+.</p></a>
-<a href="/solutions/janitorial" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></div><h3>Janitorial Program</h3><p>Daily, weekly, and monthly cleaning programs. Bilingual crews. Contract pricing per location.</p></a>
-<a href="/solutions/drain-jetting" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Drain Jetting</h3><p>High-pressure hydro jetting for kitchen drains, grease lines, and sewer connections. $300-$950.</p></a>
+<a href="/solutions/hood-cleaning.html" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></div><h3>Hood Cleaning</h3><p>NFPA 96 compliant exhaust hood, duct, and fan cleaning. $475-$1,100 by hood size. Overnight service.</p></a>
+<a href="/solutions/fire-suppression.html" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Fire Suppression</h3><p>Brand-certified semi-annual inspection and repair. Ansul, Amerex, Badger, Pyrochem, Buckeye, Captive Aire.</p></a>
+<a href="/solutions/grease-trap.html" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></div><h3>Grease Trap Service</h3><p>Pumping, cleaning, and compliant disposal. Prevents FOG violations and Florida DBPR and local fire marshals fines. $325-$1,050.</p></a>
+<a href="/solutions/uco-management.html" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></div><h3>UCO Management</h3><p>Used cooking oil collection, IoT tank monitoring, and biodiesel recycling through TruShine Environmental.</p></a>
+<a href="/solutions/deep-cleaning.html" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3>Deep Cleaning</h3><p>Full kitchen restoration — walls, floors, equipment, walk-ins. BOH and FOH. $650-$3,500+.</p></a>
+<a href="/solutions/janitorial.html" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></div><h3>Janitorial Program</h3><p>Daily, weekly, and monthly cleaning programs. Bilingual crews. Contract pricing per location.</p></a>
+<a href="/solutions/drain-jetting.html" class="scope-card" style="text-decoration:none;color:inherit"><div class="scope-icon" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Drain Jetting</h3><p>High-pressure hydro jetting for kitchen drains, grease lines, and sewer connections. $300-$950.</p></a>
 <div class="scope-card" style="border:2px solid var(--ts-cyan)"><div class="scope-icon" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></div><h3>TruShine 360 Ecosystem</h3><p>All 8 services under one contract. One vendor. One invoice. One compliance dashboard. Total kitchen protection.</p></div>
 </div>
 </div>
@@ -466,9 +489,9 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 
 <footer class="foot"><div class="foot-grid">
 <div><a href="/" class="logo"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span></a><p class="foot-desc">The kitchen compliance management platform. One system. Eight services. Total protection.</p></div>
-<div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning">Hood Cleaning</a><a href="/solutions/fire-suppression">Fire Suppression</a><a href="/solutions/grease-trap">Grease Trap</a><a href="/solutions/uco-management">UCO Management</a><a href="/solutions/deep-cleaning">Deep Cleaning</a><a href="/solutions/janitorial">Janitorial</a><a href="/solutions/drain-jetting">Drain Jetting</a></div>
-<div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta">Atlanta, GA</a><a href="/locations/charlotte">Charlotte, NC</a><a href="/locations/jacksonville">Jacksonville, FL</a><a href="#">Nashville, TN</a><a href="#">Jacksonville, FL</a></div>
-<div class="foot-col"><h4>Company</h4><a href="#">About TruShine</a><a href="#">Compliance Center</a><a href="#">Careers</a><a href="#">Contact</a></div>
+<div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning.html">Hood Cleaning</a><a href="/solutions/fire-suppression.html">Fire Suppression</a><a href="/solutions/grease-trap.html">Grease Trap</a><a href="/solutions/uco-management.html">UCO Management</a><a href="/solutions/deep-cleaning.html">Deep Cleaning</a><a href="/solutions/janitorial.html">Janitorial</a><a href="/solutions/drain-jetting.html">Drain Jetting</a></div>
+<div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta.html">Atlanta, GA</a><a href="/locations/charlotte.html">Charlotte, NC</a><a href="/locations/jacksonville.html">Jacksonville, FL</a><a href="/locations/nashville.html">Nashville, TN</a><a href="/locations/jacksonville.html">Jacksonville, FL</a></div>
+<div class="foot-col"><h4>Company</h4><a href="/#services">About TruShine</a><a href="/#services">Compliance Center</a><a href="/#contact">Careers</a><a href="/#contact">Contact</a></div>
 </div>
 <div class="foot-btm"><p>© 2026 TruShine Services, LLC. All rights reserved.</p><div class="foot-addr">florida@trushineservice.com · (843) 502-6442</div></div>
 </footer>
