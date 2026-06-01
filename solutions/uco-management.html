@@ -355,13 +355,36 @@ select{color:rgba(255,255,255,.35)!important}
 input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!important}
 
 .env-accent{color:#60A052}
+
+/* SOLUTIONS DROPDOWN */
+.nav-dd{position:relative}
+.nav-dd>a{cursor:pointer}
+.dd-menu{display:none;position:absolute;top:100%;left:-20px;background:rgba(6,14,31,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(64,200,224,.12);border-radius:12px;padding:12px 0;min-width:280px;z-index:200;box-shadow:0 20px 60px rgba(0,0,0,.5);margin-top:8px}
+.nav-dd:hover .dd-menu{display:block}
+.dd-menu a{display:flex;align-items:center;gap:12px;padding:10px 20px;color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+.dd-menu a:hover{background:rgba(64,200,224,.06);color:#40C8E0}
+.dd-menu a .dd-ic{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dd-menu a .dd-ic svg{width:14px;height:14px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dd-div{height:1px;background:rgba(64,200,224,.08);margin:8px 20px}
+@media(max-width:640px){.dd-menu{display:none !important}}
 </style>
 </head>
 <body>
 
 <nav class="nav"><div class="nav-inner">
 <a href="/" class="logo"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span><span class="logo-div"></span><span class="logo-tag">Kitchen Compliance Platform</span></a>
-<div class="nav-links"><a href="/">Home</a><a href="/solutions/hood-cleaning">Solutions</a><a href="#industries">Industries</a><a href="/locations/atlanta">Locations</a><a href="#contact">Contact</a></div>
+<div class="nav-links"><a href="/">Home</a><div class="nav-dd"><a href="/#services">Solutions ▾</a><div class="dd-menu">
+<a href="/solutions/hood-cleaning.html"><span class="dd-ic" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></span>Hood Cleaning</a>
+<a href="/solutions/fire-suppression.html"><span class="dd-ic" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Fire Suppression</a>
+<a href="/solutions/grease-trap.html"><span class="dd-ic" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></span>Grease Trap Service</a>
+<a href="/solutions/uco-management.html"><span class="dd-ic" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></span>UCO Management</a>
+<div class="dd-div"></div>
+<a href="/solutions/deep-cleaning.html"><span class="dd-ic" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></span>Deep Cleaning</a>
+<a href="/solutions/janitorial.html"><span class="dd-ic" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Janitorial Program</a>
+<a href="/solutions/drain-jetting.html"><span class="dd-ic" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Drain Jetting</a>
+<div class="dd-div"></div>
+<a href="/#contact" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Full Compliance Package</a>
+</div></div><a href="#industries">Industries</a><a href="/locations/atlanta.html">Locations</a><a href="#contact">Contact</a></div>
 <div class="nav-r"><a href="#bottom-form" class="nav-btn">Free Assessment</a></div>
 </div></nav>
 
@@ -370,7 +393,18 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 <div class="hero-ov"></div>
 <div class="hero-inner">
 <div>
-<nav class="bread" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/solutions/hood-cleaning">Solutions</a><span>›</span><span class="cur">UCO Management</span></nav>
+<nav class="bread" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><div class="nav-dd"><a href="/#services">Solutions ▾</a><div class="dd-menu">
+<a href="/solutions/hood-cleaning.html"><span class="dd-ic" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></span>Hood Cleaning</a>
+<a href="/solutions/fire-suppression.html"><span class="dd-ic" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Fire Suppression</a>
+<a href="/solutions/grease-trap.html"><span class="dd-ic" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></span>Grease Trap Service</a>
+<a href="/solutions/uco-management.html"><span class="dd-ic" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></span>UCO Management</a>
+<div class="dd-div"></div>
+<a href="/solutions/deep-cleaning.html"><span class="dd-ic" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></span>Deep Cleaning</a>
+<a href="/solutions/janitorial.html"><span class="dd-ic" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Janitorial Program</a>
+<a href="/solutions/drain-jetting.html"><span class="dd-ic" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Drain Jetting</a>
+<div class="dd-div"></div>
+<a href="/#contact" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Full Compliance Package</a>
+</div></div><span>›</span><span class="cur">UCO Management</span></nav>
 <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(96,160,82,.1);border:1px solid rgba(96,160,82,.3);border-radius:50px;padding:6px 16px;margin-bottom:16px"><span style="font-size:12px;font-weight:700;color:#60A052;letter-spacing:1.5px;text-transform:uppercase">TruShine Environmental</span></div>
 <h1>Your Used Oil Is Either a Liability or a <em>Revenue Stream.</em> Which Is It?</h1>
 <p class="hero-desc">Every gallon of used cooking oil sitting in your outdoor tank is an environmental liability, a theft target, and a compliance risk. TruShine Environmental converts that liability into value — we collect your oil on a smart schedule, monitor your tank levels in real time with IoT sensors, and recycle everything into renewable biodiesel. Your waste becomes clean energy.</p>
@@ -462,9 +496,9 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 <div class="ey" style="color:#60A052">Complete Kitchen Compliance</div>
 <h2 class="st">UCO Management Works Best with These Services.</h2>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px">
-<a href="/solutions/grease-trap" style="background:var(--ts-surface);border:1px solid var(--ts-border);border-radius:16px;padding:36px 28px;transition:all .3s;text-decoration:none;color:var(--ts-text);display:block" onmouseover="this.style.borderColor='#60A052';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(64,200,224,.12)';this.style.transform='none'"><div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#60A052;margin-bottom:8px">Natural Bundle</div><h3 style="font-size:20px;font-weight:700;color:var(--ts-white);margin-bottom:10px">Grease Trap Service</h3><p style="font-size:14px;color:var(--ts-muted);line-height:1.7;margin-bottom:20px">Grease trap pumping and UCO collection on the same route. Complete FOG and oil compliance in one visit. $325-$1,050.</p><span style="font-size:13px;font-weight:700;color:#60A052">Learn More →</span></a>
+<a href="/solutions/grease-trap.html" style="background:var(--ts-surface);border:1px solid var(--ts-border);border-radius:16px;padding:36px 28px;transition:all .3s;text-decoration:none;color:var(--ts-text);display:block" onmouseover="this.style.borderColor='#60A052';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(64,200,224,.12)';this.style.transform='none'"><div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#60A052;margin-bottom:8px">Natural Bundle</div><h3 style="font-size:20px;font-weight:700;color:var(--ts-white);margin-bottom:10px">Grease Trap Service</h3><p style="font-size:14px;color:var(--ts-muted);line-height:1.7;margin-bottom:20px">Grease trap pumping and UCO collection on the same route. Complete FOG and oil compliance in one visit. $325-$1,050.</p><span style="font-size:13px;font-weight:700;color:#60A052">Learn More →</span></a>
 <div style="background:var(--ts-surface);border:2px solid #60A052;border-radius:16px;padding:36px 28px;position:relative;overflow:hidden"><div style="position:absolute;top:16px;right:-28px;background:#60A052;color:#fff;font-size:9px;font-weight:800;letter-spacing:1.5px;padding:4px 36px;transform:rotate(45deg)">BEST VALUE</div><div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#60A052;margin-bottom:8px">Full Ecosystem</div><h3 style="font-size:20px;font-weight:700;color:var(--ts-white);margin-bottom:10px">TruShine 360 Ecosystem</h3><p style="font-size:14px;color:var(--ts-muted);line-height:1.7;margin-bottom:20px">All 8 services — hood, fire, grease, UCO, deep clean, janitorial, drain jetting — under one contract. Total compliance.</p><a href="#bottom-form" style="font-size:13px;font-weight:700;color:#60A052;text-decoration:none">Request Assessment →</a></div>
-<a href="/solutions/hood-cleaning" style="background:var(--ts-surface);border:1px solid var(--ts-border);border-radius:16px;padding:36px 28px;transition:all .3s;text-decoration:none;color:var(--ts-text);display:block" onmouseover="this.style.borderColor='#60A052';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(64,200,224,.12)';this.style.transform='none'"><div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#60A052;margin-bottom:8px">Add to UCO</div><h3 style="font-size:20px;font-weight:700;color:var(--ts-white);margin-bottom:10px">Hood Cleaning</h3><p style="font-size:14px;color:var(--ts-muted);line-height:1.7;margin-bottom:20px">NFPA 96 hood cleaning on the same contract. Fire compliance and environmental compliance under one vendor. $475-$1,100.</p><span style="font-size:13px;font-weight:700;color:#60A052">Learn More →</span></a>
+<a href="/solutions/hood-cleaning.html" style="background:var(--ts-surface);border:1px solid var(--ts-border);border-radius:16px;padding:36px 28px;transition:all .3s;text-decoration:none;color:var(--ts-text);display:block" onmouseover="this.style.borderColor='#60A052';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='rgba(64,200,224,.12)';this.style.transform='none'"><div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#60A052;margin-bottom:8px">Add to UCO</div><h3 style="font-size:20px;font-weight:700;color:var(--ts-white);margin-bottom:10px">Hood Cleaning</h3><p style="font-size:14px;color:var(--ts-muted);line-height:1.7;margin-bottom:20px">NFPA 96 hood cleaning on the same contract. Fire compliance and environmental compliance under one vendor. $475-$1,100.</p><span style="font-size:13px;font-weight:700;color:#60A052">Learn More →</span></a>
 </div>
 </div>
 </section>
@@ -498,10 +532,10 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 
 <footer class="foot"><div class="foot-grid">
 <div><a href="/" class="logo"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span></a><p class="foot-desc">The kitchen compliance management platform. One system. Eight services. Total protection.</p></div>
-<div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning">Hood Cleaning</a><a href="/solutions/fire-suppression">Fire Suppression</a><a href="/solutions/grease-trap">Grease Trap</a><a href="/solutions/uco-management">UCO Management</a><a href="/solutions/deep-cleaning">Deep Cleaning</a><a href="/solutions/janitorial">Janitorial</a><a href="/solutions/drain-jetting">Drain Jetting</a></div>
-<div class="foot-col"><h4>Industries</h4><a href="#">Restaurants</a><a href="#">Stadiums & Venues</a><a href="#">Hotels</a><a href="#">Healthcare</a><a href="#">Universities</a></div>
-<div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta">Atlanta, GA</a><a href="#">Charlotte, NC</a><a href="#">Nashville, TN</a></div>
-<div class="foot-col"><h4>Company</h4><a href="#">About TruShine</a><a href="#">Compliance Center</a><a href="#">Careers</a><a href="#">Contact</a></div>
+<div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning.html">Hood Cleaning</a><a href="/solutions/fire-suppression.html">Fire Suppression</a><a href="/solutions/grease-trap.html">Grease Trap</a><a href="/solutions/uco-management.html">UCO Management</a><a href="/solutions/deep-cleaning.html">Deep Cleaning</a><a href="/solutions/janitorial.html">Janitorial</a><a href="/solutions/drain-jetting.html">Drain Jetting</a></div>
+<div class="foot-col"><h4>Industries</h4><a href="/#industries">Restaurants</a><a href="/#industries">Stadiums & Venues</a><a href="/#industries">Hotels</a><a href="/#industries">Healthcare</a><a href="/#industries">Universities</a></div>
+<div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta.html">Atlanta, GA</a><a href="/locations/charlotte.html">Charlotte, NC</a><a href="/locations/nashville.html">Nashville, TN</a></div>
+<div class="foot-col"><h4>Company</h4><a href="/#services">About TruShine</a><a href="/#services">Compliance Center</a><a href="/#contact">Careers</a><a href="/#contact">Contact</a></div>
 </div>
 <div class="foot-btm"><p>© 2026 TruShine Services, LLC. All rights reserved.</p><div class="foot-addr">6500 McDonough Dr, Suite A4 · Norcross, GA 30093 · (678) 751-8871</div></div>
 </footer>
