@@ -7,7 +7,7 @@
 <meta name="description" content="NFPA 96 certified commercial kitchen exhaust hood cleaning across 8 states. Rooftop fan to kitchen hood — photo-documented compliance reports, automated scheduling, guaranteed inspection readiness. Serving 500+ locations. Free facility assessment.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://trushineservice.com/solutions/hood-cleaning/">
-<meta property="og:title" content="Commercial Exhaust Hood Cleaning | NFPA 96 Certified | TruShine Services">
+<meta property="og:title" content="Commercial Exhaust Hood Cleaning, Installation & Repair | NFPA 96 Certified | TruShine Services">
 <meta property="og:description" content="The only kitchen compliance platform offering hood cleaning with digital documentation, automated scheduling, and guaranteed inspection readiness. 8 states. 500+ locations.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://trushineservice.com/solutions/hood-cleaning/">
@@ -343,6 +343,18 @@ input::placeholder,textarea::placeholder{color:rgba(255,255,255,.35) !important}
 select{color:rgba(255,255,255,.35) !important}
 select:valid,select.selected{color:#fff !important}
 input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !important}
+
+/* SOLUTIONS DROPDOWN */
+.nav-dd{position:relative}
+.nav-dd>a{cursor:pointer}
+.dd-menu{display:none;position:absolute;top:100%;left:-20px;background:rgba(6,14,31,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(64,200,224,.12);border-radius:12px;padding:12px 0;min-width:280px;z-index:200;box-shadow:0 20px 60px rgba(0,0,0,.5);margin-top:8px}
+.nav-dd:hover .dd-menu{display:block}
+.dd-menu a{display:flex;align-items:center;gap:12px;padding:10px 20px;color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+.dd-menu a:hover{background:rgba(64,200,224,.06);color:#40C8E0}
+.dd-menu a .dd-ic{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dd-menu a .dd-ic svg{width:14px;height:14px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dd-div{height:1px;background:rgba(64,200,224,.08);margin:8px 20px}
+@media(max-width:640px){.dd-menu{display:none !important}}
 </style>
 </head>
 <body>
@@ -351,7 +363,18 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
 <nav class="nav" role="navigation" aria-label="Main navigation">
 <div class="nav-inner">
   <a href="/" class="logo" aria-label="TruShine Services Home"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span><span class="logo-div"></span><span class="logo-tag">Kitchen Compliance Platform</span></a>
-  <div class="nav-links"><a href="/solutions/hood-cleaning">Solutions</a><a href="/industries">Industries</a><a href="/platform">Platform</a><a href="/locations">Locations</a><a href="/compliance-center">Compliance Center</a></div>
+  <div class="nav-links"><div class="nav-dd"><a href="/#services">Solutions ▾</a><div class="dd-menu">
+<a href="/solutions/hood-cleaning.html"><span class="dd-ic" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></span>Hood Cleaning</a>
+<a href="/solutions/fire-suppression.html"><span class="dd-ic" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Fire Suppression</a>
+<a href="/solutions/grease-trap.html"><span class="dd-ic" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></span>Grease Trap Service</a>
+<a href="/solutions/uco-management.html"><span class="dd-ic" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></span>UCO Management</a>
+<div class="dd-div"></div>
+<a href="/solutions/deep-cleaning.html"><span class="dd-ic" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></span>Deep Cleaning</a>
+<a href="/solutions/janitorial.html"><span class="dd-ic" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Janitorial Program</a>
+<a href="/solutions/drain-jetting.html"><span class="dd-ic" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Drain Jetting</a>
+<div class="dd-div"></div>
+<a href="/#contact" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Full Compliance Package</a>
+</div></div><a href="/#industries">Industries</a><a href="/#platform">Platform</a><a href="/#locations">Locations</a><a href="/#services">Compliance Center</a></div>
   <div class="nav-r"><a href="#bottom-form" class="nav-btn">Free Assessment</a></div>
 </div>
 </nav>
@@ -362,7 +385,18 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
   <div class="hero-ov"></div>
   <div class="hero-inner">
     <div>
-      <nav class="bread" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/solutions/hood-cleaning">Solutions</a><span>›</span><span class="cur">Exhaust Hood Cleaning</span></nav>
+      <nav class="bread" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><div class="nav-dd"><a href="/#services">Solutions ▾</a><div class="dd-menu">
+<a href="/solutions/hood-cleaning.html"><span class="dd-ic" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></span>Hood Cleaning</a>
+<a href="/solutions/fire-suppression.html"><span class="dd-ic" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Fire Suppression</a>
+<a href="/solutions/grease-trap.html"><span class="dd-ic" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></span>Grease Trap Service</a>
+<a href="/solutions/uco-management.html"><span class="dd-ic" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></span>UCO Management</a>
+<div class="dd-div"></div>
+<a href="/solutions/deep-cleaning.html"><span class="dd-ic" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></span>Deep Cleaning</a>
+<a href="/solutions/janitorial.html"><span class="dd-ic" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Janitorial Program</a>
+<a href="/solutions/drain-jetting.html"><span class="dd-ic" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Drain Jetting</a>
+<div class="dd-div"></div>
+<a href="/#contact" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Full Compliance Package</a>
+</div></div><span>›</span><span class="cur">Exhaust Hood Cleaning</span></nav>
       <h1>Your Kitchen Is One Failed Inspection Away From a Fine, a Fire, or a <em>Shutdown.</em></h1>
       <p class="hero-desc">Grease builds silently in your exhaust system every day. When the fire marshal shows up, you need more than a sticker on the hood. You need documented proof that your entire system — from kitchen to rooftop — is clean, compliant, and safe. That's what TruShine delivers.</p>
       <div class="hero-ctas">
@@ -520,19 +554,19 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
     <h2 class="st">Hood Cleaning Is Just the Start.<br>Most Clients Add These.</h2>
     <p class="sd">80% of our hood cleaning clients bundle additional services. Your exhaust system is one of four compliance risks in your kitchen. Manage all four under one contract and eliminate the vendor coordination headache permanently.</p>
     <div class="cross-grid">
-      <a href="/solutions/grease-trap" class="cross-card">
+      <a href="/solutions/grease-trap.html" class="cross-card">
         <div class="cross-tag">Add to Hood Cleaning</div>
         <h3>Grease Trap Service</h3>
         <p>Scheduled pumping and maintenance of your grease trap. Prevents backups, environmental fines, and health department citations. One vendor for hood and trap eliminates two phone calls.</p>
         <div class="cross-link">Learn More →</div>
       </a>
-      <a href="/solutions/uco-management" class="cross-card featured">
+      <a href="/solutions/uco-management.html" class="cross-card featured">
         <div class="cross-tag">Most Popular Bundle</div>
         <h3>TruShine Compliance Shield</h3>
         <p>Hood cleaning + grease trap + UCO management under one contract. All four kitchen compliance risks managed. One invoice. One compliance dashboard. The full platform.</p>
         <div class="cross-link">Learn About Compliance Shield →</div>
       </a>
-      <a href="/solutions/deep-cleaning" class="cross-card">
+      <a href="/solutions/deep-cleaning.html" class="cross-card">
         <div class="cross-tag">Add to Hood Cleaning</div>
         <h3>Commercial Deep Cleaning</h3>
         <p>Full kitchen restoration — walls, floors, equipment. Schedule a deep clean with your hood service for maximum efficiency. One crew visit, two compliance boxes checked.</p>
@@ -543,7 +577,39 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
 </section>
 
 <!-- FAQ — first 3 expanded by default for visibility and featured snippets -->
-<section class="sec sec-navy" id="faq">
+<section class="sec sec-navy" id="install-repair-placeholder"></section>
+
+<!-- INSTALLATION & REPAIR -->
+<section class="sec sec-deep sec-border">
+<div class="mw">
+<div class="ey">Installation & Repair</div>
+<h2 class="st">We Don't Just Clean Hoods. We Install and Repair Them.</h2>
+<p class="sd">When your hood system needs more than cleaning — damaged ductwork, broken hinges, missing access doors, worn filters — TruShine handles the repair or full installation on-site. No need to call a separate contractor. One team for cleaning, maintenance, and repair.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px">
+
+<div style="background:var(--ts-surface);border:1px solid var(--ts-border);border-radius:14px;padding:28px 22px">
+<div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--ts-cyan)">$165<span style="font-size:14px;color:var(--ts-muted)">/hr</span></div>
+<div style="font-size:16px;font-weight:700;color:var(--ts-white);margin:10px 0 8px">Hood Repair & Maintenance</div>
+<div style="font-size:13px;color:var(--ts-muted);line-height:1.7">Ductwork repair, hinge replacement, fan motor service, damper adjustment, and general hood system maintenance. Hourly rate plus parts.</div>
+</div>
+
+<div style="background:var(--ts-surface);border:1px solid var(--ts-border);border-radius:14px;padding:28px 22px">
+<div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--ts-cyan)">Custom</div>
+<div style="font-size:16px;font-weight:700;color:var(--ts-white);margin:10px 0 8px">Hood Installation</div>
+<div style="font-size:13px;color:var(--ts-muted);line-height:1.7">Full exhaust hood system installation for new kitchens and renovations. Ductwork, fan units, make-up air, and fire suppression integration. Quoted per project.</div>
+</div>
+
+<div style="background:var(--ts-surface);border:1px solid var(--ts-border);border-radius:14px;padding:28px 22px">
+<div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--ts-cyan)">In Stock</div>
+<div style="font-size:16px;font-weight:700;color:var(--ts-white);margin:10px 0 8px">Parts & Filters</div>
+<div style="font-size:13px;color:var(--ts-muted);line-height:1.7">Baffle filters, grease containment systems, hinge kits, access doors, and replacement parts. Installed on-site during your service visit or available for purchase.</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="faq">
   <div class="mw">
     <div class="ey">Frequently Asked Questions</div>
     <h2 class="st" style="text-align:center;">Hood Cleaning — Answered.</h2>
@@ -645,14 +711,14 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
     <div class="ey">Hood Cleaning Locations</div>
     <h2 class="st">NFPA 96 Hood Cleaning Across 8 States.</h2>
     <div class="loc-grid">
-      <a href="/locations/atlanta/hood-cleaning" class="loc-card"><div class="loc-st">Georgia</div><div class="loc-city">Atlanta Metro</div><div class="loc-arr">View Details →</div></a>
-      <a href="/locations/charlotte/hood-cleaning" class="loc-card"><div class="loc-st">North Carolina</div><div class="loc-city">Charlotte</div><div class="loc-arr">View Details →</div></a>
-      <a href="/locations/raleigh/hood-cleaning" class="loc-card"><div class="loc-st">North Carolina</div><div class="loc-city">Raleigh-Durham</div><div class="loc-arr">View Details →</div></a>
-      <a href="/locations/greenville/hood-cleaning" class="loc-card"><div class="loc-st">South Carolina</div><div class="loc-city">Greenville</div><div class="loc-arr">View Details →</div></a>
-      <a href="/locations/richmond/hood-cleaning" class="loc-card"><div class="loc-st">Virginia</div><div class="loc-city">Richmond</div><div class="loc-arr">View Details →</div></a>
-      <a href="/locations/nashville/hood-cleaning" class="loc-card"><div class="loc-st">Tennessee</div><div class="loc-city">Nashville</div><div class="loc-arr">View Details →</div></a>
-      <a href="/locations/birmingham/hood-cleaning" class="loc-card"><div class="loc-st">Alabama</div><div class="loc-city">Birmingham</div><div class="loc-arr">View Details →</div></a>
-      <a href="/locations/jacksonville/hood-cleaning" class="loc-card"><div class="loc-st">Florida</div><div class="loc-city">Jacksonville</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">Georgia</div><div class="loc-city">Atlanta Metro</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">North Carolina</div><div class="loc-city">Charlotte</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">North Carolina</div><div class="loc-city">Raleigh-Durham</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">South Carolina</div><div class="loc-city">Greenville</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">Virginia</div><div class="loc-city">Richmond</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">Tennessee</div><div class="loc-city">Nashville</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">Alabama</div><div class="loc-city">Birmingham</div><div class="loc-arr">View Details →</div></a>
+      <a href="/solutions/hood-cleaning.html" class="loc-card"><div class="loc-st">Florida</div><div class="loc-city">Jacksonville</div><div class="loc-arr">View Details →</div></a>
     </div>
   </div>
 </section>
@@ -661,10 +727,10 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
 <footer class="foot">
   <div class="foot-grid">
     <div><a href="/" class="logo"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span></a><p class="foot-desc">The kitchen compliance management platform for the hospitality industry. One system. Four risks. Total protection.</p></div>
-    <div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning">Hood Cleaning</a><a href="/solutions/grease-trap">Grease Trap</a><a href="/solutions/uco-management">UCO Management</a><a href="/solutions/oil-filtration">Oil Filtration</a><a href="/solutions/deep-cleaning">Deep Cleaning</a><a href="/solutions/janitorial">Janitorial</a></div>
-    <div class="foot-col"><h4>Industries</h4><a href="/industries/restaurants">Restaurants</a><a href="/industries/stadiums">Stadiums & Venues</a><a href="/industries/hotels">Hotels</a><a href="/industries/healthcare">Healthcare</a><a href="/industries/universities">Universities</a><a href="/industries/multi-unit">Multi-Unit Operators</a></div>
-    <div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta">Atlanta, GA</a><a href="/locations/charlotte">Charlotte, NC</a><a href="/locations/raleigh">Raleigh, NC</a><a href="/locations/greenville">Greenville, SC</a><a href="/locations/richmond">Richmond, VA</a><a href="/locations/nashville">Nashville, TN</a><a href="/locations/birmingham">Birmingham, AL</a><a href="/locations/jacksonville">Jacksonville, FL</a></div>
-    <div class="foot-col"><h4>Company</h4><a href="/about">About TruShine</a><a href="/compliance-center">Compliance Center</a><a href="/careers">Careers</a><a href="/contact">Contact</a></div>
+    <div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning.html">Hood Cleaning</a><a href="/solutions/grease-trap.html">Grease Trap</a><a href="/solutions/uco-management.html">UCO Management</a><a href="/solutions/uco-management.html">Oil Filtration</a><a href="/solutions/deep-cleaning.html">Deep Cleaning</a><a href="/solutions/janitorial.html">Janitorial</a></div>
+    <div class="foot-col"><h4>Industries</h4><a href="/#industries">Restaurants</a><a href="/#industries">Stadiums & Venues</a><a href="/#industries">Hotels</a><a href="/#industries">Healthcare</a><a href="/#industries">Universities</a><a href="/#industries">Multi-Unit Operators</a></div>
+    <div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta.html">Atlanta, GA</a><a href="/locations/charlotte.html">Charlotte, NC</a><a href="/locations/raleigh.html">Raleigh, NC</a><a href="/locations/greenville.html">Greenville, SC</a><a href="/locations/atlanta.html">Richmond, VA</a><a href="/locations/nashville.html">Nashville, TN</a><a href="/locations/atlanta.html">Birmingham, AL</a><a href="/locations/jacksonville.html">Jacksonville, FL</a></div>
+    <div class="foot-col"><h4>Company</h4><a href="/#services">About TruShine</a><a href="/#services">Compliance Center</a><a href="/#contact">Careers</a><a href="/#contact">Contact</a></div>
   </div>
   <div class="foot-btm"><p>© 2026 TruShine Services, LLC. All rights reserved.</p><div class="foot-addr">6500 McDonough Dr, Suite A4 · Norcross, GA 30093 · (678) 751-8871</div></div>
 </footer>
