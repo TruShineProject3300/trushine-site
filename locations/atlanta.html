@@ -434,6 +434,18 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
 .ft-g,.foot-grid{grid-template-columns:1fr 1fr 1fr !important}
 }
 
+
+/* SOLUTIONS DROPDOWN */
+.nav-dd{position:relative}
+.nav-dd>a{cursor:pointer}
+.dd-menu{display:none;position:absolute;top:100%;left:-20px;background:rgba(6,14,31,.97);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(64,200,224,.12);border-radius:12px;padding:12px 0;min-width:280px;z-index:200;box-shadow:0 20px 60px rgba(0,0,0,.5);margin-top:8px}
+.nav-dd:hover .dd-menu{display:block}
+.dd-menu a{display:flex;align-items:center;gap:12px;padding:10px 20px;color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;font-weight:500;transition:all .15s;white-space:nowrap}
+.dd-menu a:hover{background:rgba(64,200,224,.06);color:#40C8E0}
+.dd-menu a .dd-ic{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dd-menu a .dd-ic svg{width:14px;height:14px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dd-div{height:1px;background:rgba(64,200,224,.08);margin:8px 20px}
+@media(max-width:640px){.dd-menu{display:none !important}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What kitchen compliance services does TruShine provide in Atlanta?","acceptedAnswer":{"@type":"Answer","text":"TruShine provides eight integrated kitchen compliance services in the Atlanta metro area: NFPA 96 exhaust hood cleaning, fire suppression inspection and repair, grease trap service, used cooking oil management with IoT monitoring, oil filtration (Fry360), commercial deep cleaning, janitorial programs, and drain jetting. All services include digital photo-documented compliance reports."}},{"@type":"Question","name":"What areas does TruShine serve in Atlanta?","acceptedAnswer":{"@type":"Answer","text":"TruShine services all of metro Atlanta including Fulton County (Atlanta, Alpharetta, Roswell, Sandy Springs, Johns Creek), DeKalb County (Decatur, Brookhaven, Dunwoody, Tucker), Cobb County (Marietta, Smyrna, Kennesaw), and Gwinnett County (Norcross HQ, Lawrenceville, Duluth, Suwanee, Buford). Our headquarters is at 6500 McDonough Dr, Suite A4, Norcross, GA 30093."}}]}
@@ -450,12 +462,23 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
     <span class="logo-tag">Kitchen Compliance Platform</span>
   </a>
   <div class="nav-links">
-    <a href="/solutions/hood-cleaning">Solutions</a>
-    <a href="/industries">Industries</a>
-    <a href="/platform">Platform</a>
-    <a href="/locations">Locations</a>
+    <div class="nav-dd"><a href="/#services">Solutions ▾</a><div class="dd-menu">
+<a href="/solutions/hood-cleaning.html"><span class="dd-ic" style="background:rgba(248,113,113,.08)"><svg viewBox="0 0 24 24" stroke="#F87171"><path d="M12 12c2-2.96 0-7-1-8 0 3.038-1.773 4.741-3 6-1.226 1.26-2 3.24-2 5a6 6 0 1012 0c0-1.532-1.056-3.94-2-5-1.786 3-2.791 3-4 2z"/></svg></span>Hood Cleaning</a>
+<a href="/solutions/fire-suppression.html"><span class="dd-ic" style="background:rgba(251,191,36,.08)"><svg viewBox="0 0 24 24" stroke="#FBBF24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Fire Suppression</a>
+<a href="/solutions/grease-trap.html"><span class="dd-ic" style="background:rgba(64,200,224,.08)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><path d="M6 19v-8a6 6 0 0112 0v8"/><path d="M6 19h12"/><path d="M4 19h16"/></svg></span>Grease Trap Service</a>
+<a href="/solutions/uco-management.html"><span class="dd-ic" style="background:rgba(96,160,82,.08)"><svg viewBox="0 0 24 24" stroke="#60A052"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3"/></svg></span>UCO Management</a>
+<div class="dd-div"></div>
+<a href="/solutions/deep-cleaning.html"><span class="dd-ic" style="background:rgba(167,139,250,.08)"><svg viewBox="0 0 24 24" stroke="#A78BFA"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></span>Deep Cleaning</a>
+<a href="/solutions/janitorial.html"><span class="dd-ic" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Janitorial Program</a>
+<a href="/solutions/drain-jetting.html"><span class="dd-ic" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Drain Jetting</a>
+<div class="dd-div"></div>
+<a href="/#contact" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Full Compliance Package</a>
+</div></div>
+    <a href="/#industries">Industries</a>
+    <a href="/#platform">Platform</a>
+    <a href="/#locations">Locations</a>
     
-    <a href="/compliance-center">Compliance Center</a>
+    <a href="/#services">Compliance Center</a>
   </div>
   <div class="nav-r">
     
@@ -474,8 +497,8 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
     <div>
       <nav class="bread" aria-label="Breadcrumb">
         <a href="/">Home</a><span>›</span>
-        <a href="/locations">Locations</a><span>›</span>
-        <a href="/locations/georgia">Georgia</a><span>›</span>
+        <a href="/#locations">Locations</a><span>›</span>
+        <a href="/locations/atlanta.html">Georgia</a><span>›</span>
         <span class="cur">Atlanta Metro</span>
       </nav>
       <h1>Kitchen Compliance Management in <em>Atlanta, Georgia</em></h1>
@@ -487,7 +510,7 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
       </div>
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-p">Schedule Facility Assessment →</a>
-        <a href="#scorecard" class="btn btn-g">Free Compliance Scorecard</a>
+        <a href="#areas" class="btn btn-g">Free Compliance Scorecard</a>
       </div>
     </div>
 
@@ -593,7 +616,7 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
         </div>
         <h3>Exhaust Hood Cleaning</h3>
         <p>Full NFPA 96 compliant cleaning — rooftop fan to kitchen hood. Photo-documented compliance reports included. Georgia fire marshal inspection ready.</p>
-        <a href="/locations/atlanta/hood-cleaning" class="sc-link">Atlanta Hood Cleaning →</a>
+        <a href="/solutions/hood-cleaning.html" class="sc-link">Atlanta Hood Cleaning →</a>
       </div>
       <div class="sc">
         <div class="sc-num">02</div>
@@ -602,7 +625,7 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
         </div>
         <h3>Grease Trap Service</h3>
         <p>Scheduled pumping, cleaning, and maintenance for Atlanta restaurants. Prevent backups, DeKalb and Fulton County fines, and environmental violations.</p>
-        <a href="/locations/atlanta/grease-trap" class="sc-link">Atlanta Grease Trap →</a>
+        <a href="/solutions/grease-trap.html" class="sc-link">Atlanta Grease Trap →</a>
       </div>
       <div class="sc">
         <div class="sc-num">03</div>
@@ -611,7 +634,7 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
         </div>
         <h3>UCO Management</h3>
         <p>Used cooking oil collection and recycling through TruShine Environmental. Compliant disposal serving Fulton, DeKalb, Cobb, and Gwinnett counties.</p>
-        <a href="/locations/atlanta/uco-management" class="sc-link">Atlanta UCO Service →</a>
+        <a href="/solutions/uco-management.html" class="sc-link">Atlanta UCO Service →</a>
       </div>
       <div class="sc">
         <div class="sc-num">04</div>
@@ -620,7 +643,7 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
         </div>
         <h3>Oil Filtration — Fry360°</h3>
         <p>On-site cooking oil micro-filtration extends oil life by up to 50%. Reduces oil costs for high-volume Atlanta kitchens. Proprietary Armadillo technology.</p>
-        <a href="/locations/atlanta/oil-filtration" class="sc-link">Atlanta Oil Filtration →</a>
+        <a href="/solutions/uco-management.html" class="sc-link">Atlanta Oil Filtration →</a>
       </div>
       <div class="sc">
         <div class="sc-num">05</div>
@@ -629,7 +652,7 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
         </div>
         <h3>Commercial Deep Cleaning</h3>
         <p>Full kitchen restoration — walls, floors, equipment, prep surfaces. FOH and BOH deep clean to pass Atlanta health department inspections.</p>
-        <a href="/locations/atlanta/deep-cleaning" class="sc-link">Atlanta Deep Cleaning →</a>
+        <a href="/solutions/deep-cleaning.html" class="sc-link">Atlanta Deep Cleaning →</a>
       </div>
       <div class="sc">
         <div class="sc-num">06</div>
@@ -638,7 +661,7 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
         </div>
         <h3>Janitorial Program</h3>
         <p>Recurring restaurant and facility cleaning across metro Atlanta. Daily, weekly, and monthly programs. Bilingual crews serving all ATL counties.</p>
-        <a href="/locations/atlanta/janitorial" class="sc-link">Atlanta Janitorial →</a>
+        <a href="/solutions/janitorial.html" class="sc-link">Atlanta Janitorial →</a>
       </div>
     </div>
   </div>
@@ -756,19 +779,19 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
     <div class="sa-cols">
       <div class="sa-col">
         <h4>Fulton County</h4>
-        <a href="#">Atlanta</a><a href="#">Alpharetta</a><a href="#">Roswell</a><a href="#">Sandy Springs</a><a href="#">Johns Creek</a><a href="#">Milton</a><a href="#">College Park</a><a href="#">East Point</a><a href="#">Hapeville</a><a href="#">Union City</a>
+        <a href="#areas">Atlanta</a><a href="#areas">Alpharetta</a><a href="#areas">Roswell</a><a href="#areas">Sandy Springs</a><a href="#areas">Johns Creek</a><a href="#areas">Milton</a><a href="#areas">College Park</a><a href="#areas">East Point</a><a href="#areas">Hapeville</a><a href="#areas">Union City</a>
       </div>
       <div class="sa-col">
         <h4>DeKalb County</h4>
-        <a href="#">Decatur</a><a href="#">Brookhaven</a><a href="#">Dunwoody</a><a href="#">Tucker</a><a href="#">Stone Mountain</a><a href="#">Lithonia</a><a href="#">Chamblee</a><a href="#">Doraville</a><a href="#">Clarkston</a><a href="#">Avondale Estates</a>
+        <a href="#areas">Decatur</a><a href="#areas">Brookhaven</a><a href="#areas">Dunwoody</a><a href="#areas">Tucker</a><a href="#areas">Stone Mountain</a><a href="#areas">Lithonia</a><a href="#areas">Chamblee</a><a href="#areas">Doraville</a><a href="#areas">Clarkston</a><a href="#areas">Avondale Estates</a>
       </div>
       <div class="sa-col">
         <h4>Cobb County</h4>
-        <a href="#">Marietta</a><a href="#">Smyrna</a><a href="#">Kennesaw</a><a href="#">Acworth</a><a href="#">Powder Springs</a><a href="#">Austell</a><a href="#">Mableton</a><a href="#">Vinings</a>
+        <a href="#areas">Marietta</a><a href="#areas">Smyrna</a><a href="#areas">Kennesaw</a><a href="#areas">Acworth</a><a href="#areas">Powder Springs</a><a href="#areas">Austell</a><a href="#areas">Mableton</a><a href="#areas">Vinings</a>
       </div>
       <div class="sa-col">
         <h4>Gwinnett & Beyond</h4>
-        <a href="#">Norcross (HQ)</a><a href="#">Lawrenceville</a><a href="#">Duluth</a><a href="#">Suwanee</a><a href="#">Buford</a><a href="#">Snellville</a><a href="#">Peachtree Corners</a><a href="#">Lilburn</a>
+        <a href="#areas">Norcross (HQ)</a><a href="#areas">Lawrenceville</a><a href="#areas">Duluth</a><a href="#areas">Suwanee</a><a href="#areas">Buford</a><a href="#areas">Snellville</a><a href="#areas">Peachtree Corners</a><a href="#areas">Lilburn</a>
       </div>
     </div>
   </div>
@@ -805,10 +828,10 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
     <div class="ey">Nearby Locations</div>
     <h2 class="st">Also Serving These Markets.</h2>
     <div class="nb-grid">
-      <a href="/locations/charlotte" class="nb"><div class="nb-st">North Carolina</div><div class="nb-city">Charlotte</div><div class="nb-svc">Hood · Grease Trap · UCO · Deep Clean</div><div class="nb-arr">View City →</div></a>
-      <a href="/locations/raleigh" class="nb"><div class="nb-st">North Carolina</div><div class="nb-city">Raleigh-Durham</div><div class="nb-svc">Hood · Grease Trap · UCO · Deep Clean</div><div class="nb-arr">View City →</div></a>
-      <a href="/locations/nashville" class="nb"><div class="nb-st">Tennessee</div><div class="nb-city">Nashville</div><div class="nb-svc">Hood · Grease Trap · UCO · Deep Clean</div><div class="nb-arr">View City →</div></a>
-      <a href="/locations/birmingham" class="nb"><div class="nb-st">Alabama</div><div class="nb-city">Birmingham</div><div class="nb-svc">Hood · Grease Trap · Deep Clean</div><div class="nb-arr">View City →</div></a>
+      <a href="/locations/charlotte.html" class="nb"><div class="nb-st">North Carolina</div><div class="nb-city">Charlotte</div><div class="nb-svc">Hood · Grease Trap · UCO · Deep Clean</div><div class="nb-arr">View City →</div></a>
+      <a href="/locations/raleigh.html" class="nb"><div class="nb-st">North Carolina</div><div class="nb-city">Raleigh-Durham</div><div class="nb-svc">Hood · Grease Trap · UCO · Deep Clean</div><div class="nb-arr">View City →</div></a>
+      <a href="/locations/nashville.html" class="nb"><div class="nb-st">Tennessee</div><div class="nb-city">Nashville</div><div class="nb-svc">Hood · Grease Trap · UCO · Deep Clean</div><div class="nb-arr">View City →</div></a>
+      <a href="/locations/atlanta.html" class="nb"><div class="nb-st">Alabama</div><div class="nb-city">Birmingham</div><div class="nb-svc">Hood · Grease Trap · Deep Clean</div><div class="nb-arr">View City →</div></a>
     </div>
   </div>
 </section>
@@ -820,10 +843,10 @@ select.cc-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
       <a href="/" class="logo" aria-label="TruShine Home"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span></a>
       <p class="foot-desc">The kitchen compliance management platform for the hospitality industry. One system. Four risks. Total protection.</p>
     </div>
-    <div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning">Hood Cleaning</a><a href="/solutions/grease-trap">Grease Trap</a><a href="/solutions/uco-management">UCO Management</a><a href="/solutions/oil-filtration">Oil Filtration</a><a href="/solutions/deep-cleaning">Deep Cleaning</a><a href="/solutions/janitorial">Janitorial</a></div>
-    <div class="foot-col"><h4>Industries</h4><a href="/industries/restaurants">Restaurants</a><a href="/industries/stadiums">Stadiums & Venues</a><a href="/industries/hotels">Hotels</a><a href="/industries/healthcare">Healthcare</a><a href="/industries/universities">Universities</a><a href="/industries/multi-unit">Multi-Unit Operators</a></div>
-    <div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta">Atlanta, GA</a><a href="/locations/charlotte">Charlotte, NC</a><a href="/locations/raleigh">Raleigh, NC</a><a href="/locations/greenville">Greenville, SC</a><a href="/locations/richmond">Richmond, VA</a><a href="/locations/nashville">Nashville, TN</a><a href="/locations/birmingham">Birmingham, AL</a><a href="/locations/jacksonville">Jacksonville, FL</a></div>
-    <div class="foot-col"><h4>Company</h4><a href="/about">About TruShine</a><a href="/compliance-center">Compliance Center</a><a href="/careers">Careers</a><a href="/contact">Contact</a></div>
+    <div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning.html">Hood Cleaning</a><a href="/solutions/grease-trap.html">Grease Trap</a><a href="/solutions/uco-management.html">UCO Management</a><a href="/solutions/uco-management.html">Oil Filtration</a><a href="/solutions/deep-cleaning.html">Deep Cleaning</a><a href="/solutions/janitorial.html">Janitorial</a></div>
+    <div class="foot-col"><h4>Industries</h4><a href="/#industries">Restaurants</a><a href="/#industries">Stadiums & Venues</a><a href="/#industries">Hotels</a><a href="/#industries">Healthcare</a><a href="/#industries">Universities</a><a href="/#industries">Multi-Unit Operators</a></div>
+    <div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta.html">Atlanta, GA</a><a href="/locations/charlotte.html">Charlotte, NC</a><a href="/locations/raleigh.html">Raleigh, NC</a><a href="/locations/greenville.html">Greenville, SC</a><a href="/locations/atlanta.html">Richmond, VA</a><a href="/locations/nashville.html">Nashville, TN</a><a href="/locations/atlanta.html">Birmingham, AL</a><a href="/locations/jacksonville.html">Jacksonville, FL</a></div>
+    <div class="foot-col"><h4>Company</h4><a href="/#services">About TruShine</a><a href="/#services">Compliance Center</a><a href="/#contact">Careers</a><a href="/#contact">Contact</a></div>
   </div>
   <div class="foot-btm">
     <p>© 2026 TruShine Services, LLC. All rights reserved.</p>
