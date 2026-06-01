@@ -205,7 +205,7 @@ img{max-width:100%;height:auto;display:block;}
 .bcta-sub{font-size:14px;color:var(--ts-muted);margin-bottom:24px;line-height:1.6;}
 .bcta-fields{display:flex;flex-direction:column;gap:12px;}
 .bcta-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.bcta-in{padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.03);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s;}
+.bcta-in{padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s;}
 .bcta-in:focus{border-color:var(--ts-cyan);}
 .bcta-in::placeholder{color:var(--ts-dim);}
 select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
@@ -257,6 +257,92 @@ select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
   .foot-btm{flex-direction:column;text-align:center;}
   .test-quote{font-size:18px;padding:0 20px;}
 }
+
+/* MOBILE STICKY CALL BAR */
+.mob-call{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(6,14,31,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid rgba(64,200,224,.15);padding:10px 16px;gap:10px}
+
+.mob-call{max-width:480px;left:50%;transform:translateX(-50%);bottom:20px;border-radius:12px;border:1px solid rgba(64,200,224,.15)}
+@media(max-width:640px){.mob-call{max-width:100%;left:0;transform:none;bottom:0;border-radius:0;border-left:none;border-right:none;border-bottom:none}}
+.mob-call a{flex:1;padding:14px;border-radius:8px;text-align:center;font-weight:700;font-size:14px;text-decoration:none;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px}
+.mob-call-ph{background:#40C8E0;color:#060E1F}
+.mob-call-fm{background:transparent;color:#40C8E0;border:1.5px solid #40C8E0}
+.mob-call svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:640px){
+.mob-call{display:flex}
+
+
+.nv-btn{padding:8px 14px !important;font-size:11px !important}
+.nv{padding:0 16px !important;height:60px !important}
+.lo-tg{display:none !important}
+.lo-d{display:none !important}
+.lo-t,.lo-s,.logo-tru,.logo-shine{font-size:20px !important}
+.hr,.hero{padding:80px 16px 40px !important;min-height:auto !important}
+.hr h1,.hero h1{font-size:26px !important;letter-spacing:-1px !important;line-height:1.12 !important}
+.hero-desc,.hr-d{font-size:14px !important;line-height:1.6 !important}
+.hr-st,.hero-stats{flex-wrap:wrap !important;gap:16px !important}
+.hs-n{font-size:22px !important}
+.hr-ct,.hero-ctas{flex-direction:column !important;gap:10px !important}
+.btn,.btn-p,.btn-g{width:100% !important;text-align:center !important;justify-content:center !important;padding:14px 20px !important;font-size:14px !important}
+.sec,.bottom-cta,.cta-s{padding:48px 16px !important}
+.st{font-size:26px !important;letter-spacing:-1px !important}
+.sd{font-size:14px !important}
+.sv-g,.scope-grid{grid-template-columns:1fr !important}
+.sh-g{grid-template-columns:1fr !important}
+.ind-g{grid-template-columns:1fr !important}
+.lc-g{grid-template-columns:1fr 1fr !important}
+.pl-g{grid-template-columns:1fr !important;gap:32px !important}
+.cta-in,.bcta-inner{grid-template-columns:1fr !important;gap:32px !important}
+.cta-rw{grid-template-columns:1fr !important}
+.ft-g,.foot-grid{grid-template-columns:1fr 1fr !important;gap:24px !important}
+.ft-bt,.foot-btm{flex-direction:column !important;text-align:center !important;gap:8px !important}
+.risks,.rk-grid{grid-template-columns:1fr !important}
+.hr-in,.hero-inner{grid-template-columns:1fr !important;gap:32px !important}
+.hero-photo{max-height:250px !important;border-radius:12px !important;overflow:hidden !important}
+.hero-photo img{height:250px !important;object-fit:cover !important}
+.trust,.tr{padding:14px 16px !important;overflow-x:auto !important}
+.trust-logos,.tr-lg{gap:16px !important;flex-wrap:nowrap !important;overflow-x:auto !important;-webkit-overflow-scrolling:touch}
+.trust-i,.tr-i{font-size:10px !important;white-space:nowrap !important}
+.trust-l,.tr-l{display:none !important}
+.badges,.badges-in{padding:10px 16px !important;overflow-x:auto !important}
+.bdg-i{font-size:9px !important;padding:4px 10px !important}
+.bdg-l{display:none !important}
+.dash{overflow-x:auto !important}
+.dash-row{grid-template-columns:1fr 70px 70px !important;font-size:11px !important;padding:8px 12px !important}
+.dash-loc{font-size:11px !important}
+.dash-st{font-size:8px !important;padding:2px 6px !important}
+.pricing-table{overflow-x:auto !important}
+.pt-header,.pt-row{grid-template-columns:1fr 80px 1fr !important;gap:8px !important;padding:10px 12px !important;font-size:11px !important}
+.pt-size{font-size:12px !important}
+.pt-price{font-size:14px !important}
+.pt-detail{font-size:10px !important}
+.pt-note{font-size:11px !important;padding:12px !important}
+.faq-q h3{font-size:15px !important}
+.faq-a{font-size:13px !important}
+.ey{font-size:10px !important;letter-spacing:2px !important}
+.stakes{flex-direction:column !important;gap:8px !important}
+.stake{padding:8px 12px !important}
+.stake-text{font-size:12px !important}
+}
+
+@media(max-width:1024px) and (min-width:641px){
+.nv-ph{font-size:11px !important}
+.hr h1,.hero h1{font-size:36px !important}
+.sv-g,.scope-grid{grid-template-columns:1fr 1fr !important}
+.sh-g{grid-template-columns:1fr 1fr !important}
+.ind-g{grid-template-columns:1fr 1fr !important}
+.lc-g{grid-template-columns:1fr 1fr !important}
+.hr-in,.hero-inner{grid-template-columns:1fr !important}
+.pl-g{grid-template-columns:1fr !important}
+.cta-in,.bcta-inner{grid-template-columns:1fr !important}
+.ft-g,.foot-grid{grid-template-columns:1fr 1fr 1fr !important}
+}
+
+
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,.35) !important}
+select{color:rgba(255,255,255,.35) !important}
+select:valid,select.selected{color:#fff !important}
+input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !important}
 </style>
 </head>
 <body>
@@ -266,7 +352,7 @@ select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
 <div class="nav-inner">
   <a href="/" class="logo" aria-label="TruShine Services Home"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span><span class="logo-div"></span><span class="logo-tag">Kitchen Compliance Platform</span></a>
   <div class="nav-links"><a href="/solutions/hood-cleaning">Solutions</a><a href="/industries">Industries</a><a href="/platform">Platform</a><a href="/locations">Locations</a><a href="/compliance-center">Compliance Center</a></div>
-  <div class="nav-r"><a href="tel:6787518871" class="nav-ph">(678) 751-8871</a><a href="#bottom-form" class="nav-btn">Free Assessment</a></div>
+  <div class="nav-r"><a href="#bottom-form" class="nav-btn">Free Assessment</a></div>
 </div>
 </nav>
 
@@ -297,7 +383,7 @@ select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
 </header>
 
 <!-- TRUST -->
-<div class="trust"><div class="trust-in"><span class="trust-l">Trusted By</span><div class="trust-logos"><span class="trust-i">Delaware North</span><span class="trust-i">Levy Restaurants</span><span class="trust-i">Cookout · 500+ Locations</span><span class="trust-i">Mercedes-Benz Stadium</span><span class="trust-i">Truist Park</span><span class="trust-i">State Farm Arena</span></div></div></div>
+<div class="trust"><div class="trust-in"><span class="trust-l">Trusted By</span><div class="trust-logos"><span class="trust-i">Delaware North</span><span class="trust-i">Levy Restaurants</span><span class="trust-i">Taziki's</span><span class="trust-i">Talpas Supermercados</span><span class="trust-i">Cookout · 176 Locations</span><span class="trust-i">Mercedes-Benz Stadium</span><span class="trust-i">Truist Park</span><span class="trust-i" style="color:#34D399">Locally-Owned & Operated</span><span class="trust-i">State Farm Arena</span></div></div></div>
 
 <!-- WHAT'S INCLUDED -->
 <section class="sec sec-deep sec-border">
@@ -497,10 +583,10 @@ select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
 <div id="ts-step1">
 <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 1 — Contact Info</div>
 <div style="display:flex;flex-direction:column;gap:12px">
-<input type="text" id="f-name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="tel" id="f-phone" placeholder="Phone Number *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="email" id="f-email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="text" id="f-biz" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="tel" id="f-phone" placeholder="Phone Number *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="email" id="f-email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-biz" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
 <button type="button" onclick="goStep2()" style="padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px">Continue — Almost Done <span style="font-size:18px">→</span></button>
 </div>
 </div>
@@ -509,7 +595,7 @@ select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
 <div id="ts-step2" style="display:none">
 <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 2 — Tell Us About the Job</div>
 <div style="display:flex;flex-direction:column;gap:12px">
-<select id="f-service" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--m);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<select id="f-service" onchange="this.style.color='#fff'" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--m);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
 <option value="" disabled selected>What service do you need?</option>
 <option value="Hood Cleaning">Hood Cleaning</option>
 <option value="Fire Suppression Inspection">Fire Suppression Inspection</option>
@@ -523,12 +609,12 @@ select.bcta-in{appearance:none;color:var(--ts-muted);cursor:pointer;}
 <option value="Multi-Location Program">Multi-Location Program</option>
 <option value="Not Sure">Not Sure — Assess My Kitchen</option>
 </select>
-<input type="text" id="f-addr" placeholder="Street Address" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-addr" placeholder="Street Address" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<input type="text" id="f-city" placeholder="City" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="text" id="f-state" placeholder="State" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-city" placeholder="City" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-state" placeholder="State" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
 </div>
-<textarea id="f-details" placeholder="Share some details about the job — number of hoods, locations, current provider, urgency..." rows="3" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.03);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'"></textarea>
+<textarea id="f-details" placeholder="Share some details about the job — number of hoods, locations, current provider, urgency..." rows="3" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'"></textarea>
 <div style="display:flex;gap:10px;align-items:flex-start">
 <input type="checkbox" id="f-terms" style="margin-top:4px;accent-color:#40C8E0;cursor:pointer">
 <label for="f-terms" style="font-size:12px;color:var(--dm);line-height:1.5;cursor:pointer">I agree to terms & conditions. By providing my phone number, I agree to receive text messages from the business.</label>
@@ -598,6 +684,13 @@ document.querySelectorAll('.faq-q').forEach(q => {
 
 
 <!-- GHL CHAT WIDGET -->
+
+<!-- MOBILE STICKY CALL BAR -->
+<div class="mob-call">
+<a href="tel:6787518871" class="mob-call-ph"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
+<a href="#contact" class="mob-call-fm" onclick="document.getElementById('bottom-form')&&(location.hash='bottom-form')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Free Assessment</a>
+</div>
+
 <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1baecb7645b2ba9a1b4d71"></script>
 
 <script>
