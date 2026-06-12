@@ -1,775 +1,92 @@
 {
   "redirects": [
-    {
-      "source": "/services",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/hood-cleaning",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/hood-cleaning/",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/restaurant-cleaning",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/restaurant-cleaning/",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/commercial-cleaning",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/commercial-cleaning/",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/grease-trap",
-      "destination": "/solutions/grease-trap.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/grease-trap/",
-      "destination": "/solutions/grease-trap.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/fire-suppression",
-      "destination": "/solutions/fire-suppression.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/fire-suppression/",
-      "destination": "/solutions/fire-suppression.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/pest-control",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/pest-control/",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/janitorial",
-      "destination": "/solutions/janitorial.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/janitorial/",
-      "destination": "/solutions/janitorial.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/deep-cleaning",
-      "destination": "/solutions/deep-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/deep-cleaning/",
-      "destination": "/solutions/deep-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/oil-filtration",
-      "destination": "/solutions/uco-management.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/oil-filtration/",
-      "destination": "/solutions/uco-management.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/drain-jetting",
-      "destination": "/solutions/drain-jetting.html",
-      "permanent": true
-    },
-    {
-      "source": "/services/drain-jetting/",
-      "destination": "/solutions/drain-jetting.html",
-      "permanent": true
-    },
-    {
-      "source": "/hood-cleaning",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/hood-cleaning/",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/fire-suppression",
-      "destination": "/solutions/fire-suppression.html",
-      "permanent": true
-    },
-    {
-      "source": "/fire-suppression/",
-      "destination": "/solutions/fire-suppression.html",
-      "permanent": true
-    },
-    {
-      "source": "/grease-trap",
-      "destination": "/solutions/grease-trap.html",
-      "permanent": true
-    },
-    {
-      "source": "/grease-trap/",
-      "destination": "/solutions/grease-trap.html",
-      "permanent": true
-    },
-    {
-      "source": "/pest-control",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/pest-control/",
-      "destination": "/solutions/hood-cleaning.html",
-      "permanent": true
-    },
-    {
-      "source": "/janitorial",
-      "destination": "/solutions/janitorial.html",
-      "permanent": true
-    },
-    {
-      "source": "/janitorial/",
-      "destination": "/solutions/janitorial.html",
-      "permanent": true
-    },
-    {
-      "source": "/oil-filtration",
-      "destination": "/solutions/uco-management.html",
-      "permanent": true
-    },
-    {
-      "source": "/oil-filtration/",
-      "destination": "/solutions/uco-management.html",
-      "permanent": true
-    },
-    {
-      "source": "/gwinnett-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/gwinnett-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/gwinnett-county/:path*",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/cobb-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/cobb-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/cobb-county/:path*",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/dekalb-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/dekalb-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/dekalb-county/:path*",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/fulton-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/fulton-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/fulton-county/:path*",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/cherokee-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/cherokee-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/henry-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/henry-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/clayton-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/clayton-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/forsyth-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/forsyth-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/fayette-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/fayette-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/rockdale-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/rockdale-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas",
-      "destination": "/#locations",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/",
-      "destination": "/#locations",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/gwinnett-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/gwinnett-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/cobb-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/cobb-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/dekalb-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/dekalb-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/fulton-county",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/fulton-county/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/harlem",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/harlem/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/service-areas/:path*",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/covington",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/covington/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/conyers",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/conyers/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/stockbridge",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/stockbridge/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/mcdonough",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/mcdonough/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/peachtree-city",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/peachtree-city/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/newnan",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/newnan/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/athens",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/athens/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/augusta",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/augusta/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/:path*",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/best-restaurants-in-acworth-ga",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/best-restaurants-in-acworth-ga/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/best-restaurants-in-:path*",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/about-us",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/about-us/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/about",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/about/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/contact-us",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/contact-us/",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/contact",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/contact/",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/free-estimate",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/free-estimate/",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/get-a-quote",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/get-a-quote/",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/request-a-quote",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/request-a-quote/",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/careers",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/careers/",
-      "destination": "/#contact",
-      "permanent": true
-    },
-    {
-      "source": "/residential",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/residential/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/privacy-policy",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/privacy-policy/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/terms",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/terms/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/terms-of-service",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/terms-of-service/",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/florida",
-      "destination": "/locations/jacksonville.html",
-      "permanent": true
-    },
-    {
-      "source": "/florida/",
-      "destination": "/locations/jacksonville.html",
-      "permanent": true
-    },
-    {
-      "source": "/florida/:path*",
-      "destination": "/locations/jacksonville.html",
-      "permanent": true
-    },
-    {
-      "source": "/south-carolina",
-      "destination": "/locations/greenville.html",
-      "permanent": true
-    },
-    {
-      "source": "/south-carolina/",
-      "destination": "/locations/greenville.html",
-      "permanent": true
-    },
-    {
-      "source": "/south-carolina/:path*",
-      "destination": "/locations/greenville.html",
-      "permanent": true
-    },
-    {
-      "source": "/north-carolina",
-      "destination": "/locations/charlotte.html",
-      "permanent": true
-    },
-    {
-      "source": "/north-carolina/",
-      "destination": "/locations/charlotte.html",
-      "permanent": true
-    },
-    {
-      "source": "/north-carolina/:path*",
-      "destination": "/locations/charlotte.html",
-      "permanent": true
-    },
-    {
-      "source": "/tennessee",
-      "destination": "/locations/nashville.html",
-      "permanent": true
-    },
-    {
-      "source": "/tennessee/",
-      "destination": "/locations/nashville.html",
-      "permanent": true
-    },
-    {
-      "source": "/georgia",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    },
-    {
-      "source": "/georgia/",
-      "destination": "/locations/atlanta.html",
-      "permanent": true
-    }
+    { "source": "/gwinnett-county", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/gwinnett-county/", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/cobb-county", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/cobb-county/", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/dekalb-county", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/dekalb-county/", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/fulton-county", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/fulton-county/", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/cherokee-county", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/cherokee-county/", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/covington", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/covington/", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/service-areas", "destination": "/#locations", "permanent": true },
+    { "source": "/service-areas/", "destination": "/#locations", "permanent": true },
+    { "source": "/services", "destination": "/solutions/hood-cleaning.html", "permanent": true },
+    { "source": "/services/", "destination": "/solutions/hood-cleaning.html", "permanent": true },
+    { "source": "/hood-cleaning", "destination": "/solutions/hood-cleaning.html", "permanent": true },
+    { "source": "/hood-cleaning/", "destination": "/solutions/hood-cleaning.html", "permanent": true },
+    { "source": "/fire-suppression", "destination": "/solutions/fire-suppression.html", "permanent": true },
+    { "source": "/fire-suppression/", "destination": "/solutions/fire-suppression.html", "permanent": true },
+    { "source": "/grease-trap", "destination": "/solutions/grease-trap.html", "permanent": true },
+    { "source": "/grease-trap/", "destination": "/solutions/grease-trap.html", "permanent": true },
+    { "source": "/janitorial", "destination": "/solutions/janitorial.html", "permanent": true },
+    { "source": "/janitorial/", "destination": "/solutions/janitorial.html", "permanent": true },
+    { "source": "/about-us", "destination": "/", "permanent": true },
+    { "source": "/about-us/", "destination": "/", "permanent": true },
+    { "source": "/about", "destination": "/", "permanent": true },
+    { "source": "/about/", "destination": "/", "permanent": true },
+    { "source": "/contact-us", "destination": "/#contact", "permanent": true },
+    { "source": "/contact-us/", "destination": "/#contact", "permanent": true },
+    { "source": "/contact", "destination": "/#contact", "permanent": true },
+    { "source": "/free-estimate", "destination": "/#contact", "permanent": true },
+    { "source": "/free-estimate/", "destination": "/#contact", "permanent": true },
+    { "source": "/residential", "destination": "/", "permanent": true },
+    { "source": "/residential/", "destination": "/", "permanent": true },
+    { "source": "/blog", "destination": "/", "permanent": true },
+    { "source": "/blog/", "destination": "/", "permanent": true },
+    { "source": "/careers", "destination": "/#contact", "permanent": true },
+    { "source": "/careers/", "destination": "/#contact", "permanent": true },
+    { "source": "/florida", "destination": "/locations/jacksonville.html", "permanent": true },
+    { "source": "/florida/", "destination": "/locations/jacksonville.html", "permanent": true },
+    { "source": "/south-carolina", "destination": "/locations/greenville.html", "permanent": true },
+    { "source": "/south-carolina/", "destination": "/locations/greenville.html", "permanent": true },
+    { "source": "/north-carolina", "destination": "/locations/charlotte.html", "permanent": true },
+    { "source": "/north-carolina/", "destination": "/locations/charlotte.html", "permanent": true },
+    { "source": "/tennessee", "destination": "/locations/nashville.html", "permanent": true },
+    { "source": "/tennessee/", "destination": "/locations/nashville.html", "permanent": true },
+    { "source": "/georgia", "destination": "/locations/atlanta.html", "permanent": true },
+    { "source": "/georgia/", "destination": "/locations/atlanta.html", "permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/solutions/hood-cleaning",
-      "destination": "/solutions/hood-cleaning.html"
-    },
-    {
-      "source": "/solutions/fire-suppression",
-      "destination": "/solutions/fire-suppression.html"
-    },
-    {
-      "source": "/solutions/grease-trap",
-      "destination": "/solutions/grease-trap.html"
-    },
-    {
-      "source": "/solutions/uco-management",
-      "destination": "/solutions/uco-management.html"
-    },
-    {
-      "source": "/solutions/deep-cleaning",
-      "destination": "/solutions/deep-cleaning.html"
-    },
-    {
-      "source": "/solutions/janitorial",
-      "destination": "/solutions/janitorial.html"
-    },
-    {
-      "source": "/solutions/drain-jetting",
-      "destination": "/solutions/drain-jetting.html"
-    },
-    {
-      "source": "/locations/atlanta",
-      "destination": "/locations/atlanta.html"
-    },
-    {
-      "source": "/locations/charlotte",
-      "destination": "/locations/charlotte.html"
-    },
-    {
-      "source": "/locations/greenville",
-      "destination": "/locations/greenville.html"
-    },
-    {
-      "source": "/locations/nashville",
-      "destination": "/locations/nashville.html"
-    },
-    {
-      "source": "/locations/jacksonville",
-      "destination": "/locations/jacksonville.html"
-    },
-    {
-      "source": "/locations/raleigh",
-      "destination": "/locations/raleigh.html"
-    },
-    {
-      "source": "/locations/marietta",
-      "destination": "/locations/marietta.html"
-    },
-    {
-      "source": "/locations/decatur",
-      "destination": "/locations/decatur.html"
-    },
-    {
-      "source": "/locations/alpharetta",
-      "destination": "/locations/alpharetta.html"
-    },
-    {
-      "source": "/locations/norcross",
-      "destination": "/locations/norcross.html"
-    },
-    {
-      "source": "/locations/duluth",
-      "destination": "/locations/duluth.html"
-    },
-    {
-      "source": "/locations/roswell",
-      "destination": "/locations/roswell.html"
-    },
-    {
-      "source": "/locations/kennesaw",
-      "destination": "/locations/kennesaw.html"
-    },
-    {
-      "source": "/locations/sandy-springs",
-      "destination": "/locations/sandy-springs.html"
-    },
-    {
-      "source": "/locations/lawrenceville",
-      "destination": "/locations/lawrenceville.html"
-    },
-    {
-      "source": "/locations/smyrna",
-      "destination": "/locations/smyrna.html"
-    }
+    { "source": "/solutions/hood-cleaning", "destination": "/solutions/hood-cleaning.html" },
+    { "source": "/solutions/fire-suppression", "destination": "/solutions/fire-suppression.html" },
+    { "source": "/solutions/grease-trap", "destination": "/solutions/grease-trap.html" },
+    { "source": "/solutions/uco-management", "destination": "/solutions/uco-management.html" },
+    { "source": "/solutions/deep-cleaning", "destination": "/solutions/deep-cleaning.html" },
+    { "source": "/solutions/janitorial", "destination": "/solutions/janitorial.html" },
+    { "source": "/solutions/drain-jetting", "destination": "/solutions/drain-jetting.html" },
+    { "source": "/locations/atlanta", "destination": "/locations/atlanta.html" },
+    { "source": "/locations/charlotte", "destination": "/locations/charlotte.html" },
+    { "source": "/locations/greenville", "destination": "/locations/greenville.html" },
+    { "source": "/locations/nashville", "destination": "/locations/nashville.html" },
+    { "source": "/locations/jacksonville", "destination": "/locations/jacksonville.html" },
+    { "source": "/locations/raleigh", "destination": "/locations/raleigh.html" },
+    { "source": "/locations/marietta", "destination": "/locations/marietta.html" },
+    { "source": "/locations/decatur", "destination": "/locations/decatur.html" },
+    { "source": "/locations/alpharetta", "destination": "/locations/alpharetta.html" },
+    { "source": "/locations/norcross", "destination": "/locations/norcross.html" },
+    { "source": "/locations/duluth", "destination": "/locations/duluth.html" },
+    { "source": "/locations/roswell", "destination": "/locations/roswell.html" },
+    { "source": "/locations/kennesaw", "destination": "/locations/kennesaw.html" },
+    { "source": "/locations/sandy-springs", "destination": "/locations/sandy-springs.html" },
+    { "source": "/locations/lawrenceville", "destination": "/locations/lawrenceville.html" },
+    { "source": "/locations/smyrna", "destination": "/locations/smyrna.html" }
   ],
   "headers": [
     {
       "source": "/images/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-Robots-Tag",
-          "value": "all"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" }
       ]
     }
   ]
