@@ -24,4 +24,15 @@
   <url><loc>https://trushineservice.com/locations/lawrenceville.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://trushineservice.com/locations/smyrna.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://trushineservice.com/locations/roswell.html</loc><lastmod>2026-06-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://trushineservice.com/locations/richmond</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trushineservice.com/locations/birmingham</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
