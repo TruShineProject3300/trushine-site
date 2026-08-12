@@ -1269,7 +1269,7 @@ function cfSubmit(){
         notes:fd.get('notes')||'',
         page_url:window.location.href
       })
-    }).then(function(r){return r.json();}).then(function(d){console.log('Shine: Lead created in GHL',d);}).catch(function(e){console.error('Shine: GHL error',e);});}).catch(function(e){console.error('Shine: Webhook error',e);});
+    }).then(function(r){return r.json();}).then(function(d){console.log('Shine: Lead created in GHL',d);}).catch(function(e){console.error('Shine: GHL error',e);});
 
     leadSent = true;
     document.getElementById("shine-captured").classList.add("show");
