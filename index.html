@@ -741,17 +741,34 @@ function scNext(){
 }
 
 function scSubmit(){
-  var name=document.getElementById('sc-name').value, biz=document.getElementById('sc-biz').value, email=document.getElementById('sc-email').value, phone=document.getElementById('sc-phone').value;
-  if(!name||!biz||!email){alert('Please fill in required fields.');return;}
-  var score=0; scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
-  var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
-  var d=new FormData();
-  d.append('formId','pGzNpfTaWFi6ikjEWDRq'); d.append('full_name',name); d.append('email',email);
-  d.append('business_name',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
-  d.append('message','Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
-  fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
-  document.getElementById('sc-gate').style.display='none';
-  scShowResults(score, name, biz);
+var name=document.getElementById('sc-name').value;
+var biz=document.getElementById('sc-biz').value;
+var email=document.getElementById('sc-email').value;
+var phone=document.getElementById('sc-phone').value;
+if(!name||!biz||!email){alert('Please fill in required fields.');return;}
+var score=0;
+scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
+var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
+var parts=name.trim().split(' ');
+fetch('/api/ghl-lead',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({
+first_name:parts[0]||'',
+last_name:parts.slice(1).join(' ')||'',
+phone:phone,
+email:email,
+organization:biz,
+source:'Compliance Scorecard',
+notes:'Compliance Score: '+score+'/10 - '+lvl+' | Business: '+biz,
+page_url:window.location.href
+})
+}).then(function(r){return r.json();}).then(function(d){
+console.log('Quiz: Lead created',d);
+}).catch(function(e){
+console.error('Quiz error:',e);
+});
+scShowResults(score,lvl);
 }
 
 function scShowResults(score, name, biz){
@@ -1096,31 +1113,43 @@ document.getElementById('ts-step1').style.display='block';
 document.getElementById('step-bar-2').style.background='rgba(64,200,224,.12)';
 }
 function submitForm(){
-var btn=document.getElementById('ts-submit-btn');
-btn.textContent='Sending...';btn.disabled=true;
-var src=document.getElementById('ts-form-wrap').getAttribute('data-source')||'TruShine Website';
-var d=new FormData();
-d.append('formId','pGzNpfTaWFi6ikjEWDRq');
-d.append('full_name',document.getElementById('f-name').value);
-d.append('phone',document.getElementById('f-phone').value);
-d.append('email',document.getElementById('f-email').value);
-d.append('business_name',document.getElementById('f-biz').value);
-d.append('address1',document.getElementById('f-addr').value);
-d.append('city',document.getElementById('f-city').value);
-d.append('state',document.getElementById('f-state').value);
-d.append('message',document.getElementById('f-details').value);
-d.append('source',src);
-d.append('page_url',window.location.href);
+var n=document.getElementById('f-name').value;
+var p=document.getElementById('f-phone').value;
+var e=document.getElementById('f-email').value;
+var b=document.getElementById('f-biz').value;
+var addr=document.getElementById('f-addr')?document.getElementById('f-addr').value:'';
+var c=document.getElementById('f-city')?document.getElementById('f-city').value:'';
+var st=document.getElementById('f-state')?document.getElementById('f-state').value:'';
+var det=document.getElementById('f-details')?document.getElementById('f-details').value:'';
 var sv=document.getElementById('f-service');
-if(sv.value)d.append('service_needed',sv.value);
-fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{
-method:'POST',body:d,mode:'no-cors'
-}).then(function(){
-document.getElementById('ts-step2').style.display='none';
-document.getElementById('ts-success').style.display='block';
-}).catch(function(){
-document.getElementById('ts-step2').style.display='none';
-document.getElementById('ts-success').style.display='block';
+var svc=sv?sv.value:'';
+if(!p){alert('Phone number is required.');return;}
+var parts=n.trim().split(' ');
+var btn=document.querySelector('#ts-step2 button')||document.querySelector('#ts-form-wrap button');
+if(btn){btn.textContent='Sending...';btn.disabled=true;}
+fetch('/api/ghl-lead',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({
+first_name:parts[0]||'',
+last_name:parts.slice(1).join(' ')||'',
+phone:p,
+email:e,
+organization:b,
+city:c,
+service_needed:svc,
+source:'TruShine Website',
+notes:det?det:'Address: '+addr+' '+c+' '+st,
+page_url:window.location.href
+})
+}).then(function(r){return r.json();}).then(function(d){
+console.log('Form: Lead created',d);
+if(document.getElementById('ts-step2'))document.getElementById('ts-step2').style.display='none';
+if(document.getElementById('ts-success'))document.getElementById('ts-success').style.display='block';
+if(btn){btn.textContent='Sent ✓';}
+}).catch(function(e){
+console.error('Form error:',e);
+if(btn){btn.textContent='Error - Call (678) 751-8871';btn.disabled=false;}
 });
 }
 </script>
