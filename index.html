@@ -821,139 +821,34 @@ function scShowResults(score, name, biz){
 <p class="sd" style="margin-top:16px">Response guaranteed within 2 business hours. Emergency compliance support available 24/7.</p>
 </div>
 <div class="cta-fm">
-<div id="bottom-form"></div>
-<div id="ts-form-wrap" data-source="TruShine Website - Homepage">
-<h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
-<p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">Takes 30 seconds. We respond within 2 hours.</p>
-
-<!-- PROGRESS BAR -->
-<div style="display:flex;gap:8px;margin-bottom:24px">
-<div id="step-bar-1" style="flex:1;height:3px;border-radius:2px;background:var(--c);transition:all .3s"></div>
-<div id="step-bar-2" style="flex:1;height:3px;border-radius:2px;background:var(--b);transition:all .3s"></div>
+<div id="bottom-form" style="max-width:700px;margin:40px auto;padding:0 24px">
+<div style="text-align:center;margin-bottom:24px">
+<h2 style="font-size:24px;font-weight:700;color:#fff;margin:0 0 6px">Request Your Free Assessment</h2>
+<p style="color:rgba(255,255,255,.5);font-size:13px;margin:0">Takes 30 seconds. We respond within 2 hours.</p>
 </div>
-
-<!-- STEP 1: Contact Info -->
-<div id="ts-step1">
-<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 1 — Contact Info</div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<input type="text" id="f-name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="tel" id="f-phone" placeholder="Phone Number *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="email" id="f-email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="text" id="f-biz" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<button type="button" onclick="goStep2()" style="padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px">Continue — Almost Done <span style="font-size:18px">→</span></button>
-</div>
-</div>
-
-<!-- STEP 2: Job Details -->
-<div id="ts-step2" style="display:none">
-<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 2 — Tell Us About the Job</div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<select id="f-service" onchange="this.style.color='#fff'" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--m);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<option value="" disabled selected>What service do you need?</option>
-<option value="Hood Cleaning">Hood Cleaning</option>
-<option value="Fire Suppression Inspection">Fire Suppression Inspection</option>
-<option value="Grease Trap Service">Grease Trap Service</option>
-<option value="UCO / Oil Management">UCO / Oil Management</option>
-<option value="Oil Filtration (Fry360)">Oil Filtration (Fry360°)</option>
-<option value="Deep Cleaning">Deep Cleaning</option>
-<option value="Janitorial Program">Janitorial Program</option>
-<option value="Drain Jetting">Drain Jetting</option>
-<option value="Full Compliance Package">Full Compliance Package</option>
-<option value="Multi-Location Program">Multi-Location Program</option>
-<option value="Not Sure">Not Sure — Assess My Kitchen</option>
-</select>
-<input type="text" id="f-addr" placeholder="Street Address" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<input type="text" id="f-city" placeholder="City" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="text" id="f-state" placeholder="State" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-</div>
-<textarea id="f-details" placeholder="Share some details about the job — number of hoods, locations, current provider, urgency..." rows="3" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'"></textarea>
-<div style="display:flex;gap:10px;align-items:flex-start">
-<input type="checkbox" id="f-terms" style="margin-top:4px;accent-color:#40C8E0;cursor:pointer">
-<label for="f-terms" style="font-size:12px;color:var(--dm);line-height:1.5;cursor:pointer">I agree to terms & conditions. By providing my phone number, I agree to receive text messages from the business.</label>
-</div>
-<div style="display:flex;gap:12px">
-<button type="button" onclick="goStep1()" style="padding:16px 24px;background:transparent;color:var(--m);border:1px solid var(--b);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer">← Back</button>
-<button type="button" id="ts-submit-btn" onclick="submitForm()" style="flex:1;padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s">Submit Assessment Request →</button>
+<div style="min-height:884px">
+<iframe
+    src="https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN"
+    style="width:100%;height:100%;border:none;border-radius:1px"
+    id="inline-9WDMt3dYlSyiUfC7k2IN" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Shine Chatbot Lead Capture 8.12.2026"
+    data-height="884"
+    data-layout-iframe-id="inline-9WDMt3dYlSyiUfC7k2IN"
+    data-form-id="9WDMt3dYlSyiUfC7k2IN"
+    title="Shine Chatbot Lead Capture 8.12.2026"
+    
+        >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </div>
 </div>
-</div>
-
-<!-- SUCCESS -->
-<div id="ts-success" style="display:none;padding:32px;text-align:center">
-<div style="width:56px;height:56px;border-radius:50%;background:rgba(52,211,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-<div style="font-size:20px;font-weight:700;color:var(--w);margin-bottom:8px">Assessment Requested!</div>
-<div style="font-size:14px;color:var(--m);line-height:1.6">We'll contact you within 2 business hours to schedule your free facility walkthrough. Check your email for confirmation.</div>
-</div>
-</div>
-
-<div style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:12px;color:var(--dm)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Free walkthrough · No obligation · 2-hour response · Night & weekend service</div>
-</div>
-</div></section>
-
-
-<!-- SERVICE AREAS GRID -->
-<section style="padding:64px 32px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.08)">
-<div class="mx">
-<div class="ey">Service Areas</div>
-<h2 class="st">Hood Cleaning &amp; Kitchen Compliance Near You</h2>
-<p style="font-size:15px;color:rgba(255,255,255,.55);max-width:640px;margin-bottom:36px;line-height:1.7">NFPA 96 certified service across 7 states. Click your city for local pricing, availability, and same-week scheduling.</p>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px">
-<div>
-<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#51C8E0;margin-bottom:12px">Georgia</div>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Atlanta</a>
-<a href="/locations/marietta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Marietta</a>
-<a href="/locations/lawrenceville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Lawrenceville</a>
-<a href="/locations/alpharetta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Alpharetta</a>
-<a href="/locations/norcross.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Norcross</a>
-<a href="/locations/duluth.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Duluth</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Grease Trap Atlanta</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Fire Suppression Atlanta</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0">Deep Cleaning Atlanta</a>
-</div>
-<div>
-<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#51C8E0;margin-bottom:12px">North Carolina</div>
-<a href="/locations/charlotte.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Charlotte</a>
-<a href="/locations/raleigh.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Raleigh</a>
-<a href="/locations/raleigh.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Durham</a>
-<a href="/locations/raleigh.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Cary</a>
-<a href="/locations/charlotte.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Grease Trap Charlotte</a>
-<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#51C8E0;margin:16px 0 12px">South Carolina</div>
-<a href="/locations/greenville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Greenville</a>
-<a href="/locations/greenville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Charleston</a>
-<a href="/locations/greenville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Columbia</a>
-<a href="/locations/greenville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0">Grease Trap Greenville</a>
-</div>
-<div>
-<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#51C8E0;margin-bottom:12px">Tennessee</div>
-<a href="/locations/nashville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Nashville</a>
-<a href="/locations/nashville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Franklin</a>
-<a href="/locations/nashville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Murfreesboro</a>
-<a href="/locations/nashville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Chattanooga</a>
-<a href="/locations/nashville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Grease Trap Nashville</a>
-<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#51C8E0;margin:16px 0 12px">Florida</div>
-<a href="/locations/jacksonville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Jacksonville</a>
-<a href="/locations/jacksonville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Orlando</a>
-<a href="/locations/jacksonville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Tampa</a>
-<a href="/locations/jacksonville.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0">Grease Trap Jacksonville</a>
-</div>
-<div>
-<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#51C8E0;margin-bottom:12px">Virginia</div>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Richmond</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Fredericksburg</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Henrico</a>
-<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#51C8E0;margin:16px 0 12px">Alabama</div>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Birmingham</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Huntsville</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05)">Hood Cleaning Hoover</a>
-<a href="/locations/atlanta.html" style="display:block;font-size:13px;color:rgba(255,255,255,.65);padding:5px 0">Hood Cleaning Montgomery</a>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- FOOTER -->
 <footer class="ft"><div class="ft-g">
 <div><a href="/" class="lo"><span class="lo-t">Tru</span><span class="lo-s">Shine</span></a><p class="ft-d">The kitchen compliance management platform for the hospitality industry. One system. Eight services. Total protection.</p></div>
 <div class="ft-c"><h4>Solutions</h4><a href="/solutions/hood-cleaning.html">Hood Cleaning</a><a href="/solutions/fire-suppression.html">Fire Suppression</a><a href="/solutions/grease-trap.html">Grease Trap</a><a href="/solutions/uco-management.html">UCO Management</a><a href="/solutions/uco-management.html">Oil Filtration</a><a href="/solutions/deep-cleaning.html">Deep Cleaning</a><a href="/solutions/janitorial.html">Janitorial</a><a href="/solutions/drain-jetting.html">Drain Jetting</a></div>
