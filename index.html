@@ -746,9 +746,9 @@ function scSubmit(){
   var score=0; scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
   var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
   var d=new FormData();
-  d.append('formId','pGzNpfTaWFi6ikjEWDRq'); d.append('full_name',name); d.append('email',email);
-  d.append('business_name',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
-  d.append('message','Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
+  d.append('formId','pGzNpfTaWFi6ikjEWDRq'); var _sn=name.trim().split(' ');d.append('first_name',_sn[0]||'');d.append('last_name',_sn.slice(1).join(' ')||''); d.append('email',email);
+  d.append('organization',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
+  d.append('notes','Compliance Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
   fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
@@ -800,7 +800,8 @@ function scShowResults(score, name, biz){
 <p class="sd" style="margin-top:16px">Response guaranteed within 2 business hours. Emergency compliance support available 24/7.</p>
 </div>
 <div class="cta-fm">
-<div id="ts-form-wrap" data-source="TruShine Website - Homepage">
+<div id="bottom-form"></div>
+<div id="ts-form-wrap"  data-source="TruShine Website - Homepage">
 <h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
 <p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">Takes 30 seconds. We respond within 2 hours.</p>
 
@@ -1253,14 +1254,14 @@ btn.textContent='Sending...';btn.disabled=true;
 var src=document.getElementById('ts-form-wrap').getAttribute('data-source')||'TruShine Website';
 var d=new FormData();
 d.append('formId','pGzNpfTaWFi6ikjEWDRq');
-d.append('full_name',document.getElementById('f-name').value);
+var _fn=document.getElementById('f-name').value.trim().split(' ');d.append('first_name',_fn[0]||'');d.append('last_name',_fn.slice(1).join(' ')||'');
 d.append('phone',document.getElementById('f-phone').value);
 d.append('email',document.getElementById('f-email').value);
-d.append('business_name',document.getElementById('f-biz').value);
+d.append('organization',document.getElementById('f-biz').value);
 d.append('address1',document.getElementById('f-addr').value);
 d.append('city',document.getElementById('f-city').value);
 d.append('state',document.getElementById('f-state').value);
-d.append('message',document.getElementById('f-details').value);
+d.append('notes',document.getElementById('f-details').value);
 d.append('source',src);
 d.append('page_url',window.location.href);
 var sv=document.getElementById('f-service');
