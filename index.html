@@ -741,19 +741,38 @@ function scNext(){
 }
 
 function scSubmit(){
-  var name=document.getElementById('sc-name').value, biz=document.getElementById('sc-biz').value, email=document.getElementById('sc-email').value, phone=document.getElementById('sc-phone').value;
+  var name=document.getElementById('sc-name').value;
+  var biz=document.getElementById('sc-biz').value;
+  var email=document.getElementById('sc-email').value;
+  var phone=document.getElementById('sc-phone').value;
   if(!name||!biz||!email){alert('Please fill in required fields.');return;}
-  var score=0; scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
+  var score=0;
+  scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
   var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
-  var d=new FormData();
-  d.append('formId','9WDMt3dYlSyiUfC7k2IN'); var _sn=name.trim().split(' ');d.append('first_name',_sn[0]||'');d.append('last_name',_sn.slice(1).join(' ')||''); d.append('email',email);
-  d.append('organization',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
-  d.append('notes','Compliance Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
-  var gf=document.createElement('form');gf.method='POST';gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';gf.target='ghl-hidden-frame';gf.style.display='none';
-    for(var pair of d.entries()){var inp=document.createElement('input');inp.type='hidden';inp.name=pair[0];inp.value=pair[1];gf.appendChild(inp);}
-    document.body.appendChild(gf);gf.submit();document.body.removeChild(gf);
-  document.getElementById('sc-gate').style.display='none';
-  scShowResults(score, name, biz);
+  var gf=document.createElement('form');
+  gf.method='POST';
+  gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';
+  gf.target='ghl-hidden-frame';
+  gf.style.display='none';
+  var fields={
+    'formId':'9WDMt3dYlSyiUfC7k2IN',
+    'first_name':name.trim().split(' ')[0]||'',
+    'last_name':name.trim().split(' ').slice(1).join(' ')||'',
+    'email':email,
+    'organization':biz,
+    'phone':phone,
+    'source':'Compliance Scorecard',
+    'notes':'Compliance Score: '+score+'/10 - '+lvl+' | Business: '+biz
+  };
+  for(var key in fields){
+    var inp=document.createElement('input');
+    inp.type='hidden';inp.name=key;inp.value=fields[key];
+    gf.appendChild(inp);
+  }
+  document.body.appendChild(gf);
+  gf.submit();
+  document.body.removeChild(gf);
+  scShowResults(score,lvl);
 }
 
 function scShowResults(score, name, biz){
@@ -803,73 +822,30 @@ function scShowResults(score, name, biz){
 </div>
 <div class="cta-fm">
 <div id="bottom-form"></div>
-<div id="ts-form-wrap" data-source="TruShine Website - Homepage">
-<h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
-<p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">Takes 30 seconds. We respond within 2 hours.</p>
-
-<!-- PROGRESS BAR -->
-<div style="display:flex;gap:8px;margin-bottom:24px">
-<div id="step-bar-1" style="flex:1;height:3px;border-radius:2px;background:var(--c);transition:all .3s"></div>
-<div id="step-bar-2" style="flex:1;height:3px;border-radius:2px;background:var(--b);transition:all .3s"></div>
+<div id="bottom-form"></div>
+<div id="ts-form-wrap" style="max-width:700px;margin:0 auto;padding:40px 20px">
+<div style="text-align:center;margin-bottom:24px">
+<h2 style="font-family:'Oswald',sans-serif;font-size:28px;color:#fff;margin:0 0 8px">Request Your Free Assessment</h2>
+<p style="color:rgba(255,255,255,.5);font-size:14px;margin:0">Takes 30 seconds. We respond within 2 hours.</p>
 </div>
-
-<!-- STEP 1: Contact Info -->
-<div id="ts-step1">
-<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 1 — Contact Info</div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<input type="text" id="f-name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="tel" id="f-phone" placeholder="Phone Number *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="email" id="f-email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="text" id="f-biz" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<button type="button" onclick="goStep2()" style="padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px">Continue — Almost Done <span style="font-size:18px">→</span></button>
-</div>
-</div>
-
-<!-- STEP 2: Job Details -->
-<div id="ts-step2" style="display:none">
-<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 2 — Tell Us About the Job</div>
-<div style="display:flex;flex-direction:column;gap:12px">
-<select id="f-service" onchange="this.style.color='#fff'" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--m);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<option value="" disabled selected>What service do you need?</option>
-<option value="Hood Cleaning">Hood Cleaning</option>
-<option value="Fire Suppression Inspection">Fire Suppression Inspection</option>
-<option value="Grease Trap Service">Grease Trap Service</option>
-<option value="UCO / Oil Management">UCO / Oil Management</option>
-<option value="Oil Filtration (Fry360)">Oil Filtration (Fry360°)</option>
-<option value="Deep Cleaning">Deep Cleaning</option>
-<option value="Janitorial Program">Janitorial Program</option>
-<option value="Drain Jetting">Drain Jetting</option>
-<option value="Full Compliance Package">Full Compliance Package</option>
-<option value="Multi-Location Program">Multi-Location Program</option>
-<option value="Not Sure">Not Sure — Assess My Kitchen</option>
-</select>
-<input type="text" id="f-addr" placeholder="Street Address" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<input type="text" id="f-city" placeholder="City" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="text" id="f-state" placeholder="State" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-</div>
-<textarea id="f-details" placeholder="Share some details about the job — number of hoods, locations, current provider, urgency..." rows="3" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'"></textarea>
-<div style="display:flex;gap:10px;align-items:flex-start">
-<input type="checkbox" id="f-terms" style="margin-top:4px;accent-color:#40C8E0;cursor:pointer">
-<label for="f-terms" style="font-size:12px;color:var(--dm);line-height:1.5;cursor:pointer">I agree to terms & conditions. By providing my phone number, I agree to receive text messages from the business.</label>
-</div>
-<div style="display:flex;gap:12px">
-<button type="button" onclick="goStep1()" style="padding:16px 24px;background:transparent;color:var(--m);border:1px solid var(--b);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer">← Back</button>
-<button type="button" id="ts-submit-btn" onclick="submitForm()" style="flex:1;padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s">Submit Assessment Request →</button>
-</div>
-</div>
-</div>
-
-<!-- SUCCESS -->
-<div id="ts-success" style="display:none;padding:32px;text-align:center">
-<div style="width:56px;height:56px;border-radius:50%;background:rgba(52,211,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-<div style="font-size:20px;font-weight:700;color:var(--w);margin-bottom:8px">Assessment Requested!</div>
-<div style="font-size:14px;color:var(--m);line-height:1.6">We'll contact you within 2 business hours to schedule your free facility walkthrough. Check your email for confirmation.</div>
-</div>
-</div>
-
-<div style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:12px;color:var(--dm)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Free walkthrough · No obligation · 2-hour response · Night & weekend service</div>
-</div>
+<iframe
+  src="https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN"
+  style="width:100%;height:800px;border:none;border-radius:8px"
+  id="inline-9WDMt3dYlSyiUfC7k2IN"
+  data-layout="{'id':'INLINE'}"
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Shine Chatbot Lead Capture 8.12.2026"
+  data-height="800"
+  data-layout-iframe-id="inline-9WDMt3dYlSyiUfC7k2IN"
+  data-form-id="9WDMt3dYlSyiUfC7k2IN"
+  title="Request Your Free Assessment"
+></iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </div></section>
 
 
@@ -1227,48 +1203,13 @@ function scShowResults(score, name, biz){
 
 
 <script>
-function goStep2(){
-var n=document.getElementById('f-name').value;
-var p=document.getElementById('f-phone').value;
-var e=document.getElementById('f-email').value;
-var b=document.getElementById('f-biz').value;
-if(!n||!p||!e||!b){alert('Please fill in all required fields.');return;}
-document.getElementById('ts-step1').style.display='none';
-document.getElementById('ts-step2').style.display='block';
-document.getElementById('step-bar-2').style.background='#40C8E0';
-}
+function goStep2(){console.log('Form handled by GHL iframe');}
 function goStep1(){
 document.getElementById('ts-step2').style.display='none';
 document.getElementById('ts-step1').style.display='block';
 document.getElementById('step-bar-2').style.background='rgba(64,200,224,.12)';
 }
-function submitForm(){
-var btn=document.getElementById('ts-submit-btn');
-btn.textContent='Sending...';btn.disabled=true;
-var src=document.getElementById('ts-form-wrap').getAttribute('data-source')||'TruShine Website';
-var d=new FormData();
-d.append('formId','9WDMt3dYlSyiUfC7k2IN');
-var _fn=document.getElementById('f-name').value.trim().split(' ');d.append('first_name',_fn[0]||'');d.append('last_name',_fn.slice(1).join(' ')||'');
-d.append('phone',document.getElementById('f-phone').value);
-d.append('email',document.getElementById('f-email').value);
-d.append('organization',document.getElementById('f-biz').value);
-d.append('address1',document.getElementById('f-addr').value);
-d.append('city',document.getElementById('f-city').value);
-d.append('state',document.getElementById('f-state').value);
-d.append('notes',document.getElementById('f-details').value);
-d.append('source',src);
-d.append('page_url',window.location.href);
-var sv=document.getElementById('f-service');
-if(sv.value)d.append('service_needed',sv.value);
-var gf=document.createElement('form');gf.method='POST';gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';gf.target='ghl-hidden-frame';gf.style.display='none';
-    for(var pair of d.entries()){var inp=document.createElement('input');inp.type='hidden';inp.name=pair[0];inp.value=pair[1];gf.appendChild(inp);}
-    document.body.appendChild(gf);gf.submit();document.body.removeChild(gf);
-document.getElementById('ts-success').style.display='block';
-}).catch(function(){
-document.getElementById('ts-step2').style.display='none';
-document.getElementById('ts-success').style.display='block';
-});
-}
+function submitForm(){console.log('Form handled by GHL iframe');}
 </script>
 </body>
 </html>
