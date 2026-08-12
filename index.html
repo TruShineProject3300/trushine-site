@@ -746,10 +746,10 @@ function scSubmit(){
   var score=0; scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
   var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
   var d=new FormData();
-  d.append('formId','pGzNpfTaWFi6ikjEWDRq'); var _sn=name.trim().split(' ');d.append('first_name',_sn[0]||'');d.append('last_name',_sn.slice(1).join(' ')||''); d.append('email',email);
+  d.append('formId','9WDMt3dYlSyiUfC7k2IN'); var _sn=name.trim().split(' ');d.append('first_name',_sn[0]||'');d.append('last_name',_sn.slice(1).join(' ')||''); d.append('email',email);
   d.append('organization',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
   d.append('notes','Compliance Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
-  fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
+  fetch('https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
 }
@@ -1240,7 +1240,7 @@ var btn=document.getElementById('ts-submit-btn');
 btn.textContent='Sending...';btn.disabled=true;
 var src=document.getElementById('ts-form-wrap').getAttribute('data-source')||'TruShine Website';
 var d=new FormData();
-d.append('formId','pGzNpfTaWFi6ikjEWDRq');
+d.append('formId','9WDMt3dYlSyiUfC7k2IN');
 var _fn=document.getElementById('f-name').value.trim().split(' ');d.append('first_name',_fn[0]||'');d.append('last_name',_fn.slice(1).join(' ')||'');
 d.append('phone',document.getElementById('f-phone').value);
 d.append('email',document.getElementById('f-email').value);
@@ -1253,7 +1253,7 @@ d.append('source',src);
 d.append('page_url',window.location.href);
 var sv=document.getElementById('f-service');
 if(sv.value)d.append('service_needed',sv.value);
-fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{
+fetch('https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN',{
 method:'POST',body:d,mode:'no-cors'
 }).then(function(){
 document.getElementById('ts-step2').style.display='none';
