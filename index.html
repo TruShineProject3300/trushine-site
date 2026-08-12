@@ -749,7 +749,9 @@ function scSubmit(){
   d.append('formId','9WDMt3dYlSyiUfC7k2IN'); var _sn=name.trim().split(' ');d.append('first_name',_sn[0]||'');d.append('last_name',_sn.slice(1).join(' ')||''); d.append('email',email);
   d.append('organization',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
   d.append('notes','Compliance Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
-  fetch('https://link.apisystem.tech/widget/form/9WDMt3dYlSyiUfC7k2IN',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
+  var gf=document.createElement('form');gf.method='POST';gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';gf.target='ghl-hidden-frame';gf.style.display='none';
+    for(var pair of d.entries()){var inp=document.createElement('input');inp.type='hidden';inp.name=pair[0];inp.value=pair[1];gf.appendChild(inp);}
+    document.body.appendChild(gf);gf.submit();document.body.removeChild(gf);
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
 }
@@ -952,6 +954,11 @@ function scShowResults(score, name, biz){
 <a href="#bottom-form" class="mob-call-fm" onclick="document.getElementById('bottom-form')&&(location.hash='bottom-form')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Get Protected</a>
 </div>
 
+
+
+<!-- GHL Hidden Submission -->
+<iframe name="ghl-hidden-frame" id="ghl-hidden-frame" style="display:none" aria-hidden="true"></iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <div id="shine-root"></div>
 
@@ -1173,9 +1180,9 @@ function scShowResults(score, name, biz){
     fd.append("source", "Shine Chatbot");
     fd.append("notes", "Lead captured by Shine chatbot on " + window.location.href + ". Service interest: " + (service || "not specified") + ". Review conversation in Shine logs.");
 
-    fetch("https://link.apisystem.tech/widget/form/9WDMt3dYlSyiUfC7k2IN", {
-      method: "POST", body: fd, mode: "no-cors"
-    });
+    var gf=document.createElement('form');gf.method='POST';gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';gf.target='ghl-hidden-frame';gf.style.display='none';
+    for(var pair of fd.entries()){var inp=document.createElement('input');inp.type='hidden';inp.name=pair[0];inp.value=pair[1];gf.appendChild(inp);}
+    document.body.appendChild(gf);gf.submit();document.body.removeChild(gf);
 
     leadSent = true;
     document.getElementById("shine-captured").classList.add("show");
@@ -1253,10 +1260,9 @@ d.append('source',src);
 d.append('page_url',window.location.href);
 var sv=document.getElementById('f-service');
 if(sv.value)d.append('service_needed',sv.value);
-fetch('https://link.apisystem.tech/widget/form/9WDMt3dYlSyiUfC7k2IN',{
-method:'POST',body:d,mode:'no-cors'
-}).then(function(){
-document.getElementById('ts-step2').style.display='none';
+var gf=document.createElement('form');gf.method='POST';gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';gf.target='ghl-hidden-frame';gf.style.display='none';
+    for(var pair of d.entries()){var inp=document.createElement('input');inp.type='hidden';inp.name=pair[0];inp.value=pair[1];gf.appendChild(inp);}
+    document.body.appendChild(gf);gf.submit();document.body.removeChild(gf);
 document.getElementById('ts-success').style.display='block';
 }).catch(function(){
 document.getElementById('ts-step2').style.display='none';
