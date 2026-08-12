@@ -1027,6 +1027,9 @@ console.error("Shine: GHL error",e);
 
 leadSent=true;
 document.getElementById("sh-ok").classList.add("show");
+msgs.push({role:"assistant",content:"Great! I\'ve noted your info. To lock in your appointment, fill out the quick form below \u2014 it takes 30 seconds:\n\n\u2193 Scroll down to the form or click here"});
+render();
+setTimeout(function(){document.getElementById("bottom-form").scrollIntoView({behavior:"smooth"});},2000);
 console.log("Shine: Lead captured",{phone:phone,service:service});
 }
 
