@@ -741,38 +741,17 @@ function scNext(){
 }
 
 function scSubmit(){
-  var name=document.getElementById('sc-name').value;
-  var biz=document.getElementById('sc-biz').value;
-  var email=document.getElementById('sc-email').value;
-  var phone=document.getElementById('sc-phone').value;
+  var name=document.getElementById('sc-name').value, biz=document.getElementById('sc-biz').value, email=document.getElementById('sc-email').value, phone=document.getElementById('sc-phone').value;
   if(!name||!biz||!email){alert('Please fill in required fields.');return;}
-  var score=0;
-  scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
+  var score=0; scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
   var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
-  var gf=document.createElement('form');
-  gf.method='POST';
-  gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';
-  gf.target='ghl-hidden-frame';
-  gf.style.display='none';
-  var fields={
-    'formId':'9WDMt3dYlSyiUfC7k2IN',
-    'first_name':name.trim().split(' ')[0]||'',
-    'last_name':name.trim().split(' ').slice(1).join(' ')||'',
-    'email':email,
-    'organization':biz,
-    'phone':phone,
-    'source':'Compliance Scorecard',
-    'notes':'Compliance Score: '+score+'/10 - '+lvl+' | Business: '+biz
-  };
-  for(var key in fields){
-    var inp=document.createElement('input');
-    inp.type='hidden';inp.name=key;inp.value=fields[key];
-    gf.appendChild(inp);
-  }
-  document.body.appendChild(gf);
-  gf.submit();
-  document.body.removeChild(gf);
-  scShowResults(score,lvl);
+  var d=new FormData();
+  d.append('formId','pGzNpfTaWFi6ikjEWDRq'); d.append('full_name',name); d.append('email',email);
+  d.append('business_name',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
+  d.append('message','Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
+  fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
+  document.getElementById('sc-gate').style.display='none';
+  scShowResults(score, name, biz);
 }
 
 function scShowResults(score, name, biz){
@@ -822,128 +801,73 @@ function scShowResults(score, name, biz){
 </div>
 <div class="cta-fm">
 <div id="bottom-form"></div>
-<div id="ts-form-wrap" style="max-width:640px;margin:0 auto;padding:48px 24px">
-<div style="text-align:center;margin-bottom:32px">
-<h2 style="font-size:26px;font-weight:700;color:#fff;margin:0 0 8px">Request Your Free Assessment</h2>
-<p style="color:rgba(255,255,255,.5);font-size:14px;margin:0">Takes 30 seconds. We respond within 2 hours.</p>
+<div id="ts-form-wrap" data-source="TruShine Website - Homepage">
+<h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
+<p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">Takes 30 seconds. We respond within 2 hours.</p>
+
+<!-- PROGRESS BAR -->
+<div style="display:flex;gap:8px;margin-bottom:24px">
+<div id="step-bar-1" style="flex:1;height:3px;border-radius:2px;background:var(--c);transition:all .3s"></div>
+<div id="step-bar-2" style="flex:1;height:3px;border-radius:2px;background:var(--b);transition:all .3s"></div>
 </div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<div>
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">First Name</label>
-<input id="cf-first" type="text" placeholder="First name" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
-</div>
-<div>
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Last Name</label>
-<input id="cf-last" type="text" placeholder="Last name" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
-</div>
-</div>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-<div>
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Phone *</label>
-<input id="cf-phone" type="tel" placeholder="(678) 000-0000" required style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
-</div>
-<div>
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Email</label>
-<input id="cf-email" type="email" placeholder="your@email.com" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+<!-- STEP 1: Contact Info -->
+<div id="ts-step1">
+<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 1 — Contact Info</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<input type="text" id="f-name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="tel" id="f-phone" placeholder="Phone Number *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="email" id="f-email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-biz" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<button type="button" onclick="goStep2()" style="padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:8px">Continue — Almost Done <span style="font-size:18px">→</span></button>
 </div>
 </div>
 
-<div style="margin-top:12px">
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Organization</label>
-<input id="cf-org" type="text" placeholder="Restaurant or business name" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
-</div>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
-<div>
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">City</label>
-<input id="cf-city" type="text" placeholder="City" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
-</div>
-<div>
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Service Needed</label>
-<select id="cf-service" style="width:100%;padding:12px 14px;background:#0C1A3A;border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none;-webkit-appearance:none">
-<option value="">Select a service</option>
-<option value="Hood Cleaning & Repair">Hood Cleaning & Repair</option>
-<option value="Hood Filter Exchange">Hood Filter Exchange</option>
+<!-- STEP 2: Job Details -->
+<div id="ts-step2" style="display:none">
+<div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--c);margin-bottom:16px">Step 2 — Tell Us About the Job</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<select id="f-service" onchange="this.style.color='#fff'" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--m);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none;cursor:pointer;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<option value="" disabled selected>What service do you need?</option>
+<option value="Hood Cleaning">Hood Cleaning</option>
 <option value="Fire Suppression Inspection">Fire Suppression Inspection</option>
 <option value="Grease Trap Service">Grease Trap Service</option>
-<option value="Drain Jetting">Drain Jetting</option>
-<option value="Deep Cleaning (BOH)">Deep Cleaning (BOH)</option>
-<option value="FOH Cleaning">FOH Cleaning</option>
-<option value="Pest Control">Pest Control</option>
+<option value="UCO / Oil Management">UCO / Oil Management</option>
+<option value="Oil Filtration (Fry360)">Oil Filtration (Fry360°)</option>
+<option value="Deep Cleaning">Deep Cleaning</option>
 <option value="Janitorial Program">Janitorial Program</option>
-<option value="Pressure Washing">Pressure Washing</option>
-<option value="UCO Management / Oil Recycling">UCO Management / Oil Recycling</option>
-<option value="Oil Filtration (Fry360)">Oil Filtration (Fry360)</option>
-<option value="Full Compliance Package (360 Ecosystem)">Full Compliance Package (360 Ecosystem)</option>
-<option value="Emergency Service">Emergency Service</option>
-<option value="Not Sure - Need Assessment">Not Sure — Need Assessment</option>
+<option value="Drain Jetting">Drain Jetting</option>
+<option value="Full Compliance Package">Full Compliance Package</option>
+<option value="Multi-Location Program">Multi-Location Program</option>
+<option value="Not Sure">Not Sure — Assess My Kitchen</option>
 </select>
+<input type="text" id="f-addr" placeholder="Street Address" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<input type="text" id="f-city" placeholder="City" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+<input type="text" id="f-state" placeholder="State" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
+</div>
+<textarea id="f-details" placeholder="Share some details about the job — number of hoods, locations, current provider, urgency..." rows="3" style="padding:14px 16px;border:1px solid var(--b);border-radius:8px;background:rgba(255,255,255,.08);color:var(--w);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'"></textarea>
+<div style="display:flex;gap:10px;align-items:flex-start">
+<input type="checkbox" id="f-terms" style="margin-top:4px;accent-color:#40C8E0;cursor:pointer">
+<label for="f-terms" style="font-size:12px;color:var(--dm);line-height:1.5;cursor:pointer">I agree to terms & conditions. By providing my phone number, I agree to receive text messages from the business.</label>
+</div>
+<div style="display:flex;gap:12px">
+<button type="button" onclick="goStep1()" style="padding:16px 24px;background:transparent;color:var(--m);border:1px solid var(--b);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer">← Back</button>
+<button type="button" id="ts-submit-btn" onclick="submitForm()" style="flex:1;padding:16px;background:var(--c);color:var(--d);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .3s">Submit Assessment Request →</button>
+</div>
+</div>
+</div>
+
+<!-- SUCCESS -->
+<div id="ts-success" style="display:none;padding:32px;text-align:center">
+<div style="width:56px;height:56px;border-radius:50%;background:rgba(52,211,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+<div style="font-size:20px;font-weight:700;color:var(--w);margin-bottom:8px">Assessment Requested!</div>
+<div style="font-size:14px;color:var(--m);line-height:1.6">We'll contact you within 2 business hours to schedule your free facility walkthrough. Check your email for confirmation.</div>
 </div>
 </div>
 
-<div style="margin-top:12px">
-<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Notes</label>
-<textarea id="cf-notes" rows="3" placeholder="Tell us about your kitchen or specific needs" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none;resize:vertical"></textarea>
+<div style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:12px;color:var(--dm)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Free walkthrough · No obligation · 2-hour response · Night & weekend service</div>
 </div>
-
-<div id="cf-success" style="display:none;text-align:center;padding:24px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2);border-radius:8px;margin-top:16px">
-<div style="font-size:24px;margin-bottom:8px">✓</div>
-<div style="font-size:16px;font-weight:600;color:#34D399;margin-bottom:4px">Request Received</div>
-<div style="font-size:13px;color:rgba(255,255,255,.5)">We'll follow up within 2 hours. Call us anytime: <a href="tel:+16787518871" style="color:#40C8E0">(678) 751-8871</a></div>
-</div>
-
-<button id="cf-submit" onclick="cfSubmit()" style="width:100%;margin-top:16px;padding:16px;background:#40C8E0;color:#060E1F;border:none;border-radius:8px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s">
-Submit Request →
-</button>
-
-<p style="text-align:center;font-size:11px;color:rgba(255,255,255,.25);margin-top:12px">🔒 Your information is secure and never shared. By submitting you consent to receive follow-up communications.</p>
-</div>
-
-<!-- Hidden GHL form for actual submission -->
-<iframe name="ghl-hidden-frame" id="ghl-hidden-frame" style="display:none" aria-hidden="true"></iframe>
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
-<script>
-function cfSubmit(){
-  var phone=document.getElementById('cf-phone').value.trim();
-  if(!phone){alert('Phone number is required.');return;}
-  var btn=document.getElementById('cf-submit');
-  btn.textContent='Sending...';btn.disabled=true;btn.style.opacity='0.6';
-  var gf=document.createElement('form');
-  gf.method='POST';
-  gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';
-  gf.target='ghl-hidden-frame';
-  gf.style.display='none';
-  var fields={
-    'formId':'9WDMt3dYlSyiUfC7k2IN',
-    'first_name':document.getElementById('cf-first').value.trim(),
-    'last_name':document.getElementById('cf-last').value.trim(),
-    'phone':phone,
-    'email':document.getElementById('cf-email').value.trim(),
-    'organization':document.getElementById('cf-org').value.trim(),
-    'city':document.getElementById('cf-city').value.trim(),
-    'service_needed':document.getElementById('cf-service').value,
-    'notes':document.getElementById('cf-notes').value.trim(),
-    'source':'TruShine Website',
-    'page_url':window.location.href
-  };
-  for(var key in fields){
-    if(fields[key]){
-      var inp=document.createElement('input');
-      inp.type='hidden';inp.name=key;inp.value=fields[key];
-      gf.appendChild(inp);
-    }
-  }
-  document.body.appendChild(gf);
-  gf.submit();
-  document.body.removeChild(gf);
-  btn.textContent='Sent ✓';
-  document.getElementById('cf-success').style.display='block';
-  setTimeout(function(){btn.textContent='Submit Request →';btn.disabled=false;btn.style.opacity='1';},5000);
-}
-</script>
 </div></section>
 
 
@@ -1028,299 +952,177 @@ function cfSubmit(){
 <a href="#bottom-form" class="mob-call-fm" onclick="document.getElementById('bottom-form')&&(location.hash='bottom-form')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Get Protected</a>
 </div>
 
-
-
-<!-- GHL Hidden Submission -->
-<iframe name="ghl-hidden-frame" id="ghl-hidden-frame" style="display:none" aria-hidden="true"></iframe>
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
+<!-- SHINE CHATBOT WIDGET — v3 Clean Rebuild -->
 <div id="shine-root"></div>
-
 <style>
-#shine-root * { box-sizing: border-box; margin: 0; padding: 0; }
-#shine-bubble { position: fixed; bottom: 20px; right: 20px; z-index: 99999; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
-#shine-teaser { background: #0C1A3A; border: 1px solid rgba(64,200,224,.12); border-radius: 12px; padding: 10px 16px; font-size: 13px; color: rgba(255,255,255,.92); box-shadow: 0 4px 20px rgba(0,0,0,.4); max-width: 240px; cursor: pointer; }
-#shine-btn { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #40C8E0, #1B4BA0); border: none; cursor: pointer; box-shadow: 0 4px 24px rgba(64,200,224,.35); display: flex; align-items: center; justify-content: center; font-size: 28px; transition: transform .2s; position: relative; }
-#shine-btn:hover { transform: scale(1.1); }
-#shine-dot { position: absolute; top: -2px; right: -2px; width: 14px; height: 14px; background: #EF4444; border-radius: 50%; border: 2px solid #060E1F; }
-
-#shine-window { position: fixed; bottom: 20px; right: 20px; z-index: 99999; width: 380px; height: 580px; display: none; flex-direction: column; background: #060E1F; border: 1px solid rgba(64,200,224,.12); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.5); font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
-#shine-window.open { display: flex; }
-
-#shine-header { padding: 12px 16px; background: #0C1A3A; border-bottom: 1px solid rgba(64,200,224,.12); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
-#shine-avatar { width: 34px; height: 34px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 1px solid rgba(64,200,224,.12); }
-#shine-avatar img { width: 100%; height: 100%; object-fit: cover; }
-#shine-avatar-fallback { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #40C8E0, #1B4BA0); display: none; align-items: center; justify-content: center; font-size: 16px; }
-#shine-close { background: none; border: none; color: rgba(255,255,255,.5); cursor: pointer; font-size: 18px; padding: 4px 8px; }
-#shine-call-btn { padding: 6px 10px; background: rgba(64,200,224,.1); border: 1px solid rgba(64,200,224,.12); border-radius: 6px; color: #40C8E0; font-size: 11px; font-weight: 600; text-decoration: none; }
-
-#shine-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
-#shine-messages::-webkit-scrollbar { width: 3px; }
-#shine-messages::-webkit-scrollbar-thumb { background: rgba(64,200,224,.2); border-radius: 3px; }
-
-.shine-msg { display: flex; max-width: 85%; }
-.shine-msg.user { align-self: flex-end; }
-.shine-msg.bot { align-self: flex-start; }
-.shine-msg .bubble { padding: 10px 14px; font-size: 13px; line-height: 1.65; white-space: pre-wrap; }
-.shine-msg.user .bubble { background: #1B4BA0; border: 1px solid rgba(64,200,224,.15); border-radius: 12px 12px 2px 12px; color: #fff; }
-.shine-msg.bot .bubble { background: #0F1D3D; border: 1px solid rgba(64,200,224,.12); border-radius: 12px 12px 12px 2px; color: rgba(255,255,255,.92); }
-
-.shine-typing .bubble { color: rgba(255,255,255,.5); }
-@keyframes shinePulse { 0%,100%{opacity:.3} 50%{opacity:1} }
-.shine-d1 { animation: shinePulse 1.4s infinite; }
-.shine-d2 { animation: shinePulse 1.4s infinite .2s; }
-.shine-d3 { animation: shinePulse 1.4s infinite .4s; }
-
-#shine-quick { padding: 0 14px 10px; display: flex; flex-wrap: wrap; gap: 5px; flex-shrink: 0; }
-#shine-quick button { background: #0C1A3A; border: 1px solid rgba(64,200,224,.12); border-radius: 20px; padding: 5px 11px; font-size: 11px; font-weight: 600; color: #40C8E0; cursor: pointer; font-family: inherit; white-space: nowrap; }
-#shine-quick button:hover { background: rgba(64,200,224,.08); }
-
-#shine-captured { padding: 6px 14px; background: rgba(52,211,153,.08); border-top: 1px solid rgba(52,211,153,.15); display: none; align-items: center; gap: 6px; flex-shrink: 0; }
-#shine-captured.show { display: flex; }
-#shine-captured span:first-child { width: 6px; height: 6px; border-radius: 50%; background: #34D399; }
-#shine-captured span:last-child { font-size: 10px; color: #34D399; }
-
-#shine-input-area { padding: 10px 14px; border-top: 1px solid rgba(64,200,224,.12); background: #0C1A3A; display: flex; gap: 8px; flex-shrink: 0; }
-#shine-input { flex: 1; padding: 10px 12px; background: rgba(255,255,255,.05); border: 1px solid rgba(64,200,224,.12); border-radius: 8px; color: #fff; font-size: 13px; font-family: inherit; outline: none; }
-#shine-input::placeholder { color: rgba(255,255,255,.3); }
-#shine-input:focus { border-color: rgba(64,200,224,.3); }
-#shine-send { width: 38px; height: 38px; border-radius: 8px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
-
-#shine-footer { padding: 6px 14px; border-top: 1px solid rgba(64,200,224,.12); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
-#shine-footer span { font-size: 9px; color: rgba(255,255,255,.25); }
-
-@media (max-width: 420px) {
-  #shine-window { width: calc(100vw - 16px); height: calc(100vh - 80px); bottom: 8px; right: 8px; border-radius: 12px; }
-}
+#shine-root *{box-sizing:border-box;margin:0;padding:0}
+.sh-bubble{position:fixed;bottom:20px;right:20px;z-index:99999;font-family:'DM Sans',sans-serif}
+.sh-fab{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#40C8E0,#1B4BA0);border:none;cursor:pointer;box-shadow:0 4px 24px rgba(64,200,224,.35);font-size:28px;display:flex;align-items:center;justify-content:center}
+.sh-fab:hover{transform:scale(1.1)}
+.sh-win{position:fixed;bottom:20px;right:20px;z-index:99999;width:380px;height:560px;display:none;flex-direction:column;background:#060E1F;border:1px solid rgba(64,200,224,.12);border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.5);font-family:'DM Sans',sans-serif}
+.sh-win.open{display:flex}
+.sh-hd{padding:12px 16px;background:#0C1A3A;border-bottom:1px solid rgba(64,200,224,.12);display:flex;justify-content:space-between;align-items:center}
+.sh-msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.sh-msg{max-width:85%;padding:10px 14px;font-size:13px;line-height:1.6;white-space:pre-wrap;border-radius:12px}
+.sh-bot{align-self:flex-start;background:#0F1D3D;border:1px solid rgba(64,200,224,.12);color:rgba(255,255,255,.92);border-radius:12px 12px 12px 2px}
+.sh-usr{align-self:flex-end;background:#1B4BA0;border:1px solid rgba(64,200,224,.15);color:#fff;border-radius:12px 12px 2px 12px}
+.sh-qa{padding:0 14px 10px;display:flex;flex-wrap:wrap;gap:5px}
+.sh-qa button{background:#0C1A3A;border:1px solid rgba(64,200,224,.12);border-radius:20px;padding:5px 11px;font-size:11px;font-weight:600;color:#40C8E0;cursor:pointer;font-family:inherit}
+.sh-inp{padding:10px 14px;border-top:1px solid rgba(64,200,224,.12);background:#0C1A3A;display:flex;gap:8px}
+.sh-inp input{flex:1;padding:10px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.12);border-radius:8px;color:#fff;font-size:13px;font-family:inherit;outline:none}
+.sh-inp button{width:38px;height:38px;border-radius:8px;background:#40C8E0;border:none;cursor:pointer;color:#060E1F;font-size:16px}
+.sh-ok{padding:6px 14px;background:rgba(52,211,153,.08);border-top:1px solid rgba(52,211,153,.15);display:none;align-items:center;gap:6px;font-size:10px;color:#34D399}
+.sh-ok.show{display:flex}
+.sh-ft{padding:6px 14px;border-top:1px solid rgba(64,200,224,.12);display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,.25)}
+@media(max-width:420px){.sh-win{width:calc(100vw - 16px);height:calc(100vh - 80px);bottom:8px;right:8px}}
 </style>
-
 <script>
-(function() {
-  const QUICK_ACTIONS = [
-    { label: "🔥 Hood cleaning", msg: "How much does hood cleaning cost?" },
-    { label: "🪣 Grease trap", msg: "What does grease trap service cost?" },
-    { label: "🐛 Pest control", msg: "Tell me about commercial pest control" },
-    { label: "🧹 Deep cleaning", msg: "How much for a kitchen deep cleaning?" },
-    { label: "💧 Drain jetting", msg: "What does drain jetting cost?" },
-    { label: "💨 Pressure washing", msg: "I need pressure washing pricing" },
-    { label: "📋 Free assessment", msg: "I want to schedule a free kitchen assessment" },
-    { label: "🇪🇸 Español", msg: "Hola, necesito información sobre limpieza de campanas y precios" },
-  ];
+(function(){
+var WELCOME="Hey! I'm Shine \u2728 I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning \u2014 all 9 services. No callbacks. No waiting. Just real numbers.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame \u2014 soy biling\u00fce.";
+var msgs=[{role:"assistant",content:WELCOME}];
+var isOpen=false,loading=false,leadSent=false,showQA=true;
+var root=document.getElementById("shine-root");
 
-  const WELCOME = "Hey! I'm Shine ✨ I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning — all 9 of our services. No callbacks. No waiting. Just real numbers.\n\n¿Habla español? Pregúntame — soy bilingüe.";
+root.innerHTML='<div class="sh-bubble" id="sh-bub"><button class="sh-fab" id="sh-fab">\u2728</button></div><div class="sh-win" id="sh-win"><div class="sh-hd"><div style="display:flex;align-items:center;gap:10px"><div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#40C8E0,#1B4BA0);display:flex;align-items:center;justify-content:center;font-size:16px">\u2728</div><div><div style="font-size:14px;font-weight:700;color:#fff">Shine</div><div style="font-size:10px;color:#34D399">\u25cf Online \u2022 English & Espa\u00f1ol</div></div></div><div style="display:flex;gap:4px"><a href="tel:+16787518871" style="padding:6px 10px;background:rgba(64,200,224,.1);border:1px solid rgba(64,200,224,.12);border-radius:6px;color:#40C8E0;font-size:11px;font-weight:600;text-decoration:none">\ud83d\udcde Call</a><button id="sh-close" style="background:none;border:none;color:rgba(255,255,255,.5);cursor:pointer;font-size:18px;padding:4px 8px">\u2715</button></div></div><div class="sh-msgs" id="sh-msgs"></div><div class="sh-qa" id="sh-qa"></div><div class="sh-ok" id="sh-ok"><span style="width:6px;height:6px;border-radius:50%;background:#34D399"></span><span>Info captured \u2014 our team will follow up within 2 hours</span></div><div class="sh-inp"><input id="sh-input" placeholder="Ask about pricing, services, scheduling..."><button id="sh-send">\u2191</button></div><div class="sh-ft"><span>Powered by Shine \u2022 TruShine Services</span><span>\ud83d\udd12 Secure</span></div></div>';
 
-  let messages = [{ role: "assistant", content: WELCOME }];
-  let isOpen = false;
-  let loading = false;
-  let leadSent = false;
-  let quickShown = true;
+var QA=[
+{l:"\ud83d\udd25 Hood cleaning",m:"How much does hood cleaning cost?"},
+{l:"\ud83e\udea3 Grease trap",m:"What does grease trap service cost?"},
+{l:"\ud83d\udc1b Pest control",m:"Tell me about commercial pest control"},
+{l:"\ud83e\uddf9 Deep cleaning",m:"How much for a kitchen deep cleaning?"},
+{l:"\ud83d\udccb Free assessment",m:"I want to schedule a free kitchen assessment"},
+{l:"\ud83c\uddea\ud83c\uddf8 Espa\u00f1ol",m:"Hola, necesito informaci\u00f3n sobre limpieza de campanas y precios"}
+];
 
-  const root = document.getElementById("shine-root");
+function render(){
+var h="";
+msgs.forEach(function(m){h+='<div class="sh-msg '+(m.role==="user"?"sh-usr":"sh-bot")+'">'+esc(m.content)+'</div>';});
+if(loading)h+='<div class="sh-msg sh-bot" style="color:rgba(255,255,255,.5)">\u25cf \u25cf \u25cf</div>';
+document.getElementById("sh-msgs").innerHTML=h;
+document.getElementById("sh-msgs").scrollTop=99999;
+var qa=document.getElementById("sh-qa");
+if(showQA&&msgs.length<=1){qa.innerHTML=QA.map(function(q){return '<button onclick="window._shSend(\''+q.m.replace(/'/g,"\\'")+'\')">'+ q.l+'</button>';}).join("");}else{qa.innerHTML="";}
+}
 
-  // Build bubble
-  root.innerHTML = `
-    <div id="shine-bubble">
-      <div id="shine-teaser">✨ Need a price? Ask Shine — instant quotes, no waiting.</div>
-      <button id="shine-btn"><span>✨</span><span id="shine-dot"></span></button>
-    </div>
-    <div id="shine-window">
-      <div id="shine-header">
-        <div style="display:flex;align-items:center;gap:10px">
-          <div id="shine-avatar"><img src="/images/logo_official.png" alt="Shine" onerror="this.style.display='none';document.getElementById('shine-avatar-fallback').style.display='flex';this.parentElement.style.display='none';document.getElementById('shine-avatar-fallback').style.display='flex';"/></div>
-          <div id="shine-avatar-fallback">✨</div>
-          <div>
-            <div style="font-size:14px;font-weight:700;color:#fff">Shine</div>
-            <div style="font-size:10px;color:#34D399;display:flex;align-items:center;gap:4px"><span style="width:5px;height:5px;border-radius:50%;background:#34D399;display:inline-block"></span>Online now · English & Español</div>
-          </div>
-        </div>
-        <div style="display:flex;gap:4px">
-          <a href="tel:+16787518871" id="shine-call-btn">📞 Call</a>
-          <button id="shine-close">✕</button>
-        </div>
-      </div>
-      <div id="shine-messages"></div>
-      <div id="shine-quick"></div>
-      <div id="shine-captured"><span></span><span>Info captured — our team will follow up within 2 hours</span></div>
-      <div id="shine-input-area">
-        <input id="shine-input" placeholder="Ask about pricing, services, scheduling..." />
-        <button id="shine-send">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </div>
-      <div id="shine-footer"><span>Powered by Shine · TruShine Services</span><span>🔒 Secure</span></div>
-    </div>
-  `;
+function esc(t){return t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br>");}
 
-  // Render messages
-  function renderMessages() {
-    const container = document.getElementById("shine-messages");
-    let html = "";
-    messages.forEach(m => {
-      const cls = m.role === "user" ? "user" : "bot";
-      html += `<div class="shine-msg ${cls}"><div class="bubble">${escapeHtml(m.content)}</div></div>`;
-    });
-    if (loading) {
-      html += `<div class="shine-msg bot shine-typing"><div class="bubble"><span class="shine-d1">●</span><span class="shine-d2"> ●</span><span class="shine-d3"> ●</span></div></div>`;
-    }
-    container.innerHTML = html;
-    container.scrollTop = container.scrollHeight;
-  }
+window._shSend=function(text){
+if(!text||!text.trim()||loading)return;
+msgs.push({role:"user",content:text.trim()});
+showQA=false;loading=true;render();
+document.getElementById("sh-input").value="";
 
-  function escapeHtml(text) {
-    return text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br>");
-  }
+fetch("/api/shine",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({messages:msgs.map(function(m){return{role:m.role,content:m.content};})})
+}).then(function(r){return r.json();}).then(function(data){
+var reply=(data.content||[]).filter(function(b){return b.type==="text";}).map(function(b){return b.text;}).join("\n")||"Connection issue. Call us at (678) 751-8871!";
+msgs.push({role:"assistant",content:reply});
+loading=false;render();
+captureLead();
+}).catch(function(){
+msgs.push({role:"assistant",content:"Connection issue. Call us at (678) 751-8871 \u2014 available 24/7 for emergencies!"});
+loading=false;render();
+});
+};
 
-  function renderQuickActions() {
-    const container = document.getElementById("shine-quick");
-    if (!quickShown) { container.innerHTML = ""; return; }
-    container.innerHTML = QUICK_ACTIONS.map(qa =>
-      `<button onclick="window._shineSend('${qa.msg.replace(/'/g,"\\'")}')">${qa.label}</button>`
-    ).join("");
-  }
+function captureLead(){
+if(leadSent)return;
+var allText=msgs.filter(function(m){return m.role==="user";}).map(function(m){return m.content;}).join(" ");
+var phoneMatch=allText.match(/(\(?\d{3}\)?[\s.\-]?\d{3}[\s.\-]?\d{4})/);
+if(!phoneMatch)return;
+var phone=phoneMatch[1].replace(/[^\d]/g,"");
+var nameMatch=allText.match(/(?:my name is|i'm|this is|name is)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i);
+var emailMatch=allText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
+var bizMatch=allText.match(/(?:restaurant is|restaurant name is|it's called|I own|my place is)\s+([^.!?,]+)/i);
+var cityMatch=allText.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)||allText.match(/(marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|orlando|tampa|richmond|charleston|columbia|chattanooga)/i);
+var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
+var service=null;
+for(var kw in svcMap){if(allText.toLowerCase().indexOf(kw)!==-1){service=svcMap[kw];break;}}
+var firstName="",lastName="";
+if(nameMatch){var parts=nameMatch[1].trim().split(" ");firstName=parts[0]||"";lastName=parts.slice(1).join(" ")||"";}
 
-  function updateSendBtn() {
-    const btn = document.getElementById("shine-send");
-    const val = document.getElementById("shine-input").value.trim();
-    const color = val ? "#060E1F" : "rgba(255,255,255,.25)";
-    btn.style.background = val ? "#40C8E0" : "#0C1A3A";
-    btn.querySelector("svg").setAttribute("stroke", color);
-  }
+fetch("/api/ghl-lead",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({
+first_name:firstName,
+last_name:lastName,
+phone:phone,
+email:emailMatch?emailMatch[0]:"",
+organization:bizMatch?bizMatch[1].trim():"",
+city:cityMatch?(cityMatch[1]||cityMatch[0]).trim():"",
+service_needed:service||"",
+source:"Shine Chatbot",
+notes:"Lead from Shine chatbot. Service: "+(service||"not specified"),
+page_url:window.location.href
+})
+}).then(function(r){return r.json();}).then(function(d){
+console.log("Shine: Lead created in GHL",d);
+}).catch(function(e){
+console.error("Shine: GHL error",e);
+});
 
-  // Send message
-  window._shineSend = async function(text) {
-    if (!text.trim() || loading) return;
-    messages.push({ role: "user", content: text.trim() });
-    quickShown = false;
-    loading = true;
-    renderMessages();
-    renderQuickActions();
-    document.getElementById("shine-input").value = "";
-    updateSendBtn();
+leadSent=true;
+document.getElementById("sh-ok").classList.add("show");
+console.log("Shine: Lead captured",{phone:phone,service:service});
+}
 
-    try {
-      const res = await fetch("/api/shine", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: messages.map(m => ({ role: m.role, content: m.content })) }),
-      });
-      const data = await res.json();
-      const reply = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n")
-        || "Having trouble connecting. Call us at (678) 751-8871!";
-      messages.push({ role: "assistant", content: reply });
+document.getElementById("sh-fab").onclick=function(){isOpen=true;document.getElementById("sh-bub").style.display="none";document.getElementById("sh-win").classList.add("open");render();document.getElementById("sh-input").focus();};
+document.getElementById("sh-close").onclick=function(){isOpen=false;document.getElementById("sh-bub").style.display="flex";document.getElementById("sh-win").classList.remove("open");};
+document.getElementById("sh-input").onkeydown=function(e){if(e.key==="Enter")window._shSend(this.value);};
+document.getElementById("sh-send").onclick=function(){window._shSend(document.getElementById("sh-input").value);};
 
-      // Auto-capture lead
-      checkAndCaptureLead();
-    } catch(e) {
-      messages.push({ role: "assistant", content: "Connection issue. Call us at (678) 751-8871 — available 24/7 for emergencies!" });
-    }
-    loading = false;
-    renderMessages();
-  };
-
-  // Lead capture
-  function checkAndCaptureLead() {
-    if (leadSent) return;
-    const allUser = messages.filter(m => m.role === "user").map(m => m.content).join(" ");
-
-    const phoneMatch = allUser.match(/(?:\+?1?[\s.-]?)?(\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4})/);
-    if (!phoneMatch) return;
-
-    const phone = phoneMatch[1].replace(/[^\d]/g, "");
-    const emailMatch = allUser.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
-    const nameMatch = allUser.match(/(?:my name is|i'm|this is|name is)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i);
-    const bizMatch = allUser.match(/(?:restaurant is|restaurant name is|it's called|I own|my place is)\s+([^.!?,]+)/i);
-    const cityMatch = allUser.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)
-      || allUser.match(/(?:marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|sandy springs|lawrenceville|orlando|tampa|richmond|charleston|columbia|chattanooga|knoxville|memphis|durham|greensboro|winston-salem|huntsville|montgomery|buford|tucker|brookhaven|virginia beach)/i);
-
-    const serviceMap = { "hood": "Hood Cleaning", "campana": "Hood Cleaning", "grease trap": "Grease Trap", "trampa": "Grease Trap", "fire": "Fire Suppression", "pest": "Pest Control", "deep clean": "Deep Cleaning", "drain": "Drain Jetting", "pressure": "Pressure Washing", "janitor": "Janitorial", "oil": "UCO Management" };
-    let service = null;
-    for (const [kw, svc] of Object.entries(serviceMap)) {
-      if (allUser.toLowerCase().includes(kw)) { service = svc; break; }
-    }
-
-    // Submit to GHL
-    const fd = new FormData();
-    fd.append("formId", "9WDMt3dYlSyiUfC7k2IN");
-    fd.append("phone", phone);
-    if (nameMatch) {
-      var parts = nameMatch[1].trim().split(" ");
-      fd.append("first_name", parts[0] || "");
-      fd.append("last_name", parts.slice(1).join(" ") || "");
-    }
-    if (emailMatch) fd.append("email", emailMatch[0]);
-    if (bizMatch) fd.append("organization", bizMatch[1].trim());
-    if (cityMatch) fd.append("city", (cityMatch[1] || cityMatch[0]).trim());
-    if (service) fd.append("service_needed", service);
-    fd.append("source", "Shine Chatbot");
-    fd.append("notes", "Lead captured by Shine chatbot on " + window.location.href + ". Service interest: " + (service || "not specified") + ". Review conversation in Shine logs.");
-
-    fetch('/api/ghl-lead',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        first_name:fd.get('first_name')||'',
-        last_name:fd.get('last_name')||'',
-        phone:phone,
-        email:fd.get('email')||'',
-        organization:fd.get('organization')||'',
-        city:fd.get('city')||'',
-        service_needed:fd.get('service_needed')||'',
-        source:'Shine Chatbot',
-        notes:fd.get('notes')||'',
-        page_url:window.location.href
-      })
-    }).then(function(r){return r.json();}).then(function(d){console.log('Shine: Lead created in GHL',d);}).catch(function(e){console.error('Shine: GHL error',e);});
-
-    leadSent = true;
-    document.getElementById("shine-captured").classList.add("show");
-    console.log("Shine: Lead submitted to GHL", { phone, name: nameMatch?.[1], service });
-  }
-
-  // Toggle open/close
-  function openChat() {
-    isOpen = true;
-    document.getElementById("shine-bubble").style.display = "none";
-    document.getElementById("shine-window").classList.add("open");
-    renderMessages();
-    renderQuickActions();
-    document.getElementById("shine-input").focus();
-    document.getElementById("shine-dot").style.display = "none";
-  }
-
-  function closeChat() {
-    isOpen = false;
-    document.getElementById("shine-bubble").style.display = "flex";
-    document.getElementById("shine-window").classList.remove("open");
-  }
-
-  // Event listeners
-  document.getElementById("shine-btn").addEventListener("click", openChat);
-  document.getElementById("shine-teaser").addEventListener("click", openChat);
-  document.getElementById("shine-close").addEventListener("click", closeChat);
-  document.getElementById("shine-input").addEventListener("keydown", function(e) {
-    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); window._shineSend(this.value); }
-  });
-  document.getElementById("shine-input").addEventListener("input", updateSendBtn);
-  document.getElementById("shine-send").addEventListener("click", function() {
-    window._shineSend(document.getElementById("shine-input").value);
-  });
-
-  // Initial render
-  renderMessages();
-  renderQuickActions();
-  updateSendBtn();
+render();
 })();
 </script>
 
 
 <script>
-function goStep2(){console.log('Form handled by GHL iframe');}
+function goStep2(){
+var n=document.getElementById('f-name').value;
+var p=document.getElementById('f-phone').value;
+var e=document.getElementById('f-email').value;
+var b=document.getElementById('f-biz').value;
+if(!n||!p||!e||!b){alert('Please fill in all required fields.');return;}
+document.getElementById('ts-step1').style.display='none';
+document.getElementById('ts-step2').style.display='block';
+document.getElementById('step-bar-2').style.background='#40C8E0';
+}
 function goStep1(){
 document.getElementById('ts-step2').style.display='none';
 document.getElementById('ts-step1').style.display='block';
 document.getElementById('step-bar-2').style.background='rgba(64,200,224,.12)';
 }
-function submitForm(){console.log('Form handled by GHL iframe');}
+function submitForm(){
+var btn=document.getElementById('ts-submit-btn');
+btn.textContent='Sending...';btn.disabled=true;
+var src=document.getElementById('ts-form-wrap').getAttribute('data-source')||'TruShine Website';
+var d=new FormData();
+d.append('formId','pGzNpfTaWFi6ikjEWDRq');
+d.append('full_name',document.getElementById('f-name').value);
+d.append('phone',document.getElementById('f-phone').value);
+d.append('email',document.getElementById('f-email').value);
+d.append('business_name',document.getElementById('f-biz').value);
+d.append('address1',document.getElementById('f-addr').value);
+d.append('city',document.getElementById('f-city').value);
+d.append('state',document.getElementById('f-state').value);
+d.append('message',document.getElementById('f-details').value);
+d.append('source',src);
+d.append('page_url',window.location.href);
+var sv=document.getElementById('f-service');
+if(sv.value)d.append('service_needed',sv.value);
+fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{
+method:'POST',body:d,mode:'no-cors'
+}).then(function(){
+document.getElementById('ts-step2').style.display='none';
+document.getElementById('ts-success').style.display='block';
+}).catch(function(){
+document.getElementById('ts-step2').style.display='none';
+document.getElementById('ts-success').style.display='block';
+});
+}
 </script>
 </body>
 </html>
