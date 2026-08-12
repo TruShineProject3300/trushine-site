@@ -749,7 +749,7 @@ function scSubmit(){
   d.append('formId','9WDMt3dYlSyiUfC7k2IN'); var _sn=name.trim().split(' ');d.append('first_name',_sn[0]||'');d.append('last_name',_sn.slice(1).join(' ')||''); d.append('email',email);
   d.append('organization',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
   d.append('notes','Compliance Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
-  fetch('https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
+  fetch('https://link.apisystem.tech/widget/form/9WDMt3dYlSyiUfC7k2IN',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
 }
@@ -1173,7 +1173,7 @@ function scShowResults(score, name, biz){
     fd.append("source", "Shine Chatbot");
     fd.append("notes", "Lead captured by Shine chatbot on " + window.location.href + ". Service interest: " + (service || "not specified") + ". Review conversation in Shine logs.");
 
-    fetch("https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN", {
+    fetch("https://link.apisystem.tech/widget/form/9WDMt3dYlSyiUfC7k2IN", {
       method: "POST", body: fd, mode: "no-cors"
     });
 
@@ -1253,7 +1253,7 @@ d.append('source',src);
 d.append('page_url',window.location.href);
 var sv=document.getElementById('f-service');
 if(sv.value)d.append('service_needed',sv.value);
-fetch('https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN',{
+fetch('https://link.apisystem.tech/widget/form/9WDMt3dYlSyiUfC7k2IN',{
 method:'POST',body:d,mode:'no-cors'
 }).then(function(){
 document.getElementById('ts-step2').style.display='none';
