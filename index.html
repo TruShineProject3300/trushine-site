@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOC/solutions/fire-suppression.html"en">
 <head>
 <meta charset="UTF-8">
 <meta name="theme-color" content="#0D1B35">
@@ -367,7 +366,7 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
 <h1>One Platform. Eight Services. Every Kitchen Compliance Risk — <em>Eliminated.</em></h1>
 <p class="hr-d">The compliance company trusted by Mercedes-Benz Stadium, Delaware North, and 176 Cook Out locations. One contract covers every risk — fire, grease, oil, and documentation — across every kitchen you operate.</p>
 <div class="hr-st">
-<div><div class="hs-n">8<span>+</span></div><div class="hs-l">States</div></div>
+<div><div class="hs-n">7<span>+</span></div><div class="hs-l">States</div></div>
 <div><div class="hs-n">500<span>+</span></div><div class="hs-l">Locations</div></div>
 <div><div class="hs-n">7</div><div class="hs-l">Service Lines</div></div>
 <div><div class="hs-n">2015</div><div class="hs-l">Founded</div></div>
@@ -565,7 +564,7 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12) !import
 <a href="/industries/hotels.html" class="ind"><div class="ind-ic"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M9 8h1"/><path d="M9 12h1"/><path d="M9 16h1"/><path d="M14 8h1"/><path d="M14 12h1"/><path d="M14 16h1"/><path d="M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg></div><h3>Hotels & Hospitality</h3><p>Multi-kitchen hotel properties. BOH and FOH compliance across all food service areas.</p></a>
 <a href="/industries/hotels.html" class="ind"><div class="ind-ic"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Healthcare</h3><p>Hospital cafeterias and food service. Strict regulatory requirements. Documented compliance for accreditation.</p></a>
 <a href="/industries/multi-unit-operators.html" class="ind"><div class="ind-ic"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div><h3>Universities & Schools</h3><p>Campus dining and institutional food service. Multiple kitchens, one compliance program.</p></a>
-<a href="/industries/multi-unit-operators.html" class="ind"><div class="ind-ic"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="22" height="18" rx="2"/><line x1="1" y1="9" x2="23" y2="9"/><line x1="1" y1="15" x2="23" y2="15"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="16" y2="21"/></svg></div><h3>Multi-Unit Operators</h3><p>5 locations or 500 — one contract, one invoice, one compliance dashboard. Single-contract management for 5 locations or 500. We manage 176 Cook Out locations across the Southeast today.</p></a>
+<a href="<a href="/industries/multi-unit-operators.html" class="ind"><div class="ind-ic"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="22" height="18" rx="2"/><line x1="1" y1="9" x2="23" y2="9"/><line x1="1" y1="15" x2="23" y2="15"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="16" y2="21"/></svg></div><h3>Multi-Unit Operators</h3><p>5 locations or 500 — one contract, one invoice, one compliance dashboard. Single-contract management for 5 locations or 500. We manage 176 Cook Out locations across the Southeast today.</p></a>
 </div>
 </div></section>
 
@@ -952,7 +951,282 @@ function scShowResults(score, name, biz){
 <a href="#bottom-form" class="mob-call-fm" onclick="document.getElementById('bottom-form')&&(location.hash='bottom-form')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Get Protected</a>
 </div>
 
-<script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1baecb7645b2ba9a1b4d71"></script>
+<!--
+  SHINE CHATBOT — Embeddable Widget
+  TruShine Services · trushineservice.com
+  
+  INSTALLATION:
+  1. Remove the old GHL chatbot script tag:
+     <!-- Shine chatbot replaces GHL chat widget -->
+  
+  2. Paste this ENTIRE file content before </body> on every page
+  
+  3. Make sure api/shine.js exists in your GitHub repo
+  4. Make sure ANTHROPIC_API_KEY is set in Vercel environment variables
+-->
+
+<div id="shine-root"></div>
+
+<style>
+#shine-root * { box-sizing: border-box; margin: 0; padding: 0; }
+#shine-bubble { position: fixed; bottom: 20px; right: 20px; z-index: 99999; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+#shine-teaser { background: #0C1A3A; border: 1px solid rgba(64,200,224,.12); border-radius: 12px; padding: 10px 16px; font-size: 13px; color: rgba(255,255,255,.92); box-shadow: 0 4px 20px rgba(0,0,0,.4); max-width: 240px; cursor: pointer; }
+#shine-btn { width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #40C8E0, #1B4BA0); border: none; cursor: pointer; box-shadow: 0 4px 24px rgba(64,200,224,.35); display: flex; align-items: center; justify-content: center; font-size: 28px; transition: transform .2s; position: relative; }
+#shine-btn:hover { transform: scale(1.1); }
+#shine-dot { position: absolute; top: -2px; right: -2px; width: 14px; height: 14px; background: #EF4444; border-radius: 50%; border: 2px solid #060E1F; }
+
+#shine-window { position: fixed; bottom: 20px; right: 20px; z-index: 99999; width: 380px; height: 580px; display: none; flex-direction: column; background: #060E1F; border: 1px solid rgba(64,200,224,.12); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,.5); font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+#shine-window.open { display: flex; }
+
+#shine-header { padding: 12px 16px; background: #0C1A3A; border-bottom: 1px solid rgba(64,200,224,.12); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+#shine-avatar { width: 34px; height: 34px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 1px solid rgba(64,200,224,.12); }
+#shine-avatar img { width: 100%; height: 100%; object-fit: cover; }
+#shine-avatar-fallback { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #40C8E0, #1B4BA0); display: none; align-items: center; justify-content: center; font-size: 16px; }
+#shine-close { background: none; border: none; color: rgba(255,255,255,.5); cursor: pointer; font-size: 18px; padding: 4px 8px; }
+#shine-call-btn { padding: 6px 10px; background: rgba(64,200,224,.1); border: 1px solid rgba(64,200,224,.12); border-radius: 6px; color: #40C8E0; font-size: 11px; font-weight: 600; text-decoration: none; }
+
+#shine-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+#shine-messages::-webkit-scrollbar { width: 3px; }
+#shine-messages::-webkit-scrollbar-thumb { background: rgba(64,200,224,.2); border-radius: 3px; }
+
+.shine-msg { display: flex; max-width: 85%; }
+.shine-msg.user { align-self: flex-end; }
+.shine-msg.bot { align-self: flex-start; }
+.shine-msg .bubble { padding: 10px 14px; font-size: 13px; line-height: 1.65; white-space: pre-wrap; }
+.shine-msg.user .bubble { background: #1B4BA0; border: 1px solid rgba(64,200,224,.15); border-radius: 12px 12px 2px 12px; color: #fff; }
+.shine-msg.bot .bubble { background: #0F1D3D; border: 1px solid rgba(64,200,224,.12); border-radius: 12px 12px 12px 2px; color: rgba(255,255,255,.92); }
+
+.shine-typing .bubble { color: rgba(255,255,255,.5); }
+@keyframes shinePulse { 0%,100%{opacity:.3} 50%{opacity:1} }
+.shine-d1 { animation: shinePulse 1.4s infinite; }
+.shine-d2 { animation: shinePulse 1.4s infinite .2s; }
+.shine-d3 { animation: shinePulse 1.4s infinite .4s; }
+
+#shine-quick { padding: 0 14px 10px; display: flex; flex-wrap: wrap; gap: 5px; flex-shrink: 0; }
+#shine-quick button { background: #0C1A3A; border: 1px solid rgba(64,200,224,.12); border-radius: 20px; padding: 5px 11px; font-size: 11px; font-weight: 600; color: #40C8E0; cursor: pointer; font-family: inherit; white-space: nowrap; }
+#shine-quick button:hover { background: rgba(64,200,224,.08); }
+
+#shine-captured { padding: 6px 14px; background: rgba(52,211,153,.08); border-top: 1px solid rgba(52,211,153,.15); display: none; align-items: center; gap: 6px; flex-shrink: 0; }
+#shine-captured.show { display: flex; }
+#shine-captured span:first-child { width: 6px; height: 6px; border-radius: 50%; background: #34D399; }
+#shine-captured span:last-child { font-size: 10px; color: #34D399; }
+
+#shine-input-area { padding: 10px 14px; border-top: 1px solid rgba(64,200,224,.12); background: #0C1A3A; display: flex; gap: 8px; flex-shrink: 0; }
+#shine-input { flex: 1; padding: 10px 12px; background: rgba(255,255,255,.05); border: 1px solid rgba(64,200,224,.12); border-radius: 8px; color: #fff; font-size: 13px; font-family: inherit; outline: none; }
+#shine-input::placeholder { color: rgba(255,255,255,.3); }
+#shine-input:focus { border-color: rgba(64,200,224,.3); }
+#shine-send { width: 38px; height: 38px; border-radius: 8px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+
+#shine-footer { padding: 6px 14px; border-top: 1px solid rgba(64,200,224,.12); display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+#shine-footer span { font-size: 9px; color: rgba(255,255,255,.25); }
+
+@media (max-width: 420px) {
+  #shine-window { width: calc(100vw - 16px); height: calc(100vh - 80px); bottom: 8px; right: 8px; border-radius: 12px; }
+}
+</style>
+
+<script>
+(function() {
+  const QUICK_ACTIONS = [
+    { label: "🔥 Hood cleaning", msg: "How much does hood cleaning cost?" },
+    { label: "🪣 Grease trap", msg: "What does grease trap service cost?" },
+    { label: "🐛 Pest control", msg: "Tell me about commercial pest control" },
+    { label: "🧹 Deep cleaning", msg: "How much for a kitchen deep cleaning?" },
+    { label: "💧 Drain jetting", msg: "What does drain jetting cost?" },
+    { label: "💨 Pressure washing", msg: "I need pressure washing pricing" },
+    { label: "📋 Free assessment", msg: "I want to schedule a free kitchen assessment" },
+    { label: "🇪🇸 Español", msg: "Hola, necesito información sobre limpieza de campanas y precios" },
+  ];
+
+  const WELCOME = "Hey! I'm Shine ✨ I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning — all 9 of our services. No callbacks. No waiting. Just real numbers.\n\n¿Habla español? Pregúntame — soy bilingüe.";
+
+  let messages = [{ role: "assistant", content: WELCOME }];
+  let isOpen = false;
+  let loading = false;
+  let leadSent = false;
+  let quickShown = true;
+
+  const root = document.getElementById("shine-root");
+
+  // Build bubble
+  root.innerHTML = `
+    <div id="shine-bubble">
+      <div id="shine-teaser">✨ Need a price? Ask Shine — instant quotes, no waiting.</div>
+      <button id="shine-btn"><span>✨</span><span id="shine-dot"></span></button>
+    </div>
+    <div id="shine-window">
+      <div id="shine-header">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div id="shine-avatar"><img src="/images/logo_official.png" alt="Shine" onerror="this.style.display='none';document.getElementById('shine-avatar-fallback').style.display='flex';this.parentElement.style.display='none';document.getElementById('shine-avatar-fallback').style.display='flex';"/></div>
+          <div id="shine-avatar-fallback">✨</div>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:#fff">Shine</div>
+            <div style="font-size:10px;color:#34D399;display:flex;align-items:center;gap:4px"><span style="width:5px;height:5px;border-radius:50%;background:#34D399;display:inline-block"></span>Online now · English & Español</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:4px">
+          <a href="tel:+16787518871" id="shine-call-btn">📞 Call</a>
+          <button id="shine-close">✕</button>
+        </div>
+      </div>
+      <div id="shine-messages"></div>
+      <div id="shine-quick"></div>
+      <div id="shine-captured"><span></span><span>Info captured — our team will follow up within 2 hours</span></div>
+      <div id="shine-input-area">
+        <input id="shine-input" placeholder="Ask about pricing, services, scheduling..." />
+        <button id="shine-send">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+      <div id="shine-footer"><span>Powered by Shine · TruShine Services</span><span>🔒 Secure</span></div>
+    </div>
+  `;
+
+  // Render messages
+  function renderMessages() {
+    const container = document.getElementById("shine-messages");
+    let html = "";
+    messages.forEach(m => {
+      const cls = m.role === "user" ? "user" : "bot";
+      html += `<div class="shine-msg ${cls}"><div class="bubble">${escapeHtml(m.content)}</div></div>`;
+    });
+    if (loading) {
+      html += `<div class="shine-msg bot shine-typing"><div class="bubble"><span class="shine-d1">●</span><span class="shine-d2"> ●</span><span class="shine-d3"> ●</span></div></div>`;
+    }
+    container.innerHTML = html;
+    container.scrollTop = container.scrollHeight;
+  }
+
+  function escapeHtml(text) {
+    return text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\n/g,"<br>");
+  }
+
+  function renderQuickActions() {
+    const container = document.getElementById("shine-quick");
+    if (!quickShown) { container.innerHTML = ""; return; }
+    container.innerHTML = QUICK_ACTIONS.map(qa =>
+      `<button onclick="window._shineSend('${qa.msg.replace(/'/g,"\\'")}')">${qa.label}</button>`
+    ).join("");
+  }
+
+  function updateSendBtn() {
+    const btn = document.getElementById("shine-send");
+    const val = document.getElementById("shine-input").value.trim();
+    const color = val ? "#060E1F" : "rgba(255,255,255,.25)";
+    btn.style.background = val ? "#40C8E0" : "#0C1A3A";
+    btn.querySelector("svg").setAttribute("stroke", color);
+  }
+
+  // Send message
+  window._shineSend = async function(text) {
+    if (!text.trim() || loading) return;
+    messages.push({ role: "user", content: text.trim() });
+    quickShown = false;
+    loading = true;
+    renderMessages();
+    renderQuickActions();
+    document.getElementById("shine-input").value = "";
+    updateSendBtn();
+
+    try {
+      const res = await fetch("/api/shine", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: messages.map(m => ({ role: m.role, content: m.content })) }),
+      });
+      const data = await res.json();
+      const reply = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("\n")
+        || "Having trouble connecting. Call us at (678) 751-8871!";
+      messages.push({ role: "assistant", content: reply });
+
+      // Auto-capture lead
+      checkAndCaptureLead();
+    } catch(e) {
+      messages.push({ role: "assistant", content: "Connection issue. Call us at (678) 751-8871 — available 24/7 for emergencies!" });
+    }
+    loading = false;
+    renderMessages();
+  };
+
+  // Lead capture
+  function checkAndCaptureLead() {
+    if (leadSent) return;
+    const allUser = messages.filter(m => m.role === "user").map(m => m.content).join(" ");
+
+    const phoneMatch = allUser.match(/(?:\+?1?[\s.-]?)?(\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4})/);
+    if (!phoneMatch) return;
+
+    const phone = phoneMatch[1].replace(/[^\d]/g, "");
+    const emailMatch = allUser.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+    const nameMatch = allUser.match(/(?:my name is|i'm|this is|name is)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i);
+    const bizMatch = allUser.match(/(?:restaurant is|restaurant name is|it's called|I own|my place is)\s+([^.!?,]+)/i);
+    const cityMatch = allUser.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)
+      || allUser.match(/(?:marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|sandy springs|lawrenceville|orlando|tampa|richmond|charleston|columbia|chattanooga|knoxville|memphis|durham|greensboro|winston-salem|huntsville|montgomery|buford|tucker|brookhaven|virginia beach)/i);
+
+    const serviceMap = { "hood": "Hood Cleaning", "campana": "Hood Cleaning", "grease trap": "Grease Trap", "trampa": "Grease Trap", "fire": "Fire Suppression", "pest": "Pest Control", "deep clean": "Deep Cleaning", "drain": "Drain Jetting", "pressure": "Pressure Washing", "janitor": "Janitorial", "oil": "UCO Management" };
+    let service = null;
+    for (const [kw, svc] of Object.entries(serviceMap)) {
+      if (allUser.toLowerCase().includes(kw)) { service = svc; break; }
+    }
+
+    // Submit to GHL
+    const fd = new FormData();
+    fd.append("formId", "9WDMt3dYlSyiUfC7k2IN");
+    fd.append("phone", phone);
+    if (nameMatch) fd.append("full_name", nameMatch[1]);
+    if (emailMatch) fd.append("email", emailMatch[0]);
+    if (bizMatch) fd.append("business_name", bizMatch[1].trim());
+    if (cityMatch) fd.append("city", (cityMatch[1] || cityMatch[0]).trim());
+    if (service) fd.append("service_needed", service);
+    fd.append("source", "Shine Chatbot");
+    fd.append("page_url", window.location.href);
+    fd.append("message", "Lead captured by Shine chatbot. Service: " + (service || "not specified"));
+
+    fetch("https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN", {
+      method: "POST", body: fd, mode: "no-cors"
+    });
+
+    leadSent = true;
+    document.getElementById("shine-captured").classList.add("show");
+    console.log("Shine: Lead submitted to GHL", { phone, name: nameMatch?.[1], service });
+  }
+
+  // Toggle open/close
+  function openChat() {
+    isOpen = true;
+    document.getElementById("shine-bubble").style.display = "none";
+    document.getElementById("shine-window").classList.add("open");
+    renderMessages();
+    renderQuickActions();
+    document.getElementById("shine-input").focus();
+    document.getElementById("shine-dot").style.display = "none";
+  }
+
+  function closeChat() {
+    isOpen = false;
+    document.getElementById("shine-bubble").style.display = "flex";
+    document.getElementById("shine-window").classList.remove("open");
+  }
+
+  // Event listeners
+  document.getElementById("shine-btn").addEventListener("click", openChat);
+  document.getElementById("shine-teaser").addEventListener("click", openChat);
+  document.getElementById("shine-close").addEventListener("click", closeChat);
+  document.getElementById("shine-input").addEventListener("keydown", function(e) {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); window._shineSend(this.value); }
+  });
+  document.getElementById("shine-input").addEventListener("input", updateSendBtn);
+  document.getElementById("shine-send").addEventListener("click", function() {
+    window._shineSend(document.getElementById("shine-input").value);
+  });
+
+  // Initial render
+  renderMessages();
+  renderQuickActions();
+  updateSendBtn();
+})();
+</script>
+
 
 <script>
 function goStep2(){
