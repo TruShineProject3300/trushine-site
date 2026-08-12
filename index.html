@@ -822,30 +822,128 @@ function scShowResults(score, name, biz){
 </div>
 <div class="cta-fm">
 <div id="bottom-form"></div>
-<div id="bottom-form"></div>
-<div id="ts-form-wrap" style="max-width:700px;margin:0 auto;padding:40px 20px">
-<div style="text-align:center;margin-bottom:24px">
-<h2 style="font-family:'Oswald',sans-serif;font-size:28px;color:#fff;margin:0 0 8px">Request Your Free Assessment</h2>
+<div id="ts-form-wrap" style="max-width:640px;margin:0 auto;padding:48px 24px">
+<div style="text-align:center;margin-bottom:32px">
+<h2 style="font-size:26px;font-weight:700;color:#fff;margin:0 0 8px">Request Your Free Assessment</h2>
 <p style="color:rgba(255,255,255,.5);font-size:14px;margin:0">Takes 30 seconds. We respond within 2 hours.</p>
 </div>
-<iframe
-  src="https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN"
-  style="width:100%;height:800px;border:none;border-radius:8px"
-  id="inline-9WDMt3dYlSyiUfC7k2IN"
-  data-layout="{'id':'INLINE'}"
-  data-trigger-type="alwaysShow"
-  data-trigger-value=""
-  data-activation-type="alwaysActivated"
-  data-activation-value=""
-  data-deactivation-type="neverDeactivate"
-  data-deactivation-value=""
-  data-form-name="Shine Chatbot Lead Capture 8.12.2026"
-  data-height="800"
-  data-layout-iframe-id="inline-9WDMt3dYlSyiUfC7k2IN"
-  data-form-id="9WDMt3dYlSyiUfC7k2IN"
-  title="Request Your Free Assessment"
-></iframe>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div>
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">First Name</label>
+<input id="cf-first" type="text" placeholder="First name" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+</div>
+<div>
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Last Name</label>
+<input id="cf-last" type="text" placeholder="Last name" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<div>
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Phone *</label>
+<input id="cf-phone" type="tel" placeholder="(678) 000-0000" required style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+</div>
+<div>
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Email</label>
+<input id="cf-email" type="email" placeholder="your@email.com" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+</div>
+</div>
+
+<div style="margin-top:12px">
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Organization</label>
+<input id="cf-org" type="text" placeholder="Restaurant or business name" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<div>
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">City</label>
+<input id="cf-city" type="text" placeholder="City" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none">
+</div>
+<div>
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Service Needed</label>
+<select id="cf-service" style="width:100%;padding:12px 14px;background:#0C1A3A;border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none;-webkit-appearance:none">
+<option value="">Select a service</option>
+<option value="Hood Cleaning & Repair">Hood Cleaning & Repair</option>
+<option value="Hood Filter Exchange">Hood Filter Exchange</option>
+<option value="Fire Suppression Inspection">Fire Suppression Inspection</option>
+<option value="Grease Trap Service">Grease Trap Service</option>
+<option value="Drain Jetting">Drain Jetting</option>
+<option value="Deep Cleaning (BOH)">Deep Cleaning (BOH)</option>
+<option value="FOH Cleaning">FOH Cleaning</option>
+<option value="Pest Control">Pest Control</option>
+<option value="Janitorial Program">Janitorial Program</option>
+<option value="Pressure Washing">Pressure Washing</option>
+<option value="UCO Management / Oil Recycling">UCO Management / Oil Recycling</option>
+<option value="Oil Filtration (Fry360)">Oil Filtration (Fry360)</option>
+<option value="Full Compliance Package (360 Ecosystem)">Full Compliance Package (360 Ecosystem)</option>
+<option value="Emergency Service">Emergency Service</option>
+<option value="Not Sure - Need Assessment">Not Sure — Need Assessment</option>
+</select>
+</div>
+</div>
+
+<div style="margin-top:12px">
+<label style="display:block;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">Notes</label>
+<textarea id="cf-notes" rows="3" placeholder="Tell us about your kitchen or specific needs" style="width:100%;padding:12px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(64,200,224,.15);border-radius:8px;color:#fff;font-size:14px;font-family:inherit;outline:none;resize:vertical"></textarea>
+</div>
+
+<div id="cf-success" style="display:none;text-align:center;padding:24px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2);border-radius:8px;margin-top:16px">
+<div style="font-size:24px;margin-bottom:8px">✓</div>
+<div style="font-size:16px;font-weight:600;color:#34D399;margin-bottom:4px">Request Received</div>
+<div style="font-size:13px;color:rgba(255,255,255,.5)">We'll follow up within 2 hours. Call us anytime: <a href="tel:+16787518871" style="color:#40C8E0">(678) 751-8871</a></div>
+</div>
+
+<button id="cf-submit" onclick="cfSubmit()" style="width:100%;margin-top:16px;padding:16px;background:#40C8E0;color:#060E1F;border:none;border-radius:8px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s">
+Submit Request →
+</button>
+
+<p style="text-align:center;font-size:11px;color:rgba(255,255,255,.25);margin-top:12px">🔒 Your information is secure and never shared. By submitting you consent to receive follow-up communications.</p>
+</div>
+
+<!-- Hidden GHL form for actual submission -->
+<iframe name="ghl-hidden-frame" id="ghl-hidden-frame" style="display:none" aria-hidden="true"></iframe>
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+<script>
+function cfSubmit(){
+  var phone=document.getElementById('cf-phone').value.trim();
+  if(!phone){alert('Phone number is required.');return;}
+  var btn=document.getElementById('cf-submit');
+  btn.textContent='Sending...';btn.disabled=true;btn.style.opacity='0.6';
+  var gf=document.createElement('form');
+  gf.method='POST';
+  gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';
+  gf.target='ghl-hidden-frame';
+  gf.style.display='none';
+  var fields={
+    'formId':'9WDMt3dYlSyiUfC7k2IN',
+    'first_name':document.getElementById('cf-first').value.trim(),
+    'last_name':document.getElementById('cf-last').value.trim(),
+    'phone':phone,
+    'email':document.getElementById('cf-email').value.trim(),
+    'organization':document.getElementById('cf-org').value.trim(),
+    'city':document.getElementById('cf-city').value.trim(),
+    'service_needed':document.getElementById('cf-service').value,
+    'notes':document.getElementById('cf-notes').value.trim(),
+    'source':'TruShine Website',
+    'page_url':window.location.href
+  };
+  for(var key in fields){
+    if(fields[key]){
+      var inp=document.createElement('input');
+      inp.type='hidden';inp.name=key;inp.value=fields[key];
+      gf.appendChild(inp);
+    }
+  }
+  document.body.appendChild(gf);
+  gf.submit();
+  document.body.removeChild(gf);
+  btn.textContent='Sent ✓';
+  document.getElementById('cf-success').style.display='block';
+  setTimeout(function(){btn.textContent='Submit Request →';btn.disabled=false;btn.style.opacity='1';},5000);
+}
+</script>
 </div></section>
 
 
@@ -1156,9 +1254,22 @@ function scShowResults(score, name, biz){
     fd.append("source", "Shine Chatbot");
     fd.append("notes", "Lead captured by Shine chatbot on " + window.location.href + ". Service interest: " + (service || "not specified") + ". Review conversation in Shine logs.");
 
-    var gf=document.createElement('form');gf.method='POST';gf.action='https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN';gf.target='ghl-hidden-frame';gf.style.display='none';
-    for(var pair of fd.entries()){var inp=document.createElement('input');inp.type='hidden';inp.name=pair[0];inp.value=pair[1];gf.appendChild(inp);}
-    document.body.appendChild(gf);gf.submit();document.body.removeChild(gf);
+    fetch('/api/ghl-lead',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        first_name:fd.get('first_name')||'',
+        last_name:fd.get('last_name')||'',
+        phone:phone,
+        email:fd.get('email')||'',
+        organization:fd.get('organization')||'',
+        city:fd.get('city')||'',
+        service_needed:fd.get('service_needed')||'',
+        source:'Shine Chatbot',
+        notes:fd.get('notes')||'',
+        page_url:window.location.href
+      })
+    }).then(function(r){return r.json();}).then(function(d){console.log('Shine: Lead created in GHL',d);}).catch(function(e){console.error('Shine: GHL error',e);});}).catch(function(e){console.error('Shine: Webhook error',e);});
 
     leadSent = true;
     document.getElementById("shine-captured").classList.add("show");
