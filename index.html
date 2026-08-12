@@ -1173,14 +1173,17 @@ function scShowResults(score, name, biz){
     const fd = new FormData();
     fd.append("formId", "9WDMt3dYlSyiUfC7k2IN");
     fd.append("phone", phone);
-    if (nameMatch) fd.append("full_name", nameMatch[1]);
+    if (nameMatch) {
+      var parts = nameMatch[1].trim().split(" ");
+      fd.append("first_name", parts[0] || "");
+      fd.append("last_name", parts.slice(1).join(" ") || "");
+    }
     if (emailMatch) fd.append("email", emailMatch[0]);
-    if (bizMatch) fd.append("business_name", bizMatch[1].trim());
+    if (bizMatch) fd.append("organization", bizMatch[1].trim());
     if (cityMatch) fd.append("city", (cityMatch[1] || cityMatch[0]).trim());
     if (service) fd.append("service_needed", service);
     fd.append("source", "Shine Chatbot");
-    fd.append("page_url", window.location.href);
-    fd.append("message", "Lead captured by Shine chatbot. Service: " + (service || "not specified"));
+    fd.append("notes", "Lead captured by Shine chatbot on " + window.location.href + ". Service interest: " + (service || "not specified") + ". Review conversation in Shine logs.");
 
     fetch("https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN", {
       method: "POST", body: fd, mode: "no-cors"
