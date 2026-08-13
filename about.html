@@ -147,6 +147,10 @@ footer a:hover{color:var(--w)}
 .mob-ph{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:8px;font-size:14px;font-weight:700;background:#51C8E0;color:#060E1F}
 .mob-fm{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:8px;font-size:14px;font-weight:700;border:1.5px solid #51C8E0;color:#51C8E0}
 </style>
+<script 
+  src="https://link.msgsndr.com/js/external-tracking.js"
+  data-tracking-id="tk_85bc249a52b54fd581e8eb7e24015121">
+</script>
 </head>
 <body>
 
@@ -373,19 +377,10 @@ footer a:hover{color:var(--w)}
     <div class="ey" style="text-align:center">Connect With the Team</div>
     <h2 class="st" style="text-align:center;font-size:26px">Let's Walk Your Kitchen</h2>
     <p style="text-align:center;color:var(--dm);margin-bottom:32px;font-size:15px">Free inspection. Written quote. No commitment.<br>Carlos built this company to help the restaurants he used to work in. Let him help yours.</p>
-    <form id="ts-form" onsubmit="submitForm(event)">
-      <div class="form-row">
-        <input id="f-name" class="fi" type="text" placeholder="Your Name *" required>
-        <input id="f-biz" class="fi" type="text" placeholder="Restaurant / Business Name *" required>
-      </div>
-      <div class="form-row">
-        <input id="f-phone" class="fi" type="tel" placeholder="Phone Number *" required>
-        <input id="f-email" class="fi" type="email" placeholder="Email Address *" required>
-      </div>
-      <input type="hidden" id="f-source" value="about-page">
-      <button type="submit" class="fsub">Request Free Kitchen Walkthrough →</button>
-      <p style="text-align:center;font-size:12px;color:var(--dm);margin-top:12px">Responds within 2 hours · No commitment · 7 states covered</p>
-    </form>
+    <div style="min-height:884px">
+<iframe src="https://link.apisystem.tech/widget/form/dPdE5irmCkay76sedBDl" style="width:100%;height:884px;border:none;border-radius:8px" id="inline-dPdE5irmCkay76sedBDl" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-name="TruShine Website" data-height="884" data-layout-iframe-id="inline-dPdE5irmCkay76sedBDl" data-form-id="dPdE5irmCkay76sedBDl" title="Request Your Free Assessment"></iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</div>
     <div id="ts-confirm" style="display:none;text-align:center;padding:40px">
       <div style="font-size:48px;margin-bottom:16px">✓</div>
       <h3 style="font-size:22px;margin-bottom:8px">Got It</h3>
@@ -443,7 +438,7 @@ async function submitForm(e) {
     source: 'about-page',
   };
   try {
-    await fetch('https://services.leadconnectorhq.com/hooks/pGzNpfTaWFi6ikjEWDRq/webhook-trigger/pGzNpfTaWFi6ikjEWDRq', {
+    await fetch('https://link.apisystem.tech/widget/form/dPdE5irmCkay76sedBDl', {
       method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(p)
     });
   } catch(err) {}

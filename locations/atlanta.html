@@ -967,10 +967,10 @@ function scSubmit(){
   var score=0; scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
   var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
   var d=new FormData();
-  d.append('formId','pGzNpfTaWFi6ikjEWDRq'); d.append('full_name',name); d.append('email',email);
+  d.append('formId','dPdE5irmCkay76sedBDl'); d.append('full_name',name); d.append('email',email);
   d.append('business_name',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
   d.append('message','Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
-  fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
+  fetch('https://link.apisystem.tech/widget/form/dPdE5irmCkay76sedBDl',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
 }
@@ -1037,9 +1037,9 @@ function scShowResults(score, name, biz){
 </div>
 <div style="min-height:884px">
 <iframe
-    src="https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN"
+    src="https://link.apisystem.tech/widget/form/dPdE5irmCkay76sedBDl"
     style="width:100%;height:100%;border:none;border-radius:1px"
-    id="inline-9WDMt3dYlSyiUfC7k2IN" 
+    id="inline-dPdE5irmCkay76sedBDl" 
     data-layout="{'id':'INLINE'}"
     data-trigger-type="alwaysShow"
     data-trigger-value=""
@@ -1049,8 +1049,8 @@ function scShowResults(score, name, biz){
     data-deactivation-value=""
     data-form-name="Shine Chatbot Lead Capture 8.12.2026"
     data-height="884"
-    data-layout-iframe-id="inline-9WDMt3dYlSyiUfC7k2IN"
-    data-form-id="9WDMt3dYlSyiUfC7k2IN"
+    data-layout-iframe-id="inline-dPdE5irmCkay76sedBDl"
+    data-form-id="dPdE5irmCkay76sedBDl"
     title="Request Your Free Assessment"
         >
 </iframe>
@@ -1107,7 +1107,7 @@ var btn=document.getElementById('ts-submit-btn');
 btn.textContent='Sending...';btn.disabled=true;
 var src=document.getElementById('ts-form-wrap').getAttribute('data-source')||'TruShine Website';
 var d=new FormData();
-d.append('formId','pGzNpfTaWFi6ikjEWDRq');
+d.append('formId','dPdE5irmCkay76sedBDl');
 d.append('full_name',document.getElementById('f-name').value);
 d.append('phone',document.getElementById('f-phone').value);
 d.append('email',document.getElementById('f-email').value);
@@ -1120,7 +1120,7 @@ d.append('source',src);
 d.append('page_url',window.location.href);
 var sv=document.getElementById('f-service');
 if(sv.value)d.append('service_needed',sv.value);
-fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{
+fetch('https://link.apisystem.tech/widget/form/dPdE5irmCkay76sedBDl',{
 method:'POST',body:d,mode:'no-cors'
 }).then(function(){
 document.getElementById('ts-step2').style.display='none';
