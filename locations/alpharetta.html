@@ -614,10 +614,10 @@ function scSubmit(){
   var score=0; scQs.forEach(function(q){if(scAnswers[q.id])score+=scAnswers[q.id].s;});
   var lvl=score>=8?'LOW RISK':score>=5?'MODERATE RISK':'HIGH RISK';
   var d=new FormData();
-  d.append('formId','pGzNpfTaWFi6ikjEWDRq'); d.append('full_name',name); d.append('email',email);
+  d.append('formId','dPdE5irmCkay76sedBDl'); d.append('full_name',name); d.append('email',email);
   d.append('business_name',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
   d.append('message','Score: '+score+'/10 — '+lvl+' | Biz: '+biz);
-  fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
+  fetch('https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
 }
@@ -663,25 +663,13 @@ function scShowResults(score, name, biz){
 <section class="bottom-cta" id="bottom-form" data-contact="true">
 <div class="bcta-inner">
 <div><div class="ey">Get Started in Alpharetta</div><h2 class="st" style="font-size:36px">Your Alpharetta Kitchen Could Be Inspection-Ready Within 48 Hours.</h2><p class="sd" style="margin-top:16px">Schedule a free facility assessment. We walk your kitchen, identify every compliance gap, and deliver transparent pricing. No obligation.</p></div>
-<div class="bcta-form" id="ts-form-wrap" data-source="TruShine Website - Alpharetta">
-<h2 style="font-size:22px;font-weight:700;color:var(--ts-white);margin-bottom:6px">Request Your Free Assessment</h2>
-<p style="font-size:14px;color:var(--ts-muted);margin-bottom:20px">Takes 30 seconds. We respond within 2 hours.</p>
-<div style="display:flex;gap:8px;margin-bottom:24px"><div id="step-bar-1" style="flex:1;height:3px;border-radius:2px;background:var(--ts-cyan)"></div><div id="step-bar-2" style="flex:1;height:3px;border-radius:2px;background:var(--ts-border)"></div></div>
-<div id="ts-step1"><div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ts-cyan);margin-bottom:16px">Step 1 — Contact Info</div><div style="display:flex;flex-direction:column;gap:12px">
-<input type="text" id="f-name" placeholder="Full Name *" required style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="tel" id="f-phone" placeholder="Phone Number *" required style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="email" id="f-email" placeholder="Email Address *" required style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<input type="text" id="f-biz" placeholder="Business / Restaurant Name *" required style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none" onfocus="this.style.borderColor='#40C8E0'" onblur="this.style.borderColor='rgba(64,200,224,.12)'">
-<button type="button" onclick="goStep2()" style="padding:16px;background:var(--ts-cyan);color:var(--ts-deep);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px">Continue — Almost Done <span style="font-size:18px">→</span></button>
-</div></div>
-<div id="ts-step2" style="display:none"><div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ts-cyan);margin-bottom:16px">Step 2 — Job Details</div><div style="display:flex;flex-direction:column;gap:12px">
-<select id="f-service" onchange="this.style.color='#fff'" style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-muted);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;appearance:none"><option value="" disabled selected>What service do you need?</option><option>Hood Cleaning</option><option>Fire Suppression</option><option>Grease Trap</option><option>Deep Cleaning</option><option>Janitorial</option><option>Drain Jetting</option><option>Full Compliance Package</option><option>Not Sure</option></select>
-<input type="text" id="f-addr" placeholder="Street Address" style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none">
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><input type="text" id="f-city" placeholder="City" value="Alpharetta" style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none"><input type="text" id="f-state" placeholder="State" value="GA" style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none"></div>
-<textarea id="f-details" placeholder="Number of hoods, grease trap size, current provider..." rows="3" style="padding:14px 16px;border:1px solid var(--ts-border);border-radius:8px;background:rgba(255,255,255,.08);color:var(--ts-white);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;resize:vertical"></textarea>
-<div style="display:flex;gap:12px"><button type="button" onclick="goStep1()" style="padding:16px 24px;background:transparent;color:var(--ts-muted);border:1px solid var(--ts-border);border-radius:8px;font-size:14px;font-weight:600;cursor:pointer">← Back</button><button type="button" id="ts-submit-btn" onclick="submitForm()" style="flex:1;padding:16px;background:var(--ts-cyan);color:var(--ts-deep);border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer">Submit Assessment Request →</button></div>
-</div></div>
-<div id="ts-success" style="display:none;padding:32px;text-align:center"><div style="width:56px;height:56px;border-radius:50%;background:rgba(52,211,153,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><div style="font-size:20px;font-weight:700;color:var(--ts-white);margin-bottom:8px">Assessment Requested!</div><div style="font-size:14px;color:var(--ts-muted)">We'll contact you within 2 business hours.</div></div>
+<div id="ts-form-wrap" data-source="TruShine Website - Alpharetta">
+<h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
+<p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">Takes 30 seconds. We respond within 2 hours.</p>
+<div style="min-height:884px">
+<iframe src="https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl" style="width:100%;height:884px;border:none;border-radius:8px" id="inline-dPdE5irmCkay76sedBDl-hero" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-name="TruShine Website - Alpharetta" data-height="884" data-layout-iframe-id="inline-dPdE5irmCkay76sedBDl-hero" data-form-id="dPdE5irmCkay76sedBDl" title="Request Your Free Assessment"></iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</div>
 </div>
 </div>
 </section>
@@ -695,9 +683,9 @@ function scShowResults(score, name, biz){
 </div>
 <div style="min-height:884px">
 <iframe
-    src="https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN"
+    src="https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl"
     style="width:100%;height:100%;border:none;border-radius:1px"
-    id="inline-9WDMt3dYlSyiUfC7k2IN" 
+    id="inline-dPdE5irmCkay76sedBDl" 
     data-layout="{'id':'INLINE'}"
     data-trigger-type="alwaysShow"
     data-trigger-value=""
@@ -707,8 +695,8 @@ function scShowResults(score, name, biz){
     data-deactivation-value=""
     data-form-name="Shine Chatbot Lead Capture 8.12.2026"
     data-height="884"
-    data-layout-iframe-id="inline-9WDMt3dYlSyiUfC7k2IN"
-    data-form-id="9WDMt3dYlSyiUfC7k2IN"
+    data-layout-iframe-id="inline-dPdE5irmCkay76sedBDl"
+    data-form-id="dPdE5irmCkay76sedBDl"
     title="Request Your Free Assessment"
         >
 </iframe>
@@ -733,7 +721,7 @@ function scShowResults(score, name, biz){
 <script>
 function goStep2(){var n=document.getElementById('f-name').value;var p=document.getElementById('f-phone').value;var e=document.getElementById('f-email').value;var b=document.getElementById('f-biz').value;if(!n||!p||!e||!b){alert('Please fill in all required fields.');return;}document.getElementById('ts-step1').style.display='none';document.getElementById('ts-step2').style.display='block';document.getElementById('step-bar-2').style.background='#40C8E0';}
 function goStep1(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-step1').style.display='block';document.getElementById('step-bar-2').style.background='rgba(64,200,224,.12)';}
-function submitForm(){var btn=document.getElementById('ts-submit-btn');btn.textContent='Sending...';btn.disabled=true;var d=new FormData();d.append('formId','pGzNpfTaWFi6ikjEWDRq');d.append('full_name',document.getElementById('f-name').value);d.append('phone',document.getElementById('f-phone').value);d.append('email',document.getElementById('f-email').value);d.append('business_name',document.getElementById('f-biz').value);d.append('address1',document.getElementById('f-addr').value);d.append('city',document.getElementById('f-city').value);d.append('state',document.getElementById('f-state').value);d.append('message',document.getElementById('f-details').value);d.append('source','TruShine Website - Alpharetta');d.append('page_url',window.location.href);var sv=document.getElementById('f-service');if(sv.value)d.append('service_needed',sv.value);fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).then(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';}).catch(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';});}
+function submitForm(){var btn=document.getElementById('ts-submit-btn');btn.textContent='Sending...';btn.disabled=true;var d=new FormData();d.append('formId','dPdE5irmCkay76sedBDl');d.append('full_name',document.getElementById('f-name').value);d.append('phone',document.getElementById('f-phone').value);d.append('email',document.getElementById('f-email').value);d.append('business_name',document.getElementById('f-biz').value);d.append('address1',document.getElementById('f-addr').value);d.append('city',document.getElementById('f-city').value);d.append('state',document.getElementById('f-state').value);d.append('message',document.getElementById('f-details').value);d.append('source','TruShine Website - Alpharetta');d.append('page_url',window.location.href);var sv=document.getElementById('f-service');if(sv.value)d.append('service_needed',sv.value);fetch('https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl',{method:'POST',body:d,mode:'no-cors'}).then(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';}).catch(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';});}
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const answer=item.querySelector('.faq-a');const arrow=q.querySelector('.arrow');const isOpen=answer.style.display==='block';if(isOpen){answer.style.display='none';arrow.textContent='+';}else{answer.style.display='block';arrow.textContent='−';}});});
 </script>
 <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1baecb7645b2ba9a1b4d71"></script>
