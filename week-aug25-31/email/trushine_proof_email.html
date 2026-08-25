@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TruShine Services | Proof Before We Leave the Building</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#EAEFF7;font-family:'Open Sans',Arial,sans-serif;color:#1A2340}
+.wrapper{max-width:640px;margin:0 auto;background:#fff}
+.header{background:linear-gradient(135deg,#1A2E7A 0%,#1B4BA0 100%);padding:40px 48px 28px;text-align:center}
+.logo{font-family:'Oswald',sans-serif;font-size:34px;font-weight:700;color:#fff;letter-spacing:3px}
+.logo span{color:#51C8E0}
+.tagline{font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:3px;text-transform:uppercase;margin-top:6px}
+.header-bar{width:48px;height:3px;background:#51C8E0;margin:14px auto 0;border-radius:2px}
+.band{background:#0D1B35;padding:14px 48px;display:flex;justify-content:space-between;align-items:center}
+.band-l{font-family:'Oswald',sans-serif;font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase}
+.band-r{font-family:'Oswald',sans-serif;font-size:11px;color:#51C8E0;letter-spacing:2px;text-transform:uppercase}
+.hero{background:#0D1B35;padding:44px 48px;border-left:4px solid #51C8E0}
+.hero-label{font-size:10px;color:#51C8E0;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;font-weight:700}
+.hero h1{font-family:'Oswald',sans-serif;font-size:38px;font-weight:700;color:#fff;line-height:1.15;margin-bottom:18px}
+.hero h1 span{color:#51C8E0}
+.hero p{font-size:15px;color:rgba(255,255,255,0.78);line-height:1.85}
+.hero strong{color:#fff}
+.section{padding:40px 48px;border-bottom:1px solid #E4EAF4}
+.sec-label{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.sec-bar{width:4px;height:18px;background:#1B4BA0;border-radius:2px;flex-shrink:0}
+.sec-label span{font-family:'Oswald',sans-serif;font-size:10px;color:#58595B;letter-spacing:3px;text-transform:uppercase;font-weight:600}
+.section h2{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:#1A2E7A;margin-bottom:14px;line-height:1.2}
+.section p{font-size:14px;color:#444;line-height:1.85;margin-bottom:14px}
+.section p:last-child{margin-bottom:0}
+.stat-row{display:flex;gap:0;margin:24px 0;border:1px solid #E4EAF4;border-radius:8px;overflow:hidden}
+.stat-box{flex:1;padding:20px 12px;text-align:center;border-right:1px solid #E4EAF4;background:#F8FAFD}
+.stat-box:last-child{border-right:none}
+.stat-num{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:#1B4BA0}
+.stat-lbl{font-size:11px;color:#58595B;margin-top:4px;line-height:1.4}
+.story-card{background:#F4F7FC;border-left:4px solid #51C8E0;border-radius:0 8px 8px 0;padding:20px 24px;margin:20px 0}
+.story-label{font-size:10px;color:#1B4BA0;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.story-card p{font-size:14px;color:#333;line-height:1.75;margin:0}
+.dark-card{background:#0D1B35;border-radius:10px;padding:28px 32px;margin:20px 0}
+.dark-card h3{font-family:'Oswald',sans-serif;font-size:18px;color:#51C8E0;margin-bottom:14px}
+.check-list{list-style:none}
+.check-list li{font-size:13px;color:rgba(255,255,255,0.78);padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;gap:10px;line-height:1.5}
+.check-list li:last-child{border-bottom:none}
+.ck{color:#51C8E0;font-weight:700;flex-shrink:0}
+.number-block{background:linear-gradient(135deg,#0D1B35,#1A2E7A);border-radius:10px;padding:32px;margin:20px 0;text-align:center}
+.number-block .big-num{font-family:'Oswald',sans-serif;font-size:72px;font-weight:700;color:#51C8E0;line-height:1}
+.number-block .big-label{font-size:16px;color:#fff;margin-top:8px;font-weight:600}
+.number-block .big-sub{font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px}
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.svc{background:#F4F7FC;border-radius:8px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start}
+.svc-icon{font-size:18px;flex-shrink:0}
+.svc-name{font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;color:#1A2E7A}
+.svc-sub{font-size:11px;color:#58595B;margin-top:2px}
+.cta-section{background:linear-gradient(135deg,#1B4BA0,#1A2E7A);padding:48px;text-align:center}
+.cta-section h2{font-family:'Oswald',sans-serif;font-size:30px;color:#fff;margin-bottom:12px;line-height:1.2}
+.cta-section p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:28px;line-height:1.7}
+.cta-btn{display:inline-block;background:#51C8E0;color:#0D1B35;font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:18px 44px;text-decoration:none;border-radius:4px}
+.cta-contact{font-size:12px;color:rgba(255,255,255,0.4);margin-top:18px}
+.cta-contact a{color:#51C8E0;text-decoration:none}
+.footer{background:#0D1B35;padding:32px 48px;text-align:center}
+.footer-logo{font-family:'Oswald',sans-serif;font-size:16px;color:rgba(255,255,255,0.3);letter-spacing:3px;margin-bottom:10px}
+.footer-logo span{color:#51C8E0}
+.footer p{font-size:11px;color:rgba(255,255,255,0.22);line-height:1.8}
+.footer a{color:rgba(255,255,255,0.3);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<div class="header">
+  <div class="logo">TRU<span>SHINE</span> SERVICES</div>
+  <div class="tagline">One Vendor. Total Kitchen Compliance.</div>
+  <div class="header-bar"></div>
+</div>
+
+<div class="band">
+  <div class="band-l">August 25, 2026</div>
+  <div class="band-r">Proof Before We Leave the Building</div>
+</div>
+
+<div class="hero">
+  <div class="hero-label">This week in the field</div>
+  <h1>Your chef shouldn't have to ask<br><span>if the job was done.</span></h1>
+  <p>
+    They should already have the report. Fryer count. Pounds recycled. Supervisor name. Time in. Time out. Filed automatically — the same shift — before our truck leaves your dock.<br><br>
+    <strong>Nobody else in this industry does that. Here's what we did this week — and what it means for your kitchen.</strong>
+  </p>
+</div>
+
+<div class="section">
+  <div class="sec-label"><div class="sec-bar"></div><span>Week in Numbers — Aug 18–25</span></div>
+  <h2>6.8 Tons. Two Venues. Eight Days.</h2>
+  <p>This week our crews serviced two major Atlanta venues across four overnight shifts. Every pound verified. Every location documented. Every report delivered before the crew left the building.</p>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="stat-num">10,370</div><div class="stat-lbl">Lbs UCO recycled</div></div>
+    <div class="stat-box"><div class="stat-num">181</div><div class="stat-lbl">Fryers filtered</div></div>
+    <div class="stat-box"><div class="stat-num">9 MT</div><div class="stat-lbl">CO₂ avoided</div></div>
+    <div class="stat-box"><div class="stat-num">414</div><div class="stat-lbl">Trees equivalent</div></div>
+  </div>
+
+  <div class="number-block">
+    <div class="big-num">9,290</div>
+    <div class="big-label">Pounds. One Night. One Crew.</div>
+    <div class="big-sub">124 fryers filtered at a major Atlanta NFL venue — Friday overnight</div>
+  </div>
+
+  <p>One crew. One building. 32 locations serviced, 124 fryers filtered, 9,290 pounds of used cooking oil out the door — and the chef had the report before the first stadium employee walked in.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label"><div class="sec-bar"></div><span>The Product Nobody Else Offers</span></div>
+  <h2>Proof. In Writing. Before We Leave.</h2>
+  <p>Every TruShine service — oil filtration, hood cleaning, grease trap — generates a digital CASR report automatically at the end of the shift.</p>
+
+  <div class="story-card">
+    <div class="story-label">What the report includes</div>
+    <p>Fryer count · Pounds recycled · Supervisor name · Time in · Time out · Before/after photos · Compliance notes — delivered automatically to the chef, AP coordinator, and sustainability team the same night the work was done.</p>
+  </div>
+
+  <p>This week a Senior Executive Chef at a major Atlanta venue asked us to expand our report distribution — add the full location list, make photos clickable, include the sustainability team.</p>
+  <p>When a customer asks that hard for more of what you're building — they're planning to stay. That's not a vendor relationship. That's a compliance partnership.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label"><div class="sec-bar"></div><span>North Carolina — Now Open</span></div>
+  <h2>Winston-Salem Branch. Keys in Hand.</h2>
+  <p>This week TruShine signed the lease on our first physical North Carolina branch — Unit 115, 1136 Louise Road, Winston-Salem.</p>
+  <p>NC went from $659 in revenue across March–May to $45,079 in June–July. A market that proves itself gets a building. If you operate in North Carolina — we are now officially on the ground.</p>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="stat-num">$659</div><div class="stat-lbl">NC revenue Mar–May</div></div>
+    <div class="stat-box"><div class="stat-num">$45,079</div><div class="stat-lbl">NC revenue Jun–Jul</div></div>
+    <div class="stat-box"><div class="stat-num">6 days</div><div class="stat-lbl">Assessment to signed deal</div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-label"><div class="sec-bar"></div><span>Environmental Impact</span></div>
+  <h2>Your Kitchen's Waste Has a Second Life.</h2>
+  <p>The 10,370 pounds of used cooking oil collected this week doesn't go to a landfill. It becomes biodiesel, animal feed, and industrial base stock — and every pound is documented with a licensed disposal manifest.</p>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="stat-num">2,228</div><div class="stat-lbl">Gallons gasoline equivalent diverted</div></div>
+    <div class="stat-box"><div class="stat-num">9 MT</div><div class="stat-lbl">CO₂ avoided</div></div>
+    <div class="stat-box"><div class="stat-num">414</div><div class="stat-lbl">Trees equivalent</div></div>
+  </div>
+
+  <p>Unlicensed UCO pickup — even free pickup — is an environmental violation that creates liability for your operation. Every TruShine Environmental collection is licensed, documented, and reported.</p>
+</div>
+
+<div class="section">
+  <div class="sec-label"><div class="sec-bar"></div><span>Complete Kitchen Protection</span></div>
+  <h2>Eight Services. One Team. One Invoice.</h2>
+
+  <div class="services-grid">
+    <div class="svc"><div class="svc-icon">🔥</div><div><div class="svc-name">Exhaust Hood System</div><div class="svc-sub">Cleaning, Maintenance & Repair · NFPA 96</div></div></div>
+    <div class="svc"><div class="svc-icon">🧯</div><div><div class="svc-name">Fire Suppression</div><div class="svc-sub">Inspection & Repair · NFPA 17A</div></div></div>
+    <div class="svc"><div class="svc-icon">🪣</div><div><div class="svc-name">Grease Trap Service</div><div class="svc-sub">Pumping & FOG Compliance</div></div></div>
+    <div class="svc"><div class="svc-icon">💧</div><div><div class="svc-name">UCO Management</div><div class="svc-sub">Licensed Collection & Recycling</div></div></div>
+    <div class="svc"><div class="svc-icon">⚗️</div><div><div class="svc-name">Oil Filtration — Fry360°</div><div class="svc-sub">Extends oil life up to 50%</div></div></div>
+    <div class="svc"><div class="svc-icon">🧹</div><div><div class="svc-name">Deep Cleaning</div><div class="svc-sub">BOH & FOH · Inspection Ready</div></div></div>
+    <div class="svc"><div class="svc-icon">🏢</div><div><div class="svc-name">Janitorial Program</div><div class="svc-sub">Daily, Weekly & Monthly</div></div></div>
+    <div class="svc"><div class="svc-icon">🔩</div><div><div class="svc-name">Drain Jetting</div><div class="svc-sub">Emergency & Scheduled</div></div></div>
+  </div>
+
+  <div class="dark-card">
+    <h3>Every Client Gets</h3>
+    <ul class="check-list">
+      <li><span class="ck">✓</span> Digital CASR report delivered before our crew leaves your building</li>
+      <li><span class="ck">✓</span> Photo documentation per fryer — every service, every location</li>
+      <li><span class="ck">✓</span> Automated compliance calendar — we track your cycles</li>
+      <li><span class="ck">✓</span> 24/7 emergency response — 2-hour target</li>
+      <li><span class="ck">✓</span> Licensed UCO disposal with manifests retained 3 years</li>
+      <li><span class="ck">✓</span> One invoice · One account manager · One point of contact</li>
+      <li><span class="ck">✓</span> NFPA 96 and NFPA 17A certified technicians</li>
+    </ul>
+  </div>
+</div>
+
+<div class="cta-section">
+  <h2>Is Your Kitchen<br>Getting the Proof?</h2>
+  <p>If you don't have a documented service report in your inbox after every compliance visit — you don't have a compliance partner. You have a vendor. Let's change that.</p>
+  <a href="https://trushineservice.com" class="cta-btn">Get Your Free Assessment →</a>
+  <div class="cta-contact">
+    📞 <a href="tel:6787518871">678-751-8871</a> &nbsp;·&nbsp;
+    <a href="https://trushineservice.com">trushineservice.com</a> &nbsp;·&nbsp;
+    <a href="mailto:info@trushineservice.com">info@trushineservice.com</a><br>
+    <span style="margin-top:8px;display:block">GA · FL · NC · SC · TN · AL · VA · Emergency 24/7</span>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-logo">TRU<span>SHINE</span> SERVICES</div>
+  <p>
+    6500 McDonough Dr, Suite A-4 · Norcross, GA 30093<br>
+    <a href="tel:6787518871">678-751-8871</a> · <a href="mailto:info@trushineservice.com">info@trushineservice.com</a><br>
+    GA · FL · NC · SC · TN · AL · VA<br><br>
+    © 2026 TruShine Services, LLC. All rights reserved.<br>
+    <a href="#">Unsubscribe</a> · <a href="#">Update Preferences</a>
+  </p>
+</div>
+
+</div>
+</body>
+</html>
