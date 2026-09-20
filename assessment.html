@@ -89,6 +89,28 @@ legend{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)
  font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:var(--dim)}
 .trust span{display:inline-flex;align-items:center;gap:6px}
 .trust span::before{content:"\2713";color:var(--cyan);font-weight:700}
+.hdrtel{margin-left:auto;font-weight:700;font-size:12px;letter-spacing:.4px;color:var(--cyan);text-decoration:none;
+ border:1px solid var(--line);border-radius:20px;padding:6px 12px;white-space:nowrap}
+.hdrtel:hover{border-color:var(--cyan)}
+.proofline{display:flex;flex-wrap:wrap;gap:6px 14px;margin:-12px 0 24px;font-size:11px;letter-spacing:1.3px;
+ text-transform:uppercase;color:var(--dim)}
+.proofline span{display:inline-flex;align-items:center;gap:6px}
+.proofline span::before{content:"\2713";color:var(--cyan);font-weight:700}
+.ent{background:rgba(35,71,181,.16);border:1px solid rgba(64,200,224,.3);border-radius:14px;padding:20px;margin-bottom:20px}
+.ent .lbl{font-weight:700;font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--cyan);margin-bottom:9px}
+.ent h3{font-weight:800;font-size:20px;letter-spacing:-.6px;color:#fff;margin-bottom:8px;line-height:1.22}
+.ent p{font-size:15.5px;color:var(--txt)}
+.gtee{border:1px solid var(--line);border-left:4px solid var(--green);border-radius:12px;background:rgba(52,211,153,.05);
+ padding:18px 20px;margin-bottom:20px}
+.gtee .lbl{font-weight:700;font-size:10.5px;letter-spacing:2.2px;text-transform:uppercase;color:var(--green);margin-bottom:9px}
+.gtee p{font-size:15.5px;color:var(--txt)}
+.gtee p.mut{font-size:13.5px;color:var(--dim);margin-top:9px}
+.steps{list-style:none;counter-reset:s;margin-bottom:22px}
+.steps li{counter-increment:s;display:flex;align-items:baseline;gap:12px;padding:9px 0;border-top:1px dashed var(--line);font-size:15px}
+.steps li::before{content:counter(s);flex:0 0 24px;height:24px;border-radius:50%;background:rgba(64,200,224,.12);
+ color:var(--cyan);font-weight:800;font-size:12px;display:grid;place-items:center;font-family:'DM Sans'}
+.steps li b{color:#fff;font-weight:700}
+.steps li span{color:var(--dim);font-size:13.5px;margin-left:auto;text-align:right}
 footer{border-top:1px solid var(--line);padding:20px 0 30px;font-size:12px;color:rgba(255,255,255,.38);line-height:1.8}
 footer a{color:var(--cyan);text-decoration:none;font-weight:700}
 @media(min-width:640px){.wrap{padding:0 28px}main{padding:38px 0 50px}}
@@ -100,6 +122,7 @@ footer a{color:var(--cyan);text-decoration:none;font-weight:700}
 <header><div class="wrap lockrow">
   <span class="lock"><span class="t">Tru</span><span class="s">Shine</span></span>
   <span class="div"></span><span class="desc">Kitchen Compliance Platform</span>
+  <a class="hdrtel" href="tel:+16787518871" id="hdrTel">Emergency? Call</a>
 </div></header>
 
 <main class="wrap">
@@ -107,6 +130,7 @@ footer a{color:var(--cyan);text-decoration:none;font-weight:700}
     <p class="eyebrow">Free Kitchen Compliance Assessment</p>
     <h1>When the inspector asks, can you produce the records?</h1>
     <p class="sub">Four questions. Fifteen seconds. You will know where your compliance record stands before you give us your name.</p>
+    <div class="proofline" id="proofline"></div>
   </div>
 
   <div class="prog" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
@@ -118,11 +142,13 @@ footer a{color:var(--cyan);text-decoration:none;font-weight:700}
       <p class="qt">Which of these does your kitchen have?</p>
       <p class="qh">Select all that apply — this scopes the assessment.</p>
       <label class="opt multi"><input type="checkbox" name="sys" value="hood-cleaning" data-l="Hoods &amp; exhaust"><span>Hoods &amp; exhaust <em>NFPA 96</em></span></label>
-      <label class="opt multi"><input type="checkbox" name="sys" value="fire-suppression" data-l="Fire suppression"><span>Fire suppression <em>NFPA 17A</em></span></label>
       <label class="opt multi"><input type="checkbox" name="sys" value="uco-management" data-l="Fryers &amp; cooking oil"><span>Fryers &amp; cooking oil <em>UCO</em></span></label>
       <label class="opt multi"><input type="checkbox" name="sys" value="grease-trap" data-l="Grease trap"><span>Grease trap <em>FOG</em></span></label>
+      <label class="opt multi"><input type="checkbox" name="sys" value="fire-suppression" data-l="Fire suppression"><span>Fire suppression <em>NFPA 17A</em></span></label>
       <label class="opt multi"><input type="checkbox" name="sys" value="drain-jetting" data-l="Floor &amp; kitchen drains"><span>Floor &amp; kitchen drains</span></label>
-      <label class="opt multi"><input type="checkbox" name="sys" value="deep-cleaning" data-l="Dining room &amp; back of house"><span>Dining room &amp; back of house</span></label>
+      <label class="opt multi"><input type="checkbox" name="sys" value="deep-cleaning" data-l="Deep cleaning"><span>Deep cleaning <em>dining &amp; BOH</em></span></label>
+      <label class="opt multi"><input type="checkbox" name="sys" value="janitorial" data-l="Janitorial program"><span>Janitorial program <em>recurring</em></span></label>
+      <label class="opt multi"><input type="checkbox" name="sys" value="pressure-washing" data-l="Pressure washing"><span>Pressure washing <em>pad, dock, drive-thru</em></span></label>
       </fieldset>
       <div class="rowbtns"><button type="button" class="next" id="next0" disabled>Continue →</button></div>
     </div>
@@ -176,7 +202,26 @@ footer a{color:var(--cyan);text-decoration:none;font-weight:700}
 
     <div class="scope" id="scope"><div class="lbl">Your assessment will cover</div><ul id="scopeList"></ul></div>
 
-    <p class="leadin">We come to your kitchens, walk every system you selected, open the access panels, and tell you in writing what your compliance record actually says. No cost. No obligation. If everything is in order we will tell you that too.</p>
+    <div class="ent" id="ent" hidden>
+      <div class="lbl">Multi-location</div>
+      <h3 id="entHead"></h3>
+      <p id="entBody"></p>
+    </div>
+
+    <p class="leadin" id="leadin">We come to your kitchens, walk every system you selected, open the access panels, and tell you in writing what your compliance record actually says. No cost. No obligation. If everything is in order we will tell you that too.</p>
+
+    <div class="gtee">
+      <div class="lbl">Inspection-Ready Guarantee</div>
+      <p>If a fire marshal or health inspector cites a system we service and document, we come back within 24 hours and re-service it at no charge.</p>
+      <p class="mut">We will not promise you a passing score — no contractor can guarantee another authority's decision, and anyone who does is selling you something they cannot deliver. What we guarantee is our work and your records.</p>
+    </div>
+
+    <ol class="steps">
+      <li><b>You send this</b><span>Takes 30 seconds.</span></li>
+      <li><b>We review the location</b><span>Before anyone calls you.</span></li>
+      <li><b>A specialist calls</b><span>Within two business hours.</span></li>
+      <li><b>We walk the kitchens</b><span>You get the findings in writing.</span></li>
+    </ol>
 
     <div class="formbox" id="formbox"><div class="loading" id="loading">Loading your request form…</div></div>
     <p class="fallback">Form not loading? Call <a href="tel:+16787518871" id="fbTel">(678) 751-8871</a> and we'll take your request by phone.</p>
@@ -206,6 +251,7 @@ var CFG = {
   REPS        : { carlos:"Carlos", jay:"Jay", "":"A TruShine specialist" },
   STATES      : "GA · SC · NC · VA · AL · FL · TN",
   TRUST       : ["USDOT #4524609","IKECA-certified technicians","Serviced to NFPA 96 standard"],
+  PROOF       : ["USDOT-registered","IKECA-certified","7 states"],
   CERTS       : "IKECA · NFPA 96 · USDOT #4524609"
 };
 /* ════════════════════════════════════════════════════════════════════ */
@@ -216,6 +262,7 @@ var repKey=(qs.get("rep")||"").toLowerCase().replace(/[^a-z]/g,"");
 $("#footStates").textContent=CFG.STATES;
 $("#footCerts").textContent=CFG.CERTS;
 $("#trust").innerHTML=CFG.TRUST.map(function(t){return "<span>"+t+"</span>";}).join("");
+$("#proofline").innerHTML=CFG.PROOF.map(function(t){return "<span>"+t+"</span>";}).join("");
 $("#fbTel").textContent=CFG.PHONE; $("#fbTel").href="tel:"+CFG.PHONE_HREF;
 
 function track(n,d){try{window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:n},d||{}));
@@ -281,6 +328,17 @@ function finish(){
   document.getElementById("bandHead").textContent=BAND.head;
   document.getElementById("bandBody").textContent=BAND.body;
   document.getElementById("scopeList").innerHTML=sysLabels.map(function(s){return "<li>"+s+"</li>";}).join("");
+  var multi = (locationCount==="6–25"||locationCount==="26–100"||locationCount==="100+");
+  if(multi){
+    var e=document.getElementById("ent");
+    document.getElementById("entHead").textContent =
+      "You operate "+locationCount+" kitchens. This should not be booked one location at a time.";
+    document.getElementById("entBody").textContent =
+      "Tell us that below and we will scope a portfolio compliance review instead — every location assessed, one schedule, one set of records, one invoice. A specialist who handles multi-unit operators will call you, not a local rep.";
+    e.hidden=false;
+    document.getElementById("leadin").textContent =
+      "We walk every system you selected, at a representative sample of your locations, and give you in writing what your compliance record actually says across the portfolio. No cost. No obligation.";
+  }
   document.getElementById("quiz").style.display="none";
   document.querySelector(".prog").style.display="none";
   document.getElementById("intro").style.display="none";
