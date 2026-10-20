@@ -8,7 +8,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Free Kitchen Compliance Assessment | TruShine Services</title>
-<meta name="description" content="Four questions, fifteen seconds. Find out whether your commercial kitchen's compliance record would hold up to an inspection — hoods, fryers, grease, drains — then book a free on-site assessment.">
+<meta name="description" content="Four questions, fifteen seconds. Find out whether your commercial kitchen's compliance record would hold up to an inspection, hoods, fryers, grease, drains, then book a free on-site assessment.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://trushineservice.com/assessment">
 <meta name="theme-color" content="#060E1F">
@@ -147,7 +147,7 @@ footer a{color:var(--cyan);text-decoration:none;font-weight:700}
       <p class="qn">Question 1 of 4</p>
       <fieldset><legend>Which of these does your kitchen have?</legend>
       <p class="qt">Which of these does your kitchen have?</p>
-      <p class="qh">Select all that apply — this scopes the assessment.</p>
+      <p class="qh">Select all that apply, this scopes the assessment.</p>
       <label class="opt multi"><input type="checkbox" name="sys" value="hood-cleaning" data-l="Hoods &amp; exhaust"><span>Hoods &amp; exhaust <em>NFPA 96</em></span></label>
       <label class="opt multi"><input type="checkbox" name="sys" value="uco-management" data-l="Fryers &amp; cooking oil"><span>Fryers &amp; cooking oil <em>UCO</em></span></label>
       <label class="opt multi"><input type="checkbox" name="sys" value="grease-trap" data-l="Grease trap"><span>Grease trap <em>FOG</em></span></label>
@@ -178,7 +178,7 @@ footer a{color:var(--cyan);text-decoration:none;font-weight:700}
       <fieldset><legend>Could you produce those records in under five minutes?</legend>
       <p class="qt">Could you produce those records in under five minutes?</p>
       <p class="qh">Hood certificate, suppression tag, grease manifest, oil chain-of-custody.</p>
-      <label class="opt"><input type="radio" name="q3" value="0"><span>Yes — filed and dated</span></label>
+      <label class="opt"><input type="radio" name="q3" value="0"><span>Yes, filed and dated</span></label>
       <label class="opt"><input type="radio" name="q3" value="1"><span>Probably, I'd have to find them</span></label>
       <label class="opt"><input type="radio" name="q3" value="2"><span>No</span></label>
       <label class="opt"><input type="radio" name="q3" value="3"><span>I've never seen them</span></label>
@@ -220,13 +220,13 @@ footer a{color:var(--cyan);text-decoration:none;font-weight:700}
     <div class="gtee">
       <div class="lbl">Inspection-Ready Guarantee</div>
       <p>If a fire marshal or health inspector cites a system we service and document, we come back within 24 hours and re-service it at no charge.</p>
-      <p class="mut">We will not promise you a passing score — no contractor can guarantee another authority's decision, and anyone who does is selling you something they cannot deliver. What we guarantee is our work and your records.</p>
+      <p class="mut">We will not promise you a passing score, no contractor can guarantee another authority's decision, and anyone who does is selling you something they cannot deliver. What we guarantee is our work and your records.</p>
     </div>
 
     <ol class="steps">
       <li><b>You send this</b><span>Takes 30 seconds.</span></li>
       <li><b>We review the location</b><span>Before anyone calls you.</span></li>
-      <li><b>A specialist calls</b><span>Within two business hours.</span></li>
+      <li><b>A specialist calls</b><span>The same business day.</span></li>
       <li><b>We walk the kitchens</b><span>You get the findings in writing.</span></li>
     </ol>
 
@@ -323,7 +323,7 @@ var BANDS=[
  {max:5,cls:"b-gap",tag:"Gap forming",head:"There is a gap in your record.",
   body:"Grease and deposit build on a schedule whether the paperwork keeps up or not. A free assessment tells you exactly where you stand before an inspector does."},
  {max:9,cls:"b-exp",tag:"Exposed",head:"You would not pass an inspection today.",
-  body:"An undated or missing record is the finding, before anyone looks inside a duct or a trap. This is fixable — and the assessment costs nothing."}
+  body:"An undated or missing record is the finding, before anyone looks inside a duct or a trap. This is fixable, and the assessment costs nothing."}
 ];
 var SCORE=0,BAND=null;
 function finish(){
@@ -341,7 +341,7 @@ function finish(){
     document.getElementById("entHead").textContent =
       "You operate "+locationCount+" kitchens. This should not be booked one location at a time.";
     document.getElementById("entBody").textContent =
-      "Tell us that below and we will scope a portfolio compliance review instead — every location assessed, one schedule, one set of records, one invoice. A specialist who handles multi-unit operators will call you, not a local rep.";
+      "Tell us that below and we will scope a portfolio compliance review instead, every location assessed, one schedule, one set of records, one invoice. A specialist who handles multi-unit operators will call you, not a local rep.";
     e.hidden=false;
     document.getElementById("leadin").textContent =
       "We walk every system you selected, at a representative sample of your locations, and give you in writing what your compliance record actually says across the portfolio. No cost. No obligation.";
@@ -373,7 +373,7 @@ function mountForm(){
     service_id: systems[0]||"", form_id: CFG.GHL_FORM_ID,
     rep: repKey||"", src: qs.get("src")||"", channel: channel(), device: device(),
     referrer: document.referrer||"", submitted_at: new Date().toISOString(),
-    cta_clicked: "Assessment — "+(BAND?BAND.tag:"")
+    cta_clicked: "Assessment: "+(BAND?BAND.tag:"")
   };
   UTM.forEach(function(u){ if(qs.get(u)) p[u]=qs.get(u); });
   Object.keys(ft).forEach(function(k){ p["ft_"+k]=ft[k]; });
@@ -391,7 +391,7 @@ function mountForm(){
   f.setAttribute("data-trigger-type","alwaysShow");
   f.setAttribute("data-activation-type","alwaysActivated");
   f.setAttribute("data-deactivation-type","neverDeactivate");
-  f.setAttribute("data-form-name","TruShine Assessment — Card / Web");
+  f.setAttribute("data-form-name","TruShine Assessment: Card / Web");
   f.setAttribute("data-height",String(CFG.FORM_HEIGHT));
   f.setAttribute("data-layout-iframe-id","inline-"+CFG.GHL_FORM_ID);
   f.setAttribute("data-form-id",CFG.GHL_FORM_ID);
@@ -400,7 +400,7 @@ function mountForm(){
   document.getElementById("formbox").appendChild(f);
   track("assessment_form_shown",{band:BAND?BAND.tag:"",location_count:locationCount});
   setTimeout(function(){ var l=document.getElementById("loading");
-    if(l){ l.innerHTML='Form slow to load — call <a href="tel:'+CFG.PHONE_HREF+'" style="color:var(--cyan);font-weight:700">'+CFG.PHONE+'</a>'; } },9000);
+    if(l){ l.innerHTML='Form slow to load, call <a href="tel:'+CFG.PHONE_HREF+'" style="color:var(--cyan);font-weight:700">'+CFG.PHONE+'</a>'; } },9000);
 }
 
 track("assessment_start",{src:qs.get("src")||"",rep:repKey||""});
