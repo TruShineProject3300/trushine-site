@@ -98,7 +98,7 @@
   // Build bubble
   root.innerHTML = `
     <div id="shine-bubble">
-      <div id="shine-teaser">✨ Need a price? Ask Shine — instant quotes, no waiting.</div>
+      <div id="shine-teaser">✨ Need a price? Ask Shine, instant quotes, no waiting.</div>
       <button id="shine-btn"><span>✨</span><span id="shine-dot"></span></button>
     </div>
     <div id="shine-window">
@@ -118,7 +118,7 @@
       </div>
       <div id="shine-messages"></div>
       <div id="shine-quick"></div>
-      <div id="shine-captured"><span></span><span>Info captured — our team will follow up within 2 hours</span></div>
+      <div id="shine-captured"><span></span><span>Info captured, our team will follow up the same business day</span></div>
       <div id="shine-input-area">
         <input id="shine-input" placeholder="Ask about pricing, services, scheduling..." />
         <button id="shine-send">
@@ -189,7 +189,7 @@
       // Auto-capture lead
       checkAndCaptureLead();
     } catch(e) {
-      messages.push({ role: "assistant", content: "Connection issue. Call us at (678) 751-8871 — available 24/7 for emergencies!" });
+      messages.push({ role: "assistant", content: "Connection issue. Call us at (678) 751-8871, available 24/7 for emergencies!" });
     }
     loading = false;
     renderMessages();
@@ -275,5 +275,4 @@
   renderMessages();
   renderQuickActions();
   updateSendBtn();
-})();
-</script>
+})();`}`</script>
