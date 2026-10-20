@@ -164,9 +164,9 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
 </section>
 
 <section style="border-top:1px solid var(--t)">
-  <div class="ey">Eight Services, One Contract</div>
+  <div class="ey">Current Services. Pest Control Coming Soon.</div>
   <h2 class="st">Everything Your Kitchens Need</h2>
-  <p class="sd">Stop managing 5 vendors. One contract covers every compliance service across every location.</p>
+  <p class="sd">Stop managing 5 vendors. One contract covers the current compliance services across every location. Pest control is coming soon and is not included.</p>
   <div class="svc-grid">
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px">
       <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">🔥 Hood Cleaning & Repair</h3>
@@ -181,8 +181,8 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
       <p style="font-size:13px;color:var(--dm)">Scheduled pumping across all locations. FOG compliance documentation for every jurisdiction. Never miss a service date.</p>
     </div>
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px">
-      <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">🐛 Pest Control</h3>
-      <p style="font-size:13px;color:var(--dm)">Monthly IPM across every location. Documented reports for health inspections. Emergency callback included.</p>
+      <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">🐛 Pest Control (Coming Soon)</h3>
+      <p style="font-size:13px;color:var(--dm)">Planned service. Not available yet and not included in a current contract. A license is required in all 7 states. Join the waitlist. No emergency pest callback is offered.</p>
     </div>
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px">
       <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">🧹 Deep Cleaning</h3>
@@ -219,7 +219,7 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
       <div style="font-size:14px;font-weight:700;color:#51C8E0;margin-bottom:4px">KITCHEN PROTECTION</div>
       <div style="font-size:28px;font-weight:800;margin:8px 0">20-100</div>
       <div style="font-size:13px;color:var(--dm)">locations</div>
-      <p style="font-size:13px;color:var(--dm);margin-top:12px">All Starter services + pest control + deep cleaning + pressure washing. Compliance dashboard. Regional coordinator.</p>
+      <p style="font-size:13px;color:var(--dm);margin-top:12px">All Starter services + pest control (coming soon, not available yet) + deep cleaning + pressure washing. Compliance dashboard. Regional coordinator.</p>
     </div>
     <div style="text-align:center;padding:24px;background:rgba(81,200,224,.15);border:1px solid rgba(81,200,224,.3);border-radius:12px">
       <div style="font-size:14px;font-weight:700;color:#51C8E0;margin-bottom:4px">360 ECOSYSTEM</div>
@@ -236,7 +236,7 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
     <div style="padding:20px;border-left:3px solid #51C8E0">
       <h4 style="font-size:15px;font-weight:700;margin-bottom:6px">Quick Service (QSR)</h4>
-      <p style="font-size:13px;color:var(--dm)">High-volume, high-grease operations. Monthly hood cleaning, quarterly grease trap, ongoing pest control. Drive-thru and patio pressure washing.</p>
+      <p style="font-size:13px;color:var(--dm)">High-volume, high-grease operations. Monthly hood cleaning, quarterly grease trap, pest control (coming soon, not available yet). Drive-thru and patio pressure washing.</p>
     </div>
     <div style="padding:20px;border-left:3px solid #51C8E0">
       <h4 style="font-size:15px;font-weight:700;margin-bottom:6px">Fast Casual</h4>
@@ -394,7 +394,7 @@ async function submitForm(e) {
 </style>
 <script>
 (function(){
-var WELCOME="Hey! I'm Shine \u2728 I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning \u2014 all 9 services. No callbacks. No waiting. Just real numbers.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame \u2014 soy biling\u00fce.";
+var WELCOME="Hey! I'm Shine \u2728 I give instant pricing for hood cleaning, grease trap, deep cleaning, and our other live services. Commercial pest control is coming soon. Join the waitlist at trushineservice.com/solutions/pest-control.html. No callbacks. No waiting. Just real numbers for live services.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
 var msgs=[{role:"assistant",content:WELCOME}];
 var isOpen=false,loading=false,leadSent=false,showQA=true;
 var root=document.getElementById("shine-root");
@@ -404,7 +404,7 @@ root.innerHTML='<div class="sh-bubble" id="sh-bub"><button class="sh-fab" id="sh
 var QA=[
 {l:"\ud83d\udd25 Hood cleaning",m:"How much does hood cleaning cost?"},
 {l:"\ud83e\udea3 Grease trap",m:"What does grease trap service cost?"},
-{l:"\ud83d\udc1b Pest control",m:"Tell me about commercial pest control"},
+{l:"\ud83d\udc1b Pest control (Coming Soon)",m:"Commercial pest control is coming soon. How do I join the waitlist?"},
 {l:"\ud83e\uddf9 Deep cleaning",m:"How much for a kitchen deep cleaning?"},
 {l:"\ud83d\udccb Free assessment",m:"I want to schedule a free kitchen assessment"},
 {l:"\ud83c\uddea\ud83c\uddf8 Espa\u00f1ol",m:"Hola, necesito informaci\u00f3n sobre limpieza de campanas y precios"}
@@ -453,7 +453,7 @@ var nameMatch=allText.match(/(?:my name is|i'm|this is|name is)\s+([A-Z][a-z]+(?
 var emailMatch=allText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
 var bizMatch=allText.match(/(?:restaurant is|restaurant name is|it's called|I own|my place is)\s+([^.!?,]+)/i);
 var cityMatch=allText.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)||allText.match(/(marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|orlando|tampa|richmond|charleston|columbia|chattanooga)/i);
-var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
+var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control (Coming Soon)","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
 var service=null;
 for(var kw in svcMap){if(allText.toLowerCase().indexOf(kw)!==-1){service=svcMap[kw];break;}}
 var firstName="",lastName="";

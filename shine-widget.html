@@ -77,7 +77,7 @@
   const QUICK_ACTIONS = [
     { label: "🔥 Hood cleaning", msg: "How much does hood cleaning cost?" },
     { label: "🪣 Grease trap", msg: "What does grease trap service cost?" },
-    { label: "🐛 Pest control", msg: "Tell me about commercial pest control" },
+    { label: "🐛 Pest control (Coming Soon)", msg: "Commercial pest control is coming soon. How do I join the waitlist?" },
     { label: "🧹 Deep cleaning", msg: "How much for a kitchen deep cleaning?" },
     { label: "💧 Drain jetting", msg: "What does drain jetting cost?" },
     { label: "💨 Pressure washing", msg: "I need pressure washing pricing" },
@@ -85,7 +85,7 @@
     { label: "🇪🇸 Español", msg: "Hola, necesito información sobre limpieza de campanas y precios" },
   ];
 
-  const WELCOME = "Hey! I'm Shine ✨ I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning — all 9 of our services. No callbacks. No waiting. Just real numbers.\n\n¿Habla español? Pregúntame — soy bilingüe.";
+  const WELCOME = "Hey! I'm Shine ✨ I give instant pricing for hood cleaning, grease trap, deep cleaning, and our other live services. Commercial pest control is coming soon. Join the waitlist at trushineservice.com/solutions/pest-control.html. No callbacks. No waiting. Just real numbers for live services.\n\n¿Habla español? Pregúntame. Soy bilingüe.";
 
   let messages = [{ role: "assistant", content: WELCOME }];
   let isOpen = false;
@@ -210,7 +210,7 @@
     const cityMatch = allUser.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)
       || allUser.match(/(?:marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|sandy springs|lawrenceville|orlando|tampa|richmond|charleston|columbia|chattanooga|knoxville|memphis|durham|greensboro|winston-salem|huntsville|montgomery|buford|tucker|brookhaven|virginia beach)/i);
 
-    const serviceMap = { "hood": "Hood Cleaning", "campana": "Hood Cleaning", "grease trap": "Grease Trap", "trampa": "Grease Trap", "fire": "Fire Suppression", "pest": "Pest Control", "deep clean": "Deep Cleaning", "drain": "Drain Jetting", "pressure": "Pressure Washing", "janitor": "Janitorial", "oil": "UCO Management" };
+    const serviceMap = { "hood": "Hood Cleaning", "campana": "Hood Cleaning", "grease trap": "Grease Trap", "trampa": "Grease Trap", "fire": "Fire Suppression", "pest": "Pest Control (Coming Soon)", "deep clean": "Deep Cleaning", "drain": "Drain Jetting", "pressure": "Pressure Washing", "janitor": "Janitorial", "oil": "UCO Management" };
     let service = null;
     for (const [kw, svc] of Object.entries(serviceMap)) {
       if (allUser.toLowerCase().includes(kw)) { service = svc; break; }

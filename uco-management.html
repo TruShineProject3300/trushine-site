@@ -629,6 +629,7 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 
   <div style="font-size:12px;color:rgba(255,255,255,.4);margin-bottom:10px">Toggle services — watch your net cost update live</div>
   <div id="svc-list" style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px"></div>
+  <p style="font-size:12px;color:rgba(255,255,255,.55);margin:-8px 0 24px">Pest Control (Coming Soon) is not in this quote. It is not available yet, and it is not priced.</p>
 
   <!-- Cost breakdown -->
   <div style="background:#112040;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px;margin-bottom:20px">
@@ -692,7 +693,6 @@ var ucoServices = [
   {id:'hood',name:'Hood Cleaning',icon:'🔥',price:220,desc:'Quarterly NFPA 96 · billed monthly',tag:'Required'},
   {id:'fire',name:'Fire Suppression',icon:'🧯',price:85,desc:'Semi-annual inspection · billed monthly',tag:'Required'},
   {id:'grease',name:'Grease Trap',icon:'🪣',price:180,desc:'Monthly pump & service',tag:'Required'},
-  {id:'pest',name:'Pest Control',icon:'🐛',price:120,desc:'Monthly commercial treatment',tag:'Health Dept'},
   {id:'deep',name:'Deep Cleaning',icon:'🧹',price:280,desc:'Bi-annual kitchen restoration',tag:'Optional'},
   {id:'drain',name:'Drain Jetting',icon:'💧',price:95,desc:'Quarterly hydro jetting',tag:'Optional'}
 ];
@@ -868,7 +868,7 @@ document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{
 </style>
 <script>
 (function(){
-var WELCOME="Hey! I'm Shine \u2728 I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning \u2014 all 9 services. No callbacks. No waiting. Just real numbers.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame \u2014 soy biling\u00fce.";
+var WELCOME="Hey! I'm Shine \u2728 I give instant pricing for hood cleaning, grease trap, deep cleaning, and our other live services. Commercial pest control is coming soon. Join the waitlist at trushineservice.com/solutions/pest-control.html. No callbacks. No waiting. Just real numbers for live services.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
 var msgs=[{role:"assistant",content:WELCOME}];
 var isOpen=false,loading=false,leadSent=false,showQA=true;
 var root=document.getElementById("shine-root");
@@ -878,7 +878,7 @@ root.innerHTML='<div class="sh-bubble" id="sh-bub"><button class="sh-fab" id="sh
 var QA=[
 {l:"\ud83d\udd25 Hood cleaning",m:"How much does hood cleaning cost?"},
 {l:"\ud83e\udea3 Grease trap",m:"What does grease trap service cost?"},
-{l:"\ud83d\udc1b Pest control",m:"Tell me about commercial pest control"},
+{l:"\ud83d\udc1b Pest control (Coming Soon)",m:"Commercial pest control is coming soon. How do I join the waitlist?"},
 {l:"\ud83e\uddf9 Deep cleaning",m:"How much for a kitchen deep cleaning?"},
 {l:"\ud83d\udccb Free assessment",m:"I want to schedule a free kitchen assessment"},
 {l:"\ud83c\uddea\ud83c\uddf8 Espa\u00f1ol",m:"Hola, necesito informaci\u00f3n sobre limpieza de campanas y precios"}
@@ -927,7 +927,7 @@ var nameMatch=allText.match(/(?:my name is|i'm|this is|name is)\s+([A-Z][a-z]+(?
 var emailMatch=allText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
 var bizMatch=allText.match(/(?:restaurant is|restaurant name is|it's called|I own|my place is)\s+([^.!?,]+)/i);
 var cityMatch=allText.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)||allText.match(/(marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|orlando|tampa|richmond|charleston|columbia|chattanooga)/i);
-var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
+var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control (Coming Soon)","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
 var service=null;
 for(var kw in svcMap){if(allText.toLowerCase().indexOf(kw)!==-1){service=svcMap[kw];break;}}
 var firstName="",lastName="";
