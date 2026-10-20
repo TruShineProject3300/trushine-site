@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0D1B35">
+<title>Blog | TruShine Services</title>
+<meta name="description" content="Notes from TruShine Services on commercial kitchen compliance, documentation, and the crew that does the work.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trushineservice.com/blog">
+<meta property="og:title" content="Blog | TruShine Services">
+<meta property="og:description" content="Notes from TruShine Services on commercial kitchen compliance, documentation, and the crew that does the work.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://trushineservice.com/blog">
+<meta property="og:image" content="https://trushineservice.com/images/og-image.png">
+<link rel="icon" href="/images/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#40C8E0;--royal:#2347B5;--navy:#0C1A3A;--deep:#060E1F;--surface:#0F2240;--line:rgba(64,200,224,.12);--text:rgba(255,255,255,.92);--muted:rgba(255,255,255,.55);--dim:rgba(255,255,255,.28);--white:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--deep);color:var(--text);line-height:1.6}
+a{color:var(--cyan)}
+img{max-width:100%;height:auto}
+.nav{position:sticky;top:0;z-index:20;background:rgba(6,14,31,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);height:70px;display:flex;align-items:center;padding:0 32px}
+.nav-in{max-width:1100px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:baseline;text-decoration:none;gap:0}
+.logo-tru{font-size:22px;font-weight:800;color:var(--cyan);letter-spacing:-.4px}
+.logo-shine{font-size:22px;font-weight:800;color:var(--royal);letter-spacing:-.4px}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:600}
+.nav-links a[aria-current="page"],.nav-links a:hover{color:var(--cyan)}
+.nav-phone{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--cyan);text-decoration:none;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--cyan);color:var(--deep);text-decoration:none;font-weight:700;font-size:14px;padding:12px 18px;border-radius:8px}
+.btn:hover{background:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding:48px 32px 72px}
+.bread{font-size:13px;color:var(--dim);margin-bottom:22px}
+.bread a{color:var(--muted);text-decoration:none}
+.bread a:hover{color:var(--cyan)}
+.ey{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+h1{font-size:42px;line-height:1.1;letter-spacing:-1.2px;font-weight:800;color:var(--white);margin-bottom:14px}
+.lede{font-size:17px;color:var(--muted);max-width:680px;margin-bottom:28px}
+.group{margin-top:40px}
+.group h2{font-size:22px;font-weight:800;color:var(--white);letter-spacing:-.4px;margin-bottom:4px}
+.group .count{font-size:13px;color:var(--dim);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.card{display:block;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 18px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--cyan)}
+.card h3{font-size:16px;font-weight:700;color:var(--white);margin:0 0 6px}
+.card p{font-size:13px;color:var(--muted);line-height:1.55}
+.prose{max-width:760px}
+.prose h2{font-size:22px;font-weight:800;color:var(--white);margin:32px 0 10px;letter-spacing:-.3px}
+.prose p,.prose li{font-size:16px;color:var(--muted);margin-bottom:12px}
+.prose ul{margin:0 0 12px 1.2em}
+.prose a{color:var(--cyan)}
+.note{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--navy);color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:28px 32px 40px;background:var(--navy)}
+.foot{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.foot a{color:var(--muted);text-decoration:none;margin-right:14px}
+.foot a:hover{color:var(--cyan)}
+.foot strong{color:var(--white);font-weight:700}
+@media(max-width:720px){
+  .nav{height:auto;padding:12px 16px}
+  .nav-in{flex-wrap:wrap}
+  .nav-links{gap:14px;flex-wrap:wrap}
+  .wrap{padding:32px 16px 56px}
+  h1{font-size:32px}
+  footer{padding:24px 16px 36px}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-in">
+    <a href="/" class="logo" aria-label="TruShine home"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span></a>
+    <div class="nav-links"><a href="/services">Services</a><a href="/locations">Locations</a><a href="/blog" aria-current="page">Blog</a><a href="/privacy">Privacy</a></div>
+    <a class="nav-phone" href="tel:+16787518871">(678) 751-8871</a>
+  </div>
+</nav>
+<main class="wrap">
+  <p class="bread"><a href="/">Home</a> <span aria-hidden="true">/</span> <span>Notes and field reports</span></p>
+  <p class="ey">Blog</p>
+  <h1>Notes and field reports</h1>
+  <p class="lede">Every link below goes to a page that exists in this site. Some posts are stored in older content folders. The link is the real file, not a path that was never published.</p>
+  <div class="grid">
+<a class="card" href="/labor-day-2026"><h3>Happy Labor Day 2026</h3><p>A note from TruShine honoring the crew that runs commercial kitchen compliance across seven states.</p></a>
+<a class="card" href="/blog_labor_day_2026"><h3>Labor Day 2026: The Crew Behind Every Kitchen</h3><p>A companion note about the people who keep nightly compliance work on schedule.</p></a>
+<a class="card" href="/week-aug25-31/blog/proof-before-we-leave"><h3>Proof Before We Leave the Building</h3><p>How TruShine documents each commercial kitchen visit before the crew leaves.</p></a>
+<a class="card" href="/trushine-content/blog/one-vendor-kitchen-compliance"><h3>One Vendor for Commercial Kitchen Compliance</h3><p>Why operators put hood, suppression, grease, and oil work with one vendor.</p></a>
+<a class="card" href="/sep1-blog/standard-every-market-2026"><h3>The Same Standard, in Every Market</h3><p>How TruShine applies one kitchen compliance standard across its markets.</p></a>
+<a class="card" href="/full-week/blogs/blog2_field_report"><h3>Field Report: One Week of Kitchen Compliance</h3><p>What a week of commercial kitchen compliance work looks like in the field.</p></a>
+<a class="card" href="/full-week/blogs/blog3_two_inspectors"><h3>There Are Two Inspectors</h3><p>Fire inspection and health inspection are different visits, and kitchens need records for both.</p></a>
+<a class="card" href="/full-week/blogs/blog4_uco_esg"><h3>Used Cooking Oil, Licensed and Documented</h3><p>Why used cooking oil collection needs a licensed hauler and a paper trail.</p></a>
+</div>
+  <p class="note">Request a free assessment at <a href="/#bottom-form">trushineservice.com</a> or call <a href="tel:+16787518871">(678) 751-8871</a>.</p>
+</main>
+<footer>
+  <div class="foot">
+    <div><strong>TruShine Services, LLC</strong><br>6500 McDonough Dr, Suite A4, Norcross, GA 30093<br><a href="mailto:info@trushineservice.com">info@trushineservice.com</a></div>
+    <div><a href="/">Home</a><a href="/services">Services</a><a href="/locations">Locations</a><a href="/blog">Blog</a><a href="/privacy">Privacy</a></div>
+  </div>
+</footer>
+</body>
+</html>
