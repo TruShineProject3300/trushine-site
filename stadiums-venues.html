@@ -165,7 +165,7 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px">
       <div style="font-size:24px;margin-bottom:12px">🐛</div>
       <h3 style="font-size:16px;font-weight:700;margin-bottom:8px">Pest Control (Coming Soon)</h3>
-      <p style="font-size:13px;color:var(--dm);line-height:1.6">Commercial pest control is planned and is not available yet. It is not part of a current contract. A license is required in all 7 states. Join the waitlist. No monthly service and no emergency callback.</p>
+      <p style="font-size:13px;color:var(--dm);line-height:1.6">Commercial pest control is planned. Licensing is still in progress. Service is not offered yet and is not part of a current contract. Join the waitlist.</p>
     </div>
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px">
       <div style="font-size:24px;margin-bottom:12px">💨</div>
@@ -409,7 +409,7 @@ async function submitForm(e) {
 </style>
 <script>
 (function(){
-var WELCOME="Hey! I'm Shine \u2728 TruShine offers 8 services, plus pest control coming soon. Pest control is not offered yet. Join the waitlist at trushineservice.com/solutions/pest-control.html.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
+var WELCOME="Hey! I'm Shine \u2728 TruShine offers 8 services, plus pest control coming soon. Licensing is still in progress. Pest control is not offered yet. Join the waitlist at trushineservice.com/solutions/pest-control.html.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
 var msgs=[{role:"assistant",content:WELCOME}];
 var isOpen=false,loading=false,leadSent=false,showQA=true;
 var root=document.getElementById("shine-root");
@@ -486,7 +486,7 @@ organization:bizMatch?bizMatch[1].trim():"",
 city:cityMatch?(cityMatch[1]||cityMatch[0]).trim():"",
 service_needed:service||"",
 source:"Shine Chatbot",
-notes:"Lead from Shine chatbot. Service: "+(service||"not specified"),
+notes:(service==="Pest Control (Coming Soon)"?"Waitlist interest only. Licensing is still in progress. Pest control is not offered yet.":"Lead from Shine chatbot. Service: "+(service||"not specified")),
 page_url:window.location.href
 })
 }).then(function(r){return r.json();}).then(function(d){

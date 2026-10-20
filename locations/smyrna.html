@@ -770,7 +770,7 @@ document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{
 </style>
 <script>
 (function(){
-var WELCOME="Hey! I'm Shine \u2728 TruShine offers 8 services, plus pest control coming soon. Pest control is not offered yet. Join the waitlist at trushineservice.com/solutions/pest-control.html.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
+var WELCOME="Hey! I'm Shine \u2728 TruShine offers 8 services, plus pest control coming soon. Licensing is still in progress. Pest control is not offered yet. Join the waitlist at trushineservice.com/solutions/pest-control.html.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
 var msgs=[{role:"assistant",content:WELCOME}];
 var isOpen=false,loading=false,leadSent=false,showQA=true;
 var root=document.getElementById("shine-root");
@@ -847,7 +847,7 @@ organization:bizMatch?bizMatch[1].trim():"",
 city:cityMatch?(cityMatch[1]||cityMatch[0]).trim():"",
 service_needed:service||"",
 source:"Shine Chatbot",
-notes:"Lead from Shine chatbot. Service: "+(service||"not specified"),
+notes:(service==="Pest Control (Coming Soon)"?"Waitlist interest only. Licensing is still in progress. Pest control is not offered yet.":"Lead from Shine chatbot. Service: "+(service||"not specified")),
 page_url:window.location.href
 })
 }).then(function(r){return r.json();}).then(function(d){
