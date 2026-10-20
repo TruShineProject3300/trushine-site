@@ -582,7 +582,7 @@ document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{
 </style>
 <script>
 (function(){
-var WELCOME="Hey! I'm Shine \u2728 I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning \u2014 all 9 services. No callbacks. No waiting. Just real numbers.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame \u2014 soy biling\u00fce.";
+var WELCOME="Hey! I'm Shine \u2728 TruShine offers 8 services. TruShine commercial pest control is coming soon. We're working through the state licensing process and are not yet offering or scheduling pest control services. Leave your email to hear when we launch. This email list is for Georgia kitchens only: trushineservice.com/solutions/pest-control.html. We do not collect pest emails outside Georgia.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
 var msgs=[{role:"assistant",content:WELCOME}];
 var isOpen=false,loading=false,leadSent=false,showQA=true;
 var root=document.getElementById("shine-root");
@@ -592,7 +592,7 @@ root.innerHTML='<div class="sh-bubble" id="sh-bub"><button class="sh-fab" id="sh
 var QA=[
 {l:"\ud83d\udd25 Hood cleaning",m:"How much does hood cleaning cost?"},
 {l:"\ud83e\udea3 Grease trap",m:"What does grease trap service cost?"},
-{l:"\ud83d\udc1b Pest control",m:"Tell me about commercial pest control"},
+{l:"\ud83d\udc1b Pest control",m:"TruShine commercial pest control is coming soon. Is your kitchen in Georgia?"},
 {l:"\ud83e\uddf9 Deep cleaning",m:"How much for a kitchen deep cleaning?"},
 {l:"\ud83d\udccb Free assessment",m:"I want to schedule a free kitchen assessment"},
 {l:"\ud83c\uddea\ud83c\uddf8 Espa\u00f1ol",m:"Hola, necesito informaci\u00f3n sobre limpieza de campanas y precios"}
@@ -641,12 +641,13 @@ var nameMatch=allText.match(/(?:my name is|i'm|this is|name is)\s+([A-Z][a-z]+(?
 var emailMatch=allText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
 var bizMatch=allText.match(/(?:restaurant is|restaurant name is|it's called|I own|my place is)\s+([^.!?,]+)/i);
 var cityMatch=allText.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)||allText.match(/(marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|orlando|tampa|richmond|charleston|columbia|chattanooga)/i);
-var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
+var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control (Coming Soon)","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
 var service=null;
 for(var kw in svcMap){if(allText.toLowerCase().indexOf(kw)!==-1){service=svcMap[kw];break;}}
 var firstName="",lastName="";
 if(nameMatch){var parts=nameMatch[1].trim().split(" ");firstName=parts[0]||"";lastName=parts.slice(1).join(" ")||"";}
 
+if(service==="Pest Control (Coming Soon)"){leadSent=true;return;}
 fetch("/api/ghl-lead",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
@@ -659,7 +660,7 @@ organization:bizMatch?bizMatch[1].trim():"",
 city:cityMatch?(cityMatch[1]||cityMatch[0]).trim():"",
 service_needed:service||"",
 source:"Shine Chatbot",
-notes:"Lead from Shine chatbot. Service: "+(service||"not specified"),
+notes:(service==="Pest Control (Coming Soon)"?"Waitlist interest only. Licensing is still in progress. Pest control is not offered yet.":"Lead from Shine chatbot. Service: "+(service||"not specified")),
 page_url:window.location.href
 })
 }).then(function(r){return r.json();}).then(function(d){

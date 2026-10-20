@@ -143,7 +143,7 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
       <div style="font-size:28px;margin-bottom:8px">🍽️</div>
       <h4 style="font-size:14px;font-weight:700;margin-bottom:4px">Main Kitchen</h4>
-      <p style="font-size:12px;color:var(--dm)">Hood cleaning, fire suppression, grease trap, deep cleaning, pest control</p>
+      <p style="font-size:12px;color:var(--dm)">Hood cleaning, fire suppression, grease trap, deep cleaning</p>
     </div>
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
       <div style="font-size:28px;margin-bottom:8px">🎉</div>
@@ -153,7 +153,7 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
       <div style="font-size:28px;margin-bottom:8px">🍸</div>
       <h4 style="font-size:14px;font-weight:700;margin-bottom:4px">Bar & Restaurant</h4>
-      <p style="font-size:12px;color:var(--dm)">Hood systems, grease management, pest control, front-of-house cleaning</p>
+      <p style="font-size:12px;color:var(--dm)">Hood systems, grease management, front-of-house cleaning</p>
     </div>
     <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:20px;text-align:center">
       <div style="font-size:28px;margin-bottom:8px">🏊</div>
@@ -215,7 +215,7 @@ footer a{display:block;font-size:13px;color:var(--dm);margin-bottom:6px}
     </div>
     <div style="padding:16px 0">
       <h3 style="font-size:15px;font-weight:700;margin-bottom:8px">What documentation do you provide for brand audits?</h3>
-      <p style="font-size:14px;color:var(--dm)">Before/after photos, digital compliance certificates, NFPA 96 reports, fire suppression inspection tags, FOG manifests, and pest control logs. Everything your brand inspector and health department need — in one package.</p>
+      <p style="font-size:14px;color:var(--dm)">Before/after photos, digital compliance certificates, NFPA 96 reports, fire suppression inspection tags, FOG manifests. Everything your brand inspector and health department need — in one package.</p>
     </div>
   </div>
 </section>
@@ -319,7 +319,7 @@ async function submitForm(e) {
 </style>
 <script>
 (function(){
-var WELCOME="Hey! I'm Shine \u2728 I give instant pricing for hood cleaning, grease trap, pest control, deep cleaning \u2014 all 9 services. No callbacks. No waiting. Just real numbers.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame \u2014 soy biling\u00fce.";
+var WELCOME="Hey! I'm Shine \u2728 TruShine offers 8 services. TruShine commercial pest control is coming soon. We're working through the state licensing process and are not yet offering or scheduling pest control services. Leave your email to hear when we launch. This email list is for Georgia kitchens only: trushineservice.com/solutions/pest-control.html. We do not collect pest emails outside Georgia.\n\n\u00bfHabla espa\u00f1ol? Preg\u00fantame. Soy biling\u00fce.";
 var msgs=[{role:"assistant",content:WELCOME}];
 var isOpen=false,loading=false,leadSent=false,showQA=true;
 var root=document.getElementById("shine-root");
@@ -329,7 +329,7 @@ root.innerHTML='<div class="sh-bubble" id="sh-bub"><button class="sh-fab" id="sh
 var QA=[
 {l:"\ud83d\udd25 Hood cleaning",m:"How much does hood cleaning cost?"},
 {l:"\ud83e\udea3 Grease trap",m:"What does grease trap service cost?"},
-{l:"\ud83d\udc1b Pest control",m:"Tell me about commercial pest control"},
+{l:"\ud83d\udc1b Pest control",m:"TruShine commercial pest control is coming soon. Is your kitchen in Georgia?"},
 {l:"\ud83e\uddf9 Deep cleaning",m:"How much for a kitchen deep cleaning?"},
 {l:"\ud83d\udccb Free assessment",m:"I want to schedule a free kitchen assessment"},
 {l:"\ud83c\uddea\ud83c\uddf8 Espa\u00f1ol",m:"Hola, necesito informaci\u00f3n sobre limpieza de campanas y precios"}
@@ -378,12 +378,13 @@ var nameMatch=allText.match(/(?:my name is|i'm|this is|name is)\s+([A-Z][a-z]+(?
 var emailMatch=allText.match(/[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/);
 var bizMatch=allText.match(/(?:restaurant is|restaurant name is|it's called|I own|my place is)\s+([^.!?,]+)/i);
 var cityMatch=allText.match(/(?:in|from|located in|we're in)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i)||allText.match(/(marietta|atlanta|norcross|alpharetta|duluth|charlotte|raleigh|nashville|jacksonville|greenville|birmingham|roswell|kennesaw|smyrna|decatur|orlando|tampa|richmond|charleston|columbia|chattanooga)/i);
-var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
+var svcMap={"hood":"Hood Cleaning","campana":"Hood Cleaning","grease trap":"Grease Trap","trampa":"Grease Trap","fire":"Fire Suppression","pest":"Pest Control (Coming Soon)","deep clean":"Deep Cleaning","drain":"Drain Jetting","pressure":"Pressure Washing","janitor":"Janitorial","oil":"UCO Management"};
 var service=null;
 for(var kw in svcMap){if(allText.toLowerCase().indexOf(kw)!==-1){service=svcMap[kw];break;}}
 var firstName="",lastName="";
 if(nameMatch){var parts=nameMatch[1].trim().split(" ");firstName=parts[0]||"";lastName=parts.slice(1).join(" ")||"";}
 
+if(service==="Pest Control (Coming Soon)"){leadSent=true;return;}
 fetch("/api/ghl-lead",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
@@ -396,7 +397,7 @@ organization:bizMatch?bizMatch[1].trim():"",
 city:cityMatch?(cityMatch[1]||cityMatch[0]).trim():"",
 service_needed:service||"",
 source:"Shine Chatbot",
-notes:"Lead from Shine chatbot. Service: "+(service||"not specified"),
+notes:(service==="Pest Control (Coming Soon)"?"Waitlist interest only. Licensing is still in progress. Pest control is not offered yet.":"Lead from Shine chatbot. Service: "+(service||"not specified")),
 page_url:window.location.href
 })
 }).then(function(r){return r.json();}).then(function(d){
