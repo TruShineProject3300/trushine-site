@@ -32,7 +32,7 @@ Hashtags:
 First Comment:
 Did you know TruShine takes care of your full kitchen? 🍳🔥
 ✅ Exhaust Hood System — Cleaning, Maintenance & Repair
-✅ Fire Suppression Systems ✅ Grease Trap Service. Pest control is coming soon. Licensing is still in progress. Service is not offered yet.
+✅ Fire Suppression Systems ✅ Grease Trap Service
 ✅ Oil Filtration & Recycling ✅ Deep Cleaning & Janitorial
 ✅ Pressure Washing ✅ Drain Jetting
 One call. Every service. Zero compliance gaps.

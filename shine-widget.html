@@ -77,7 +77,7 @@
   const QUICK_ACTIONS = [
     { label: "🔥 Hood cleaning", msg: "How much does hood cleaning cost?" },
     { label: "🪣 Grease trap", msg: "What does grease trap service cost?" },
-    { label: "🐛 Pest control (Coming Soon)", msg: "Pest control is not offered yet. How do I join the waitlist?" },
+    { label: "🐛 Pest control", msg: "TruShine commercial pest control is coming soon. Is your kitchen in Georgia?" },
     { label: "🧹 Deep cleaning", msg: "How much for a kitchen deep cleaning?" },
     { label: "💧 Drain jetting", msg: "What does drain jetting cost?" },
     { label: "💨 Pressure washing", msg: "I need pressure washing pricing" },
@@ -85,7 +85,7 @@
     { label: "🇪🇸 Español", msg: "Hola, necesito información sobre limpieza de campanas y precios" },
   ];
 
-  const WELCOME = "Hey! I'm Shine ✨ TruShine offers 8 services, plus pest control coming soon. Licensing is still in progress. Pest control is not offered yet. Join the waitlist at trushineservice.com/solutions/pest-control.html.\n\n¿Habla español? Pregúntame. Soy bilingüe.";
+  const WELCOME = "Hey! I'm Shine ✨ TruShine offers 8 services. TruShine commercial pest control is coming soon. We're working through the state licensing process and are not yet offering or scheduling pest control services. Leave your email to hear when we launch. This email list is for Georgia kitchens only: trushineservice.com/solutions/pest-control.html. We do not collect pest emails outside Georgia.\n\n¿Habla español? Pregúntame. Soy bilingüe.";
 
   let messages = [{ role: "assistant", content: WELCOME }];
   let isOpen = false;
@@ -232,6 +232,7 @@
     fd.append("source", "Shine Chatbot");
     fd.append("notes", service === "Pest Control (Coming Soon)" ? "Waitlist interest only. Licensing is still in progress. Pest control is not offered yet." : "Lead captured by Shine chatbot on " + window.location.href + ". Service interest: " + (service || "not specified") + ". Review conversation in Shine logs.");
 
+    if (service === "Pest Control (Coming Soon)") { leadSent = true; return; }
     fetch("https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN", {
       method: "POST", body: fd, mode: "no-cors"
     });
