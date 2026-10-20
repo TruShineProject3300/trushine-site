@@ -55,7 +55,7 @@ COMPANY: TruShine Services — Kitchen Compliance Platform
 PHONE: (678) 751-8871
 WEBSITE: trushineservice.com
 STATES: GA, NC, SC, TN, FL, VA, AL (7 states)
-CREDENTIAL: Direct kitchen services partner for Mercedes-Benz Stadium during FIFA World Cup 2026. 500+ locations. 176 Cookout locations.
+CREDENTIAL: Direct kitchen services partner for a major stadium during a major international event. 500+ locations. A large restaurant-chain account.
 
 ═══════════════════════════════════════════════
 OFFICIAL PRICE TABLE — Effective May 23, 2026
@@ -74,7 +74,7 @@ Quote these numbers EXACTLY. Do not round or estimate.
    Travel fee (50+ miles): +$100
    Neglected system (6+ months overdue): 1.5x base
    Repair & maintenance: $165/hr + parts
-   Note: First fan is included in base. Cookout default = Medium ($600).
+   Note: First fan is included in base. Default chain account = Medium ($600).
 
 2. GREASE TRAP (6 tiers by gallon size)
    XS (up to 50 gal): $325 — indoor under-sink, small cafes, food trucks
@@ -128,7 +128,7 @@ Quote these numbers EXACTLY. Do not round or estimate.
 
 7. OIL FILTRATION (Fry360)
    DO NOT quote specific per-fryer rates publicly.
-   Say: "Our Fry360 oil filtration program is custom-priced based on venue volume and number of fryers. We currently manage 100+ fryers across Mercedes-Benz Stadium, Truist Park, and State Farm Arena. I can connect you with our team for a custom proposal."
+   Say: "Our Fry360 oil filtration program is custom-priced based on venue volume and number of fryers. We currently manage 100+ fryers across major stadiums, ballparks, and arenas. I can connect you with our team for a custom proposal."
 
 8. UCO MANAGEMENT (TruShine Environmental)
    Collection and recycling of used cooking oil. Clean oil bins provided. IoT tank monitoring available. Revenue-sharing model.

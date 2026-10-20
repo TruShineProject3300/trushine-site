@@ -10,8 +10,8 @@
 **Best time: 7:00 AM**
 
 Caption:
-5:08 AM. Mercedes-Benz Stadium.
-6:35 AM. State Farm Arena.
+5:08 AM. A major stadium.
+6:35 AM. A major arena.
 
 Two venues. One crew. Same morning.
 
@@ -49,7 +49,7 @@ Caption:
 
 One crew. One building. One overnight shift.
 
-Friday night — a major Atlanta NFL venue. Ahmon Miller ran 32 locations, 124 fryers, and pulled 9,290 pounds of used cooking oil out of the building before the sun came up.
+Friday night, a major venue. Ahmon Miller ran 32 locations, 124 fryers, and pulled 9,290 pounds of used cooking oil out of the building before the sun came up.
 
 That's 1,113 gallons. 4.6 tons. In a single night.
 
@@ -165,7 +165,7 @@ Ahmon Miller.
 
 Five overnight shifts in eight days.
 
-Including Friday — 32 locations, 124 fryers, 9,290 pounds of used cooking oil out of a major Atlanta stadium before sunrise.
+Including Friday, 32 locations, 124 fryers, 9,290 pounds of used cooking oil out of a major stadium before sunrise.
 
 No spotlight. No applause.
 
@@ -217,11 +217,11 @@ First Comment: [Standard kitchen services first comment]
 **Best time: 12:00 PM**
 
 Caption:
-Three major-league venues.
+Three major venues.
 One city.
 One month.
 
-A major NFL stadium. A major MLB ballpark. A major NBA arena.
+A major stadium. A major ballpark. A major arena.
 
 All three serviced overnight by TruShine crews in August.
 
@@ -240,7 +240,7 @@ That's a compliance platform.
 📞 678-751-8871 | trushineservice.com
 
 Hashtags:
-#TruShineServices #ThreeVenues #OneCity #CompliancePlatform #UCO #OilRecycling #AtlantaVenues #NFL #MLB #NBA #CommercialKitchen #KitchenCompliance #WeShowUp #OneVendor #SoutheastRestaurants
+#TruShineServices #ThreeVenues #OneCity #CompliancePlatform #UCO #OilRecycling #AtlantaVenues #Stadiums #Ballparks #Arenas #CommercialKitchen #KitchenCompliance #WeShowUp #OneVendor #SoutheastRestaurants
 
 First Comment: [Standard kitchen services first comment]
 
@@ -369,7 +369,7 @@ Caption:
 One crew.
 One night.
 
-Friday overnight — a major NFL venue in Atlanta.
+Friday overnight, a major venue.
 
 Ahmon Miller ran every location in the building. By the time the first stadium employee walked through the door — every fryer was filtered, every pound was documented, and the chef already had the report.
 
