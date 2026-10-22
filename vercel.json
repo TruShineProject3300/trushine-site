@@ -3,23 +3,2558 @@
   "cleanUrls": false,
   "routes": [
     {
+      "src": "^/service-areas/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/acworth/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/acworth-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/aiken-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/alpharetta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/alpharetta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/alpharetta-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-alpharetta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/appling/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/asheville-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/asheville-nc/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/asheville-nc/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/asheville-nc/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/asheville-nc/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/asheville-nc/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/asheville-nc/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/atlanta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/atlanta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/augusta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/austell-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/brookhaven/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/brookhaven"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/brookhaven-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-brookhaven-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/canton/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cartersville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charleston-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-charleston-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-charlotte-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte-nc/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-charlotte-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte-nc/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-charlotte-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte-nc/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-charlotte-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte-nc/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-charlotte-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte-nc/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-charlotte-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte-nc/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-charlotte-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth-ga/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth-ga/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth-ga/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth-ga/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth-ga/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/acworth-ga/schools-and-educational-facilities-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-acworth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/austell/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/austell/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/austell/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/austell/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/austell/office-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/austell/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/austell/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-austell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/kennesaw/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/kennesaw"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/kennesaw/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-kennesaw-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/kennesaw/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-kennesaw-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/kennesaw/industrial-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-kennesaw-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/kennesaw/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-kennesaw-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/kennesaw/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-kennesaw-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/kennesaw/schools-and-educational-facilities-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-kennesaw-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/mableton/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/mableton/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/mableton/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/mableton/industrial-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/mableton/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/mableton/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/mableton/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/marietta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/marietta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/marietta/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-marietta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/marietta/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-marietta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/marietta/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-marietta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/marietta/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-marietta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/marietta/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-marietta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/marietta/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-marietta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/powder-springs/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-powder-springs-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/powder-springs/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-powder-springs-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/powder-springs/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-powder-springs-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/powder-springs/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-powder-springs-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/powder-springs/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-powder-springs-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/sandy-springs/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/sandy-springs"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/smyrna/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/smyrna"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/smyrna/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-smyrna-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/smyrna/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-smyrna-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/smyrna/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-smyrna-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/smyrna/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-smyrna-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/woodstock/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/woodstock/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/woodstock/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/woodstock/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/woodstock/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/woodstock/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cobb-county/woodstock/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/columbia-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-columbia-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/conyers/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/covington/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/crawfordville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/decatur/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/decatur"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/dekalb-county/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/dekalb-county-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/douglasville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/duluth/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/duluth"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/dunwoody/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-dunwoody-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/durham-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-durham-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/edgefield-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/evans/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/forest-park/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/forsyth-county/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/forsyth-county-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fulton-county/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fulton-county-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fulton-county/alpharetta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/alpharetta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fulton-county/atlanta-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/atlanta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fulton-county/johns-creek/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-johns-creek-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fulton-county/roswell/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/roswell"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/gainesville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/gaston-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/greensboro"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-greensboro-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro-nc/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-greensboro-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro-nc/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-greensboro-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro-nc/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-greensboro-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro-nc/office-and-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-greensboro-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro-nc/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-greensboro-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greensboro-nc/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-greensboro-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/grovetown/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/gwinnett-county/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/gwinnett-county-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/harlem/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/holly-springs/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-holly-springs-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntersville-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-huntersville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntersville-nc/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-huntersville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntersville-nc/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-huntersville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntersville-nc/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-huntersville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntersville-nc/office-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-huntersville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntersville-nc/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-huntersville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntersville-nc/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-huntersville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/johns-creek/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-johns-creek-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/johns-creek-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-johns-creek-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/johnston-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/kennesaw/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/kennesaw"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/kennesaw-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-kennesaw-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/lithonia/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mableton/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mableton-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mableton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/madison/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-madison-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/marietta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/marietta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/marietta-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-marietta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mcdonoguh/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/milton/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-milton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/north-augusta-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/pelion-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/powder-spring-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-raleigh-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh-nc/commercial-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-raleigh-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh-nc/hood-cleaning-in-raleigh-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-raleigh-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh-nc/industrial-and-warehouse-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-raleigh-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh-nc/office-building-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-raleigh-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh-nc/restaurant-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning-raleigh-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh-nc/schools-and-educational-facilities/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial-raleigh-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/ridge-spring-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/roswell/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/roswell"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/roswell-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-roswell-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/rutledge/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/salley-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/sandy-springs/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/sandy-springs"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/sandy-springs-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-sandy-springs-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/services/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/services"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/smyrna/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/smyrna"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/smyrna-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-smyrna-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/aiken/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/batesburg-leesville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/edgefield/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/gaston/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/johnston/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/north-augusta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/pelion/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/ridge-spring/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/salley/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/south-carolina/swansea/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/sugar-hill/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/swansea-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/thomson/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/union-point/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/warrenton/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/winston-salem-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-winston-salem-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/woodstock/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/woodstock-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/trussville-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-trussville-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/chattanooga-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-chattanooga-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/brandon-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-brandon-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/nashville-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-nashville-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/hoover-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-hoover-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/morrisville-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-morrisville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/sanford-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-sanford-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/brentwood-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-brentwood-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/chesterfield-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-chesterfield-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/vestavia-hills-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-vestavia-hills-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/duluth-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-duluth-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fredericksburg-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-fredericksburg-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/franklin-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-franklin-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/midlothian-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-midlothian-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/norcross-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-norcross-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/doraville-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-doraville-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/north-charleston-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-north-charleston-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/buford-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-buford-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/powder-springs-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-powder-springs-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/memphis-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-memphis-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/woodbridge-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-woodbridge-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/orlando-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-orlando-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/peachtree-corners-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-peachtree-corners-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/birmingham-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-birmingham-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/smyrna-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-smyrna-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/anderson-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-anderson-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/east-point-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-east-point-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mechanicsville-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mechanicsville-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/st-augustine-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-st-augustine-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fleming-island-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-fleming-island-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/goose-creek-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-goose-creek-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fayetteville-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-fayetteville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/murfreesboro-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-murfreesboro-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/simpsonville-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-simpsonville-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/chester-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-chester-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/richmond-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-richmond-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/maryville-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-maryville-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/kannapolis-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-kannapolis-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/ashland-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-ashland-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/atlanta-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-atlanta-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/jacksonville-beach-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-jacksonville-beach-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/prattville-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-prattville-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/farragut-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-farragut-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/virginia-beach-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-virginia-beach-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/altamonte-springs-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-altamonte-springs-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/clarksville-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-clarksville-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/alabaster-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-alabaster-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/tampa-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-tampa-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/orange-park-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-orange-park-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/summerville-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-summerville-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/holly-springs-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-holly-springs-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/lake-mary-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-lake-mary-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/matthews-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-matthews-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/concord-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-concord-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/winter-park-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-winter-park-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/pelham-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-pelham-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/gallatin-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-gallatin-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/montgomery-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-montgomery-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/homewood-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-homewood-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/taylors-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-taylors-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mount-pleasant-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mount-pleasant-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/clarkston-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-clarkston-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/kissimmee-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-kissimmee-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/stone-mountain-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-stone-mountain-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greenville-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-greenville-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mountain-brook-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mountain-brook-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/colonial-heights-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-colonial-heights-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/lexington-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-lexington-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/college-park-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-college-park-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/suwanee-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-suwanee-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/madison-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-madison-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/cary-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-cary-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/west-columbia-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-west-columbia-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mount-juliet-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mount-juliet-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greer-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-greer-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/ponte-vedra-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-ponte-vedra-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/hapeville-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-hapeville-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/henrico-va/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-henrico-va"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntsville-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-huntsville-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/irmo-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-irmo-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/hixson-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-hixson-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/gardendale-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-gardendale-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mauldin-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mauldin-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/knoxville-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-knoxville-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/hendersonville-tn/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-hendersonville-tn"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/gastonia-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-gastonia-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/spartanburg-sc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-spartanburg-sc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/chapel-hill-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-chapel-hill-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mint-hill-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mint-hill-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/snellville-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-snellville-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/tucker-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-tucker-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/vinings-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-vinings-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/lilburn-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-lilburn-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/mooresville-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-mooresville-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/lawrenceville-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-lawrenceville-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/milton-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-milton-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/dunwoody-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-dunwoody-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/decatur-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-decatur-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/apex-nc/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-apex-nc"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/clearwater-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-clearwater-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/decatur-al/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-decatur-al"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/jacksonville-fl/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-jacksonville-fl"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/chamblee-ga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-chamblee-ga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/tampa/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/tampa"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/virginia-beach/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/virginia-beach"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/buford/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/buford"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/greenville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/greenville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/orlando/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/orlando"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/fredericksburg/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/fredericksburg"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/nashville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/nashville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/norcross/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/norcross"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charlotte/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/charlotte"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/raleigh/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/raleigh"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/huntsville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/huntsville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/memphis/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/memphis"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/lawrenceville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/lawrenceville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/montgomery/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/montgomery"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/chattanooga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/chattanooga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/richmond/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/richmond"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/jacksonville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/jacksonville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/columbia/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/columbia"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/winston-salem/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/winston-salem"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/franklin/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/franklin"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/birmingham/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/birmingham"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/charleston/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/charleston"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/durham/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/durham"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/tucker/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/tucker"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas/knoxville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/knoxville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/about-us/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/about"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/chain-restaurants/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/chain-restaurants"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/chain-restaurants/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/chain-restaurants"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/hotels/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/hotels"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/hotels/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/hotels"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/multi-unit-operators/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/multi-unit-operators"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/multi-unit-operators/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/multi-unit-operators"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/stadiums-venues/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/stadiums-venues"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/stadiums-venues/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/industries/stadiums-venues"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/alpharetta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/alpharetta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/atlanta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/atlanta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/birmingham/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/birmingham"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/brookhaven/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/brookhaven"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/buford/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/buford"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/charleston/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/charleston"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/charlotte/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/charlotte"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/chattanooga/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/chattanooga"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/columbia/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/columbia"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/decatur/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/decatur"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/duluth/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/duluth"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/durham/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/durham"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/franklin/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/franklin"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/fredericksburg/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/fredericksburg"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/greensboro/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/greensboro"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/greenville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/greenville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/huntsville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/huntsville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/jacksonville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/jacksonville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/kennesaw/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/kennesaw"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/knoxville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/knoxville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/lawrenceville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/lawrenceville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/marietta/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/marietta"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/memphis/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/memphis"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/montgomery/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/montgomery"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/nashville/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/nashville"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/norcross/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/norcross"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/orlando/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/orlando"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/raleigh/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/raleigh"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/richmond/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/richmond"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/roswell/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/roswell"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/sandy-springs/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/sandy-springs"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/smyrna/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/smyrna"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/tampa/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/tampa"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/tucker/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/tucker"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/virginia-beach/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/virginia-beach"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/locations/winston-salem/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/winston-salem"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/service-areas(?:/.*)?$",
+      "headers": {
+        "Location": "/locations"
+      },
+      "status": 301
+    },
+    {
       "src": "^/(?:(.+)/)?index(?:\\.html)?/?$",
-      "headers": { "Location": "/$1" },
+      "headers": {
+        "Location": "/$1"
+      },
       "status": 308
     },
     {
       "src": "^/(?!google309bb75b72291029\\.html$)(.*)\\.html/?$",
-      "headers": { "Location": "/$1" },
+      "headers": {
+        "Location": "/$1"
+      },
       "status": 308
     },
     {
       "src": "^/api/(.*)\\.js/?$",
-      "headers": { "Location": "/api/$1" },
+      "headers": {
+        "Location": "/api/$1"
+      },
       "status": 308
     },
     {
       "src": "^/(.*)/$",
-      "headers": { "Location": "/$1" },
+      "headers": {
+        "Location": "/$1"
+      },
       "status": 308
     }
   ],
@@ -42,6 +2577,3623 @@
           "value": "SAMEORIGIN"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/service-areas",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/acworth",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/acworth/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/acworth-ga",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/acworth-ga/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/aiken-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/aiken-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/alpharetta",
+      "destination": "/alpharetta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/alpharetta/",
+      "destination": "/alpharetta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/alpharetta-ga",
+      "destination": "/hood-cleaning-alpharetta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/alpharetta-ga/",
+      "destination": "/hood-cleaning-alpharetta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/appling",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/appling/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/commercial-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/commercial-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/hood-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/hood-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/industrial-and-warehouse-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/industrial-and-warehouse-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/office-and-building-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/office-and-building-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/restaurant-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/restaurant-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/schools-and-educational-facilities",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/asheville-nc/schools-and-educational-facilities/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/atlanta",
+      "destination": "/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/atlanta/",
+      "destination": "/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/augusta",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/augusta/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/austell-ga",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/austell-ga/",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brookhaven",
+      "destination": "/brookhaven",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brookhaven/",
+      "destination": "/brookhaven",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brookhaven-ga",
+      "destination": "/hood-cleaning-brookhaven-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brookhaven-ga/",
+      "destination": "/hood-cleaning-brookhaven-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/canton",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/canton/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cartersville",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cartersville/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charleston-sc",
+      "destination": "/hood-cleaning-charleston-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charleston-sc/",
+      "destination": "/hood-cleaning-charleston-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc",
+      "destination": "/hood-cleaning-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/",
+      "destination": "/hood-cleaning-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/commercial-cleaning",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/commercial-cleaning/",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/hood-cleaning",
+      "destination": "/hood-cleaning-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/hood-cleaning/",
+      "destination": "/hood-cleaning-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/industrial-and-warehouse-cleaning",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/industrial-and-warehouse-cleaning/",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/office-and-building-cleaning",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/office-and-building-cleaning/",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/restaurant-cleaning",
+      "destination": "/deep-cleaning-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/restaurant-cleaning/",
+      "destination": "/deep-cleaning-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/schools-and-educational-facilities",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte-nc/schools-and-educational-facilities/",
+      "destination": "/janitorial-charlotte-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county-ga",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county-ga/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/commercial-cleaning",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/commercial-cleaning/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/hood-cleaning",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/hood-cleaning/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/industrial-and-warehouse-cleaning",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/industrial-and-warehouse-cleaning/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/office-and-building-cleaning",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/office-and-building-cleaning/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/restaurant-cleaning",
+      "destination": "/deep-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/restaurant-cleaning/",
+      "destination": "/deep-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/schools-and-educational-facilities-cleaning",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/acworth-ga/schools-and-educational-facilities-cleaning/",
+      "destination": "/hood-cleaning-acworth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/commercial-cleaning",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/commercial-cleaning/",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/hood-cleaning",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/hood-cleaning/",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/industrial-and-warehouse-cleaning",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/industrial-and-warehouse-cleaning/",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/office-building-cleaning",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/office-building-cleaning/",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/restaurant-cleaning",
+      "destination": "/deep-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/restaurant-cleaning/",
+      "destination": "/deep-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/schools-and-educational-facilities",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/austell/schools-and-educational-facilities/",
+      "destination": "/hood-cleaning-austell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/commercial-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/commercial-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/hood-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/hood-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/industrial-and-warehouse-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/industrial-and-warehouse-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw",
+      "destination": "/kennesaw",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/",
+      "destination": "/kennesaw",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/commercial-cleaning",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/commercial-cleaning/",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/hood-cleaning",
+      "destination": "/hood-cleaning-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/hood-cleaning/",
+      "destination": "/hood-cleaning-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/industrial-warehouse-cleaning",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/industrial-warehouse-cleaning/",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/office-and-building-cleaning",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/office-and-building-cleaning/",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/restaurant-cleaning",
+      "destination": "/deep-cleaning-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/restaurant-cleaning/",
+      "destination": "/deep-cleaning-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/schools-and-educational-facilities-cleaning",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/kennesaw/schools-and-educational-facilities-cleaning/",
+      "destination": "/janitorial-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/commercial-cleaning",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/commercial-cleaning/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/hood-cleaning",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/hood-cleaning/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/industrial-warehouse-cleaning",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/industrial-warehouse-cleaning/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/office-and-building-cleaning",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/office-and-building-cleaning/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/restaurant-cleaning",
+      "destination": "/deep-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/restaurant-cleaning/",
+      "destination": "/deep-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/schools-and-educational-facilities",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/mableton/schools-and-educational-facilities/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta",
+      "destination": "/marietta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/",
+      "destination": "/marietta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/commercial-cleaning",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/commercial-cleaning/",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/hood-cleaning",
+      "destination": "/hood-cleaning-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/hood-cleaning/",
+      "destination": "/hood-cleaning-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/industrial-and-warehouse-cleaning",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/industrial-and-warehouse-cleaning/",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/office-and-building-cleaning",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/office-and-building-cleaning/",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/restaurant-cleaning",
+      "destination": "/deep-cleaning-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/restaurant-cleaning/",
+      "destination": "/deep-cleaning-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/schools-and-educational-facilities",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/marietta/schools-and-educational-facilities/",
+      "destination": "/janitorial-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/office-and-building-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/office-and-building-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/commercial-cleaning",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/commercial-cleaning/",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/hood-cleaning",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/hood-cleaning/",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/industrial-and-warehouse-cleaning",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/industrial-and-warehouse-cleaning/",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/office-and-building-cleaning",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/powder-springs/office-and-building-cleaning/",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/restaurant-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/restaurant-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/sandy-springs",
+      "destination": "/sandy-springs",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/sandy-springs/",
+      "destination": "/sandy-springs",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/schools-and-educational-facilities",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/schools-and-educational-facilities/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna",
+      "destination": "/smyrna",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/",
+      "destination": "/smyrna",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/commercial-cleaning",
+      "destination": "/janitorial-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/commercial-cleaning/",
+      "destination": "/janitorial-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/hood-cleaning",
+      "destination": "/hood-cleaning-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/hood-cleaning/",
+      "destination": "/hood-cleaning-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/industrial-and-warehouse-cleaning",
+      "destination": "/janitorial-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/industrial-and-warehouse-cleaning/",
+      "destination": "/janitorial-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/office-and-building-cleaning",
+      "destination": "/janitorial-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/smyrna/office-and-building-cleaning/",
+      "destination": "/janitorial-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/commercial-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/commercial-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/hood-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/hood-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/industrial-and-warehouse-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/industrial-and-warehouse-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/office-and-building-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/office-and-building-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/restaurant-cleaning",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/restaurant-cleaning/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/schools-and-educational-facilities",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cobb-county/woodstock/schools-and-educational-facilities/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/columbia-sc",
+      "destination": "/hood-cleaning-columbia-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/columbia-sc/",
+      "destination": "/hood-cleaning-columbia-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/conyers",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/conyers/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/covington",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/covington/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/crawfordville",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/crawfordville/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/decatur",
+      "destination": "/decatur",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/decatur/",
+      "destination": "/decatur",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dekalb-county",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dekalb-county/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dekalb-county-ga",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dekalb-county-ga/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/douglasville",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/douglasville/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/duluth",
+      "destination": "/duluth",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/duluth/",
+      "destination": "/duluth",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dunwoody",
+      "destination": "/hood-cleaning-dunwoody-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dunwoody/",
+      "destination": "/hood-cleaning-dunwoody-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/durham-nc",
+      "destination": "/hood-cleaning-durham-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/durham-nc/",
+      "destination": "/hood-cleaning-durham-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/edgefield-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/edgefield-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/evans",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/evans/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/forest-park",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/forest-park/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/forsyth-county",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/forsyth-county/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/forsyth-county-ga",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/forsyth-county-ga/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county-ga",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county-ga/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/alpharetta",
+      "destination": "/alpharetta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/alpharetta/",
+      "destination": "/alpharetta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/atlanta-ga",
+      "destination": "/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/atlanta-ga/",
+      "destination": "/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/johns-creek",
+      "destination": "/hood-cleaning-johns-creek-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/johns-creek/",
+      "destination": "/hood-cleaning-johns-creek-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/roswell",
+      "destination": "/roswell",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fulton-county/roswell/",
+      "destination": "/roswell",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gainesville",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gainesville/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gaston-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gaston-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro",
+      "destination": "/greensboro",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro/",
+      "destination": "/greensboro",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc",
+      "destination": "/hood-cleaning-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/",
+      "destination": "/hood-cleaning-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/commercial-cleaning",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/commercial-cleaning/",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/hood-cleaning",
+      "destination": "/hood-cleaning-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/hood-cleaning/",
+      "destination": "/hood-cleaning-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/industrial-and-warehouse-cleaning",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/industrial-and-warehouse-cleaning/",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/office-and-building-cleaning",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/office-and-building-cleaning/",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/restaurant-cleaning",
+      "destination": "/deep-cleaning-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/restaurant-cleaning/",
+      "destination": "/deep-cleaning-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/schools-and-educational-facilities",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greensboro-nc/schools-and-educational-facilities/",
+      "destination": "/janitorial-greensboro-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/grovetown",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/grovetown/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gwinnett-county",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gwinnett-county/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gwinnett-county-ga",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gwinnett-county-ga/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/harlem",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/harlem/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/holly-springs",
+      "destination": "/hood-cleaning-holly-springs-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/holly-springs/",
+      "destination": "/hood-cleaning-holly-springs-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/commercial-cleaning",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/commercial-cleaning/",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/hood-cleaning",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/hood-cleaning/",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/industrial-and-warehouse-cleaning",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/industrial-and-warehouse-cleaning/",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/office-building-cleaning",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/office-building-cleaning/",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/restaurant-cleaning",
+      "destination": "/deep-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/restaurant-cleaning/",
+      "destination": "/deep-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/schools-and-educational-facilities",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntersville-nc/schools-and-educational-facilities/",
+      "destination": "/hood-cleaning-huntersville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/johns-creek",
+      "destination": "/hood-cleaning-johns-creek-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/johns-creek/",
+      "destination": "/hood-cleaning-johns-creek-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/johns-creek-ga",
+      "destination": "/hood-cleaning-johns-creek-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/johns-creek-ga/",
+      "destination": "/hood-cleaning-johns-creek-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/johnston-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/johnston-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kennesaw",
+      "destination": "/kennesaw",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kennesaw/",
+      "destination": "/kennesaw",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kennesaw-ga",
+      "destination": "/hood-cleaning-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kennesaw-ga/",
+      "destination": "/hood-cleaning-kennesaw-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lithonia",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lithonia/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mableton",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mableton/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mableton-ga",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mableton-ga/",
+      "destination": "/hood-cleaning-mableton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/madison",
+      "destination": "/hood-cleaning-madison-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/madison/",
+      "destination": "/hood-cleaning-madison-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/marietta",
+      "destination": "/marietta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/marietta/",
+      "destination": "/marietta",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/marietta-ga",
+      "destination": "/hood-cleaning-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/marietta-ga/",
+      "destination": "/hood-cleaning-marietta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mcdonoguh",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mcdonoguh/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/milton",
+      "destination": "/hood-cleaning-milton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/milton/",
+      "destination": "/hood-cleaning-milton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/north-augusta-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/north-augusta-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/pelion-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/pelion-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/powder-spring-ga",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/powder-spring-ga/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc",
+      "destination": "/hood-cleaning-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/",
+      "destination": "/hood-cleaning-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/commercial-cleaning",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/commercial-cleaning/",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/hood-cleaning-in-raleigh-nc",
+      "destination": "/hood-cleaning-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/hood-cleaning-in-raleigh-nc/",
+      "destination": "/hood-cleaning-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/industrial-and-warehouse-cleaning",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/industrial-and-warehouse-cleaning/",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/office-building-cleaning",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/office-building-cleaning/",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/restaurant-cleaning",
+      "destination": "/deep-cleaning-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/restaurant-cleaning/",
+      "destination": "/deep-cleaning-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/schools-and-educational-facilities",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh-nc/schools-and-educational-facilities/",
+      "destination": "/janitorial-raleigh-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/ridge-spring-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/ridge-spring-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/roswell",
+      "destination": "/roswell",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/roswell/",
+      "destination": "/roswell",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/roswell-ga",
+      "destination": "/hood-cleaning-roswell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/roswell-ga/",
+      "destination": "/hood-cleaning-roswell-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/rutledge",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/rutledge/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/salley-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/salley-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sandy-springs",
+      "destination": "/sandy-springs",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sandy-springs/",
+      "destination": "/sandy-springs",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sandy-springs-ga",
+      "destination": "/hood-cleaning-sandy-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sandy-springs-ga/",
+      "destination": "/hood-cleaning-sandy-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/services",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/services/",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/smyrna",
+      "destination": "/smyrna",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/smyrna/",
+      "destination": "/smyrna",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/smyrna-ga",
+      "destination": "/hood-cleaning-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/smyrna-ga/",
+      "destination": "/hood-cleaning-smyrna-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/aiken",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/aiken/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/batesburg-leesville",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/batesburg-leesville/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/edgefield",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/edgefield/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/gaston",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/gaston/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/johnston",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/johnston/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/north-augusta",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/north-augusta/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/pelion",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/pelion/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/ridge-spring",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/ridge-spring/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/salley",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/salley/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/swansea",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/south-carolina/swansea/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sugar-hill",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sugar-hill/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/swansea-sc",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/swansea-sc/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/thomson",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/thomson/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/union-point",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/union-point/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/warrenton",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/warrenton/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/winston-salem-nc",
+      "destination": "/hood-cleaning-winston-salem-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/winston-salem-nc/",
+      "destination": "/hood-cleaning-winston-salem-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/woodstock",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/woodstock/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/woodstock-ga",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/woodstock-ga/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/trussville-al",
+      "destination": "/hood-cleaning-trussville-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/trussville-al/",
+      "destination": "/hood-cleaning-trussville-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chattanooga-tn",
+      "destination": "/hood-cleaning-chattanooga-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chattanooga-tn/",
+      "destination": "/hood-cleaning-chattanooga-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brandon-fl",
+      "destination": "/hood-cleaning-brandon-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brandon-fl/",
+      "destination": "/hood-cleaning-brandon-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/nashville-tn",
+      "destination": "/hood-cleaning-nashville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/nashville-tn/",
+      "destination": "/hood-cleaning-nashville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hoover-al",
+      "destination": "/hood-cleaning-hoover-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hoover-al/",
+      "destination": "/hood-cleaning-hoover-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/morrisville-nc",
+      "destination": "/hood-cleaning-morrisville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/morrisville-nc/",
+      "destination": "/hood-cleaning-morrisville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sanford-fl",
+      "destination": "/hood-cleaning-sanford-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/sanford-fl/",
+      "destination": "/hood-cleaning-sanford-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brentwood-tn",
+      "destination": "/hood-cleaning-brentwood-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/brentwood-tn/",
+      "destination": "/hood-cleaning-brentwood-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chesterfield-va",
+      "destination": "/hood-cleaning-chesterfield-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chesterfield-va/",
+      "destination": "/hood-cleaning-chesterfield-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/vestavia-hills-al",
+      "destination": "/hood-cleaning-vestavia-hills-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/vestavia-hills-al/",
+      "destination": "/hood-cleaning-vestavia-hills-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/duluth-ga",
+      "destination": "/hood-cleaning-duluth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/duluth-ga/",
+      "destination": "/hood-cleaning-duluth-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fredericksburg-va",
+      "destination": "/hood-cleaning-fredericksburg-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fredericksburg-va/",
+      "destination": "/hood-cleaning-fredericksburg-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/franklin-tn",
+      "destination": "/hood-cleaning-franklin-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/franklin-tn/",
+      "destination": "/hood-cleaning-franklin-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/midlothian-va",
+      "destination": "/hood-cleaning-midlothian-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/midlothian-va/",
+      "destination": "/hood-cleaning-midlothian-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/norcross-ga",
+      "destination": "/hood-cleaning-norcross-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/norcross-ga/",
+      "destination": "/hood-cleaning-norcross-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/doraville-ga",
+      "destination": "/hood-cleaning-doraville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/doraville-ga/",
+      "destination": "/hood-cleaning-doraville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/north-charleston-sc",
+      "destination": "/hood-cleaning-north-charleston-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/north-charleston-sc/",
+      "destination": "/hood-cleaning-north-charleston-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/buford-ga",
+      "destination": "/hood-cleaning-buford-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/buford-ga/",
+      "destination": "/hood-cleaning-buford-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/powder-springs-ga",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/powder-springs-ga/",
+      "destination": "/hood-cleaning-powder-springs-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/memphis-tn",
+      "destination": "/hood-cleaning-memphis-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/memphis-tn/",
+      "destination": "/hood-cleaning-memphis-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/woodbridge-va",
+      "destination": "/hood-cleaning-woodbridge-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/woodbridge-va/",
+      "destination": "/hood-cleaning-woodbridge-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/orlando-fl",
+      "destination": "/hood-cleaning-orlando-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/orlando-fl/",
+      "destination": "/hood-cleaning-orlando-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/peachtree-corners-ga",
+      "destination": "/hood-cleaning-peachtree-corners-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/peachtree-corners-ga/",
+      "destination": "/hood-cleaning-peachtree-corners-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/birmingham-al",
+      "destination": "/hood-cleaning-birmingham-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/birmingham-al/",
+      "destination": "/hood-cleaning-birmingham-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/smyrna-tn",
+      "destination": "/hood-cleaning-smyrna-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/smyrna-tn/",
+      "destination": "/hood-cleaning-smyrna-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/anderson-sc",
+      "destination": "/hood-cleaning-anderson-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/anderson-sc/",
+      "destination": "/hood-cleaning-anderson-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/east-point-ga",
+      "destination": "/hood-cleaning-east-point-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/east-point-ga/",
+      "destination": "/hood-cleaning-east-point-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mechanicsville-va",
+      "destination": "/hood-cleaning-mechanicsville-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mechanicsville-va/",
+      "destination": "/hood-cleaning-mechanicsville-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/st-augustine-fl",
+      "destination": "/hood-cleaning-st-augustine-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/st-augustine-fl/",
+      "destination": "/hood-cleaning-st-augustine-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fleming-island-fl",
+      "destination": "/hood-cleaning-fleming-island-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fleming-island-fl/",
+      "destination": "/hood-cleaning-fleming-island-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/goose-creek-sc",
+      "destination": "/hood-cleaning-goose-creek-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/goose-creek-sc/",
+      "destination": "/hood-cleaning-goose-creek-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fayetteville-nc",
+      "destination": "/hood-cleaning-fayetteville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fayetteville-nc/",
+      "destination": "/hood-cleaning-fayetteville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/murfreesboro-tn",
+      "destination": "/hood-cleaning-murfreesboro-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/murfreesboro-tn/",
+      "destination": "/hood-cleaning-murfreesboro-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/simpsonville-sc",
+      "destination": "/hood-cleaning-simpsonville-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/simpsonville-sc/",
+      "destination": "/hood-cleaning-simpsonville-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chester-va",
+      "destination": "/hood-cleaning-chester-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chester-va/",
+      "destination": "/hood-cleaning-chester-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/richmond-va",
+      "destination": "/hood-cleaning-richmond-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/richmond-va/",
+      "destination": "/hood-cleaning-richmond-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/maryville-tn",
+      "destination": "/hood-cleaning-maryville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/maryville-tn/",
+      "destination": "/hood-cleaning-maryville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kannapolis-nc",
+      "destination": "/hood-cleaning-kannapolis-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kannapolis-nc/",
+      "destination": "/hood-cleaning-kannapolis-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/ashland-va",
+      "destination": "/hood-cleaning-ashland-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/ashland-va/",
+      "destination": "/hood-cleaning-ashland-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/atlanta-ga",
+      "destination": "/hood-cleaning-atlanta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/atlanta-ga/",
+      "destination": "/hood-cleaning-atlanta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/jacksonville-beach-fl",
+      "destination": "/hood-cleaning-jacksonville-beach-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/jacksonville-beach-fl/",
+      "destination": "/hood-cleaning-jacksonville-beach-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/prattville-al",
+      "destination": "/hood-cleaning-prattville-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/prattville-al/",
+      "destination": "/hood-cleaning-prattville-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/farragut-tn",
+      "destination": "/hood-cleaning-farragut-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/farragut-tn/",
+      "destination": "/hood-cleaning-farragut-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/virginia-beach-va",
+      "destination": "/hood-cleaning-virginia-beach-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/virginia-beach-va/",
+      "destination": "/hood-cleaning-virginia-beach-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/altamonte-springs-fl",
+      "destination": "/hood-cleaning-altamonte-springs-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/altamonte-springs-fl/",
+      "destination": "/hood-cleaning-altamonte-springs-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/clarksville-tn",
+      "destination": "/hood-cleaning-clarksville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/clarksville-tn/",
+      "destination": "/hood-cleaning-clarksville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/alabaster-al",
+      "destination": "/hood-cleaning-alabaster-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/alabaster-al/",
+      "destination": "/hood-cleaning-alabaster-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tampa-fl",
+      "destination": "/hood-cleaning-tampa-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tampa-fl/",
+      "destination": "/hood-cleaning-tampa-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/orange-park-fl",
+      "destination": "/hood-cleaning-orange-park-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/orange-park-fl/",
+      "destination": "/hood-cleaning-orange-park-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/summerville-sc",
+      "destination": "/hood-cleaning-summerville-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/summerville-sc/",
+      "destination": "/hood-cleaning-summerville-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/holly-springs-nc",
+      "destination": "/hood-cleaning-holly-springs-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/holly-springs-nc/",
+      "destination": "/hood-cleaning-holly-springs-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lake-mary-fl",
+      "destination": "/hood-cleaning-lake-mary-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lake-mary-fl/",
+      "destination": "/hood-cleaning-lake-mary-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/matthews-nc",
+      "destination": "/hood-cleaning-matthews-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/matthews-nc/",
+      "destination": "/hood-cleaning-matthews-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/concord-nc",
+      "destination": "/hood-cleaning-concord-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/concord-nc/",
+      "destination": "/hood-cleaning-concord-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/winter-park-fl",
+      "destination": "/hood-cleaning-winter-park-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/winter-park-fl/",
+      "destination": "/hood-cleaning-winter-park-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/pelham-al",
+      "destination": "/hood-cleaning-pelham-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/pelham-al/",
+      "destination": "/hood-cleaning-pelham-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gallatin-tn",
+      "destination": "/hood-cleaning-gallatin-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gallatin-tn/",
+      "destination": "/hood-cleaning-gallatin-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/montgomery-al",
+      "destination": "/hood-cleaning-montgomery-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/montgomery-al/",
+      "destination": "/hood-cleaning-montgomery-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/homewood-al",
+      "destination": "/hood-cleaning-homewood-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/homewood-al/",
+      "destination": "/hood-cleaning-homewood-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/taylors-sc",
+      "destination": "/hood-cleaning-taylors-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/taylors-sc/",
+      "destination": "/hood-cleaning-taylors-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mount-pleasant-sc",
+      "destination": "/hood-cleaning-mount-pleasant-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mount-pleasant-sc/",
+      "destination": "/hood-cleaning-mount-pleasant-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/clarkston-ga",
+      "destination": "/hood-cleaning-clarkston-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/clarkston-ga/",
+      "destination": "/hood-cleaning-clarkston-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kissimmee-fl",
+      "destination": "/hood-cleaning-kissimmee-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/kissimmee-fl/",
+      "destination": "/hood-cleaning-kissimmee-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/stone-mountain-ga",
+      "destination": "/hood-cleaning-stone-mountain-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/stone-mountain-ga/",
+      "destination": "/hood-cleaning-stone-mountain-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greenville-sc",
+      "destination": "/hood-cleaning-greenville-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greenville-sc/",
+      "destination": "/hood-cleaning-greenville-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mountain-brook-al",
+      "destination": "/hood-cleaning-mountain-brook-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mountain-brook-al/",
+      "destination": "/hood-cleaning-mountain-brook-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/colonial-heights-va",
+      "destination": "/hood-cleaning-colonial-heights-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/colonial-heights-va/",
+      "destination": "/hood-cleaning-colonial-heights-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lexington-sc",
+      "destination": "/hood-cleaning-lexington-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lexington-sc/",
+      "destination": "/hood-cleaning-lexington-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/college-park-ga",
+      "destination": "/hood-cleaning-college-park-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/college-park-ga/",
+      "destination": "/hood-cleaning-college-park-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/suwanee-ga",
+      "destination": "/hood-cleaning-suwanee-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/suwanee-ga/",
+      "destination": "/hood-cleaning-suwanee-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/madison-al",
+      "destination": "/hood-cleaning-madison-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/madison-al/",
+      "destination": "/hood-cleaning-madison-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cary-nc",
+      "destination": "/hood-cleaning-cary-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/cary-nc/",
+      "destination": "/hood-cleaning-cary-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/west-columbia-sc",
+      "destination": "/hood-cleaning-west-columbia-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/west-columbia-sc/",
+      "destination": "/hood-cleaning-west-columbia-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mount-juliet-tn",
+      "destination": "/hood-cleaning-mount-juliet-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mount-juliet-tn/",
+      "destination": "/hood-cleaning-mount-juliet-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greer-sc",
+      "destination": "/hood-cleaning-greer-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greer-sc/",
+      "destination": "/hood-cleaning-greer-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/ponte-vedra-fl",
+      "destination": "/hood-cleaning-ponte-vedra-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/ponte-vedra-fl/",
+      "destination": "/hood-cleaning-ponte-vedra-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hapeville-ga",
+      "destination": "/hood-cleaning-hapeville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hapeville-ga/",
+      "destination": "/hood-cleaning-hapeville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/henrico-va",
+      "destination": "/hood-cleaning-henrico-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/henrico-va/",
+      "destination": "/hood-cleaning-henrico-va",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntsville-al",
+      "destination": "/hood-cleaning-huntsville-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntsville-al/",
+      "destination": "/hood-cleaning-huntsville-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/irmo-sc",
+      "destination": "/hood-cleaning-irmo-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/irmo-sc/",
+      "destination": "/hood-cleaning-irmo-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hixson-tn",
+      "destination": "/hood-cleaning-hixson-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hixson-tn/",
+      "destination": "/hood-cleaning-hixson-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gardendale-al",
+      "destination": "/hood-cleaning-gardendale-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gardendale-al/",
+      "destination": "/hood-cleaning-gardendale-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mauldin-sc",
+      "destination": "/hood-cleaning-mauldin-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mauldin-sc/",
+      "destination": "/hood-cleaning-mauldin-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/knoxville-tn",
+      "destination": "/hood-cleaning-knoxville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/knoxville-tn/",
+      "destination": "/hood-cleaning-knoxville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hendersonville-tn",
+      "destination": "/hood-cleaning-hendersonville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/hendersonville-tn/",
+      "destination": "/hood-cleaning-hendersonville-tn",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gastonia-nc",
+      "destination": "/hood-cleaning-gastonia-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/gastonia-nc/",
+      "destination": "/hood-cleaning-gastonia-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/spartanburg-sc",
+      "destination": "/hood-cleaning-spartanburg-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/spartanburg-sc/",
+      "destination": "/hood-cleaning-spartanburg-sc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chapel-hill-nc",
+      "destination": "/hood-cleaning-chapel-hill-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chapel-hill-nc/",
+      "destination": "/hood-cleaning-chapel-hill-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mint-hill-nc",
+      "destination": "/hood-cleaning-mint-hill-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mint-hill-nc/",
+      "destination": "/hood-cleaning-mint-hill-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/snellville-ga",
+      "destination": "/hood-cleaning-snellville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/snellville-ga/",
+      "destination": "/hood-cleaning-snellville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tucker-ga",
+      "destination": "/hood-cleaning-tucker-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tucker-ga/",
+      "destination": "/hood-cleaning-tucker-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/vinings-ga",
+      "destination": "/hood-cleaning-vinings-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/vinings-ga/",
+      "destination": "/hood-cleaning-vinings-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lilburn-ga",
+      "destination": "/hood-cleaning-lilburn-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lilburn-ga/",
+      "destination": "/hood-cleaning-lilburn-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mooresville-nc",
+      "destination": "/hood-cleaning-mooresville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/mooresville-nc/",
+      "destination": "/hood-cleaning-mooresville-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lawrenceville-ga",
+      "destination": "/hood-cleaning-lawrenceville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lawrenceville-ga/",
+      "destination": "/hood-cleaning-lawrenceville-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/milton-ga",
+      "destination": "/hood-cleaning-milton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/milton-ga/",
+      "destination": "/hood-cleaning-milton-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dunwoody-ga",
+      "destination": "/hood-cleaning-dunwoody-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/dunwoody-ga/",
+      "destination": "/hood-cleaning-dunwoody-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/decatur-ga",
+      "destination": "/hood-cleaning-decatur-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/decatur-ga/",
+      "destination": "/hood-cleaning-decatur-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/apex-nc",
+      "destination": "/hood-cleaning-apex-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/apex-nc/",
+      "destination": "/hood-cleaning-apex-nc",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/clearwater-fl",
+      "destination": "/hood-cleaning-clearwater-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/clearwater-fl/",
+      "destination": "/hood-cleaning-clearwater-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/decatur-al",
+      "destination": "/hood-cleaning-decatur-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/decatur-al/",
+      "destination": "/hood-cleaning-decatur-al",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/jacksonville-fl",
+      "destination": "/hood-cleaning-jacksonville-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/jacksonville-fl/",
+      "destination": "/hood-cleaning-jacksonville-fl",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chamblee-ga",
+      "destination": "/hood-cleaning-chamblee-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chamblee-ga/",
+      "destination": "/hood-cleaning-chamblee-ga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tampa",
+      "destination": "/tampa",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tampa/",
+      "destination": "/tampa",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/virginia-beach",
+      "destination": "/virginia-beach",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/virginia-beach/",
+      "destination": "/virginia-beach",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/buford",
+      "destination": "/buford",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/buford/",
+      "destination": "/buford",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greenville",
+      "destination": "/greenville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/greenville/",
+      "destination": "/greenville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/orlando",
+      "destination": "/orlando",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/orlando/",
+      "destination": "/orlando",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fredericksburg",
+      "destination": "/fredericksburg",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/fredericksburg/",
+      "destination": "/fredericksburg",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/nashville",
+      "destination": "/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/nashville/",
+      "destination": "/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/norcross",
+      "destination": "/norcross",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/norcross/",
+      "destination": "/norcross",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte",
+      "destination": "/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charlotte/",
+      "destination": "/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh",
+      "destination": "/raleigh",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/raleigh/",
+      "destination": "/raleigh",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntsville",
+      "destination": "/huntsville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/huntsville/",
+      "destination": "/huntsville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/memphis",
+      "destination": "/memphis",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/memphis/",
+      "destination": "/memphis",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lawrenceville",
+      "destination": "/lawrenceville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/lawrenceville/",
+      "destination": "/lawrenceville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/montgomery",
+      "destination": "/montgomery",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/montgomery/",
+      "destination": "/montgomery",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chattanooga",
+      "destination": "/chattanooga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/chattanooga/",
+      "destination": "/chattanooga",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/richmond",
+      "destination": "/richmond",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/richmond/",
+      "destination": "/richmond",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/jacksonville",
+      "destination": "/jacksonville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/jacksonville/",
+      "destination": "/jacksonville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/columbia",
+      "destination": "/columbia",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/columbia/",
+      "destination": "/columbia",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/winston-salem",
+      "destination": "/winston-salem",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/winston-salem/",
+      "destination": "/winston-salem",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/franklin",
+      "destination": "/franklin",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/franklin/",
+      "destination": "/franklin",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/birmingham",
+      "destination": "/birmingham",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/birmingham/",
+      "destination": "/birmingham",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charleston",
+      "destination": "/charleston",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/charleston/",
+      "destination": "/charleston",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/durham",
+      "destination": "/durham",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/durham/",
+      "destination": "/durham",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tucker",
+      "destination": "/tucker",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/tucker/",
+      "destination": "/tucker",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/knoxville",
+      "destination": "/knoxville",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/knoxville/",
+      "destination": "/knoxville",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/chain-restaurants",
+      "destination": "/industries/chain-restaurants",
+      "permanent": true
+    },
+    {
+      "source": "/chain-restaurants/",
+      "destination": "/industries/chain-restaurants",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chain-restaurants",
+      "destination": "/industries/chain-restaurants",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chain-restaurants/",
+      "destination": "/industries/chain-restaurants",
+      "permanent": true
+    },
+    {
+      "source": "/hotels",
+      "destination": "/industries/hotels",
+      "permanent": true
+    },
+    {
+      "source": "/hotels/",
+      "destination": "/industries/hotels",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hotels",
+      "destination": "/industries/hotels",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hotels/",
+      "destination": "/industries/hotels",
+      "permanent": true
+    },
+    {
+      "source": "/multi-unit-operators",
+      "destination": "/industries/multi-unit-operators",
+      "permanent": true
+    },
+    {
+      "source": "/multi-unit-operators/",
+      "destination": "/industries/multi-unit-operators",
+      "permanent": true
+    },
+    {
+      "source": "/locations/multi-unit-operators",
+      "destination": "/industries/multi-unit-operators",
+      "permanent": true
+    },
+    {
+      "source": "/locations/multi-unit-operators/",
+      "destination": "/industries/multi-unit-operators",
+      "permanent": true
+    },
+    {
+      "source": "/stadiums-venues",
+      "destination": "/industries/stadiums-venues",
+      "permanent": true
+    },
+    {
+      "source": "/stadiums-venues/",
+      "destination": "/industries/stadiums-venues",
+      "permanent": true
+    },
+    {
+      "source": "/locations/stadiums-venues",
+      "destination": "/industries/stadiums-venues",
+      "permanent": true
+    },
+    {
+      "source": "/locations/stadiums-venues/",
+      "destination": "/industries/stadiums-venues",
+      "permanent": true
+    },
+    {
+      "source": "/locations/alpharetta",
+      "destination": "/alpharetta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/alpharetta/",
+      "destination": "/alpharetta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/atlanta",
+      "destination": "/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/atlanta/",
+      "destination": "/atlanta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/birmingham",
+      "destination": "/birmingham",
+      "permanent": true
+    },
+    {
+      "source": "/locations/birmingham/",
+      "destination": "/birmingham",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brookhaven",
+      "destination": "/brookhaven",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brookhaven/",
+      "destination": "/brookhaven",
+      "permanent": true
+    },
+    {
+      "source": "/locations/buford",
+      "destination": "/buford",
+      "permanent": true
+    },
+    {
+      "source": "/locations/buford/",
+      "destination": "/buford",
+      "permanent": true
+    },
+    {
+      "source": "/locations/charleston",
+      "destination": "/charleston",
+      "permanent": true
+    },
+    {
+      "source": "/locations/charleston/",
+      "destination": "/charleston",
+      "permanent": true
+    },
+    {
+      "source": "/locations/charlotte",
+      "destination": "/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/locations/charlotte/",
+      "destination": "/charlotte",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chattanooga",
+      "destination": "/chattanooga",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chattanooga/",
+      "destination": "/chattanooga",
+      "permanent": true
+    },
+    {
+      "source": "/locations/columbia",
+      "destination": "/columbia",
+      "permanent": true
+    },
+    {
+      "source": "/locations/columbia/",
+      "destination": "/columbia",
+      "permanent": true
+    },
+    {
+      "source": "/locations/decatur",
+      "destination": "/decatur",
+      "permanent": true
+    },
+    {
+      "source": "/locations/decatur/",
+      "destination": "/decatur",
+      "permanent": true
+    },
+    {
+      "source": "/locations/duluth",
+      "destination": "/duluth",
+      "permanent": true
+    },
+    {
+      "source": "/locations/duluth/",
+      "destination": "/duluth",
+      "permanent": true
+    },
+    {
+      "source": "/locations/durham",
+      "destination": "/durham",
+      "permanent": true
+    },
+    {
+      "source": "/locations/durham/",
+      "destination": "/durham",
+      "permanent": true
+    },
+    {
+      "source": "/locations/franklin",
+      "destination": "/franklin",
+      "permanent": true
+    },
+    {
+      "source": "/locations/franklin/",
+      "destination": "/franklin",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fredericksburg",
+      "destination": "/fredericksburg",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fredericksburg/",
+      "destination": "/fredericksburg",
+      "permanent": true
+    },
+    {
+      "source": "/locations/greensboro",
+      "destination": "/greensboro",
+      "permanent": true
+    },
+    {
+      "source": "/locations/greensboro/",
+      "destination": "/greensboro",
+      "permanent": true
+    },
+    {
+      "source": "/locations/greenville",
+      "destination": "/greenville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/greenville/",
+      "destination": "/greenville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/huntsville",
+      "destination": "/huntsville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/huntsville/",
+      "destination": "/huntsville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/jacksonville",
+      "destination": "/jacksonville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/jacksonville/",
+      "destination": "/jacksonville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kennesaw",
+      "destination": "/kennesaw",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kennesaw/",
+      "destination": "/kennesaw",
+      "permanent": true
+    },
+    {
+      "source": "/locations/knoxville",
+      "destination": "/knoxville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/knoxville/",
+      "destination": "/knoxville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lawrenceville",
+      "destination": "/lawrenceville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lawrenceville/",
+      "destination": "/lawrenceville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/marietta",
+      "destination": "/marietta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/marietta/",
+      "destination": "/marietta",
+      "permanent": true
+    },
+    {
+      "source": "/locations/memphis",
+      "destination": "/memphis",
+      "permanent": true
+    },
+    {
+      "source": "/locations/memphis/",
+      "destination": "/memphis",
+      "permanent": true
+    },
+    {
+      "source": "/locations/montgomery",
+      "destination": "/montgomery",
+      "permanent": true
+    },
+    {
+      "source": "/locations/montgomery/",
+      "destination": "/montgomery",
+      "permanent": true
+    },
+    {
+      "source": "/locations/nashville",
+      "destination": "/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/nashville/",
+      "destination": "/nashville",
+      "permanent": true
+    },
+    {
+      "source": "/locations/norcross",
+      "destination": "/norcross",
+      "permanent": true
+    },
+    {
+      "source": "/locations/norcross/",
+      "destination": "/norcross",
+      "permanent": true
+    },
+    {
+      "source": "/locations/orlando",
+      "destination": "/orlando",
+      "permanent": true
+    },
+    {
+      "source": "/locations/orlando/",
+      "destination": "/orlando",
+      "permanent": true
+    },
+    {
+      "source": "/locations/raleigh",
+      "destination": "/raleigh",
+      "permanent": true
+    },
+    {
+      "source": "/locations/raleigh/",
+      "destination": "/raleigh",
+      "permanent": true
+    },
+    {
+      "source": "/locations/richmond",
+      "destination": "/richmond",
+      "permanent": true
+    },
+    {
+      "source": "/locations/richmond/",
+      "destination": "/richmond",
+      "permanent": true
+    },
+    {
+      "source": "/locations/roswell",
+      "destination": "/roswell",
+      "permanent": true
+    },
+    {
+      "source": "/locations/roswell/",
+      "destination": "/roswell",
+      "permanent": true
+    },
+    {
+      "source": "/locations/sandy-springs",
+      "destination": "/sandy-springs",
+      "permanent": true
+    },
+    {
+      "source": "/locations/sandy-springs/",
+      "destination": "/sandy-springs",
+      "permanent": true
+    },
+    {
+      "source": "/locations/smyrna",
+      "destination": "/smyrna",
+      "permanent": true
+    },
+    {
+      "source": "/locations/smyrna/",
+      "destination": "/smyrna",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tampa",
+      "destination": "/tampa",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tampa/",
+      "destination": "/tampa",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tucker",
+      "destination": "/tucker",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tucker/",
+      "destination": "/tucker",
+      "permanent": true
+    },
+    {
+      "source": "/locations/virginia-beach",
+      "destination": "/virginia-beach",
+      "permanent": true
+    },
+    {
+      "source": "/locations/virginia-beach/",
+      "destination": "/virginia-beach",
+      "permanent": true
+    },
+    {
+      "source": "/locations/winston-salem",
+      "destination": "/winston-salem",
+      "permanent": true
+    },
+    {
+      "source": "/locations/winston-salem/",
+      "destination": "/winston-salem",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas/:path*",
+      "destination": "/locations",
+      "permanent": true
     }
   ]
 }
