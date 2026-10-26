@@ -2537,6 +2537,13 @@
       "status": 308
     },
     {
+      "src": "^/kitchen-exhaust-cleaning-atlanta-ga(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-atlanta-ga"
+      },
+      "status": 308
+    },
+    {
       "src": "^/(?!google309bb75b72291029\\.html$)(.*)\\.html/?$",
       "headers": {
         "Location": "/$1"
@@ -2580,6 +2587,21 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/kitchen-exhaust-cleaning-atlanta-ga",
+      "destination": "/hood-cleaning-atlanta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/kitchen-exhaust-cleaning-atlanta-ga/",
+      "destination": "/hood-cleaning-atlanta-ga",
+      "permanent": true
+    },
+    {
+      "source": "/kitchen-exhaust-cleaning-atlanta-ga.html",
+      "destination": "/hood-cleaning-atlanta-ga",
+      "permanent": true
+    },
     {
       "source": "/service-areas",
       "destination": "/locations",
