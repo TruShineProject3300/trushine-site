@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>window.dataLayer=window.dataLayer||[];(function(){try{var b=(new URLSearchParams(window.location.search)).get('branch');if(b!=='atl-001'&&b!=='car-001')b='atl-001';window.dataLayer.push({branch:b});}catch(e){window.dataLayer.push({branch:'atl-001'});}})();</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NQMGW4B');</script>
+<!-- End Google Tag Manager -->
+<!-- thank_you_view is a page view only. It is not a conversion. -->
+<script>
+(function(){
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var branch = params.get('branch');
+    if (branch !== 'atl-001' && branch !== 'car-001') branch = 'atl-001';
+    var formId = params.get('form') || '';
+    if (!/^[A-Za-z0-9_-]{0,64}$/.test(formId)) formId = '';
+    var key = 'ts_thank_you_' + formId;
+    var seen = false;
+    try { seen = window.sessionStorage.getItem(key) === '1'; } catch (e) {}
+    if (seen) return;
+    try { window.sessionStorage.setItem(key, '1'); } catch (e) {}
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event:'thank_you_view', form_id:formId, branch:branch});
+  } catch (e) {}
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you | TruShine Services</title>
+<meta name="description" content="Thank you. TruShine will respond the same business day.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://trushineservice.com/thank-you">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="/js/ts-tracking.js" defer></script>
+<style>
+:root{--deep:#050B18;--panel:#0B1730;--cyan:#40C8E0;--white:#F3F7FC;--mut:rgba(243,247,252,.72);--line:rgba(64,200,224,.18)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--deep);color:var(--white);line-height:1.6;min-height:100vh}
+a{color:var(--cyan)}
+.wrap{max-width:720px;margin:0 auto;padding:48px 24px 72px}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;text-decoration:none;color:var(--white)}
+.brand b{color:var(--cyan)}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,5vw,44px);line-height:1.1;margin:28px 0 14px}
+p{color:var(--mut);font-size:17px;margin-bottom:16px}
+.phones{display:grid;gap:12px;margin:28px 0}
+.phone{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none}
+.phone strong{display:block;color:var(--white);font-size:18px;margin-top:4px}
+.phone span{color:var(--mut);font-size:13px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.links a{display:inline-flex;align-items:center;min-height:44px;padding:10px 14px;border-radius:10px;border:1px solid var(--line);text-decoration:none;color:var(--white);font-weight:600}
+.links a:focus,.phone:focus{outline:2px solid #fff;outline-offset:3px}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQMGW4B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<main class="wrap">
+<a class="brand" href="/"><b>Tru</b>Shine</a>
+<h1>Thank you.</h1>
+<p>We have your request and will respond the same business day.</p>
+<p>If you need us sooner, call the line for your area.</p>
+<div class="phones">
+<a class="phone" href="tel:+16787518871"><span>Georgia, Alabama, Florida, and Tennessee</span><strong>(678) 751-8871</strong></a>
+<a class="phone" href="tel:+17049707290"><span>North Carolina, South Carolina, and Virginia</span><strong>(704) 970-7290</strong></a>
+</div>
+<div class="links">
+<a href="/hood-cleaning">Hood cleaning</a>
+<a href="/deep-cleaning">Deep cleaning</a>
+<a href="/grease-trap">Grease trap service</a>
+<a href="/">Home</a>
+</div>
+</main>
+</body>
+</html>
