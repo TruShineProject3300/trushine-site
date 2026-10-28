@@ -60,6 +60,46 @@
       window.dataLayer.push(payload);
     }
 
+    /*
+     * Custom HTML form submits.
+     * Widget form URLs (api.leadconnectorhq.com/widget/form/...) did not
+     * return Access-Control-Allow-Origin on OPTIONS or GET for
+     * Origin https://trushineservice.com (checked 2026-10-28, no lead
+     * posted). Those calls stay mode no-cors so lead delivery is unchanged.
+     * A push after that promise resolves is a sent signal, not a confirmed
+     * server success. lead_confirm is "opaque".
+     * The webhook URL (services.leadconnectorhq.com/hooks/...) answered
+     * OPTIONS with Access-Control-Allow-Origin: *. Those calls already use
+     * cors. Callers pass lead_confirm "http-ok" only when response.ok.
+     * guard is a dedupe key only. It is never pushed. No PII is pushed.
+     */
+    var recentCustom = Object.create(null);
+    function formSubmit(opts) {
+      try {
+        var formId;
+        var leadConfirm;
+        var guard;
+        var now;
+        if (!opts || typeof opts !== "object") return;
+        formId = typeof opts.form_id === "string" ? opts.form_id : "";
+        if (!/^[A-Za-z0-9_-]{1,64}$/.test(formId)) return;
+        leadConfirm = opts.lead_confirm === "http-ok" ? "http-ok" : "opaque";
+        guard = typeof opts.guard === "string" && /^[a-z0-9-]{1,40}$/.test(opts.guard) ? opts.guard : "form";
+        now = Date.now();
+        guard = formId + "|" + guard + "|" + leadConfirm;
+        if (recentCustom[guard] && now - recentCustom[guard] < 4000) return;
+        recentCustom[guard] = now;
+        pushEvent({
+          event: "ghl_form_submit",
+          form_id: formId,
+          branch: pageBranch(),
+          lead_channel: "web-form",
+          lead_confirm: leadConfirm
+        });
+      } catch (err) {}
+    }
+    window.tsTrack = { formSubmit: formSubmit };
+
     function allowedOrigin(origin) {
       var host;
       var roots = ["leadconnectorhq.com", "msgsndr.com", "trushineservice.com"];
