@@ -2544,6 +2544,76 @@
       "status": 308
     },
     {
+      "src": "^/solutions/deep-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/deep-cleaning"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/drain-jetting/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/drain-jetting"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/fire-suppression/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/fire-suppression"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/grease-trap/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/grease-trap"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/hood-cleaning/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/janitorial/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/janitorial"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/pest-control/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/pest-control"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/pressure-washing/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/pressure-washing"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/solutions/uco-management/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/uco-management"
+      },
+      "status": 301
+    },
+    {
+      "src": "^/blog_labor_day_2026/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/labor-day-2026"
+      },
+      "status": 301
+    },
+    {
       "src": "^/(?!google309bb75b72291029\\.html$)(.*)\\.html/?$",
       "headers": {
         "Location": "/$1"
@@ -2587,6 +2657,206 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/solutions/deep-cleaning",
+      "destination": "/deep-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/deep-cleaning/",
+      "destination": "/deep-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/deep-cleaning.html",
+      "destination": "/deep-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/deep-cleaning.html/",
+      "destination": "/deep-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/drain-jetting",
+      "destination": "/drain-jetting",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/drain-jetting/",
+      "destination": "/drain-jetting",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/drain-jetting.html",
+      "destination": "/drain-jetting",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/drain-jetting.html/",
+      "destination": "/drain-jetting",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/fire-suppression",
+      "destination": "/fire-suppression",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/fire-suppression/",
+      "destination": "/fire-suppression",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/fire-suppression.html",
+      "destination": "/fire-suppression",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/fire-suppression.html/",
+      "destination": "/fire-suppression",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/grease-trap",
+      "destination": "/grease-trap",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/grease-trap/",
+      "destination": "/grease-trap",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/grease-trap.html",
+      "destination": "/grease-trap",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/grease-trap.html/",
+      "destination": "/grease-trap",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/hood-cleaning",
+      "destination": "/hood-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/hood-cleaning/",
+      "destination": "/hood-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/hood-cleaning.html",
+      "destination": "/hood-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/hood-cleaning.html/",
+      "destination": "/hood-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/janitorial",
+      "destination": "/janitorial",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/janitorial/",
+      "destination": "/janitorial",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/janitorial.html",
+      "destination": "/janitorial",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/janitorial.html/",
+      "destination": "/janitorial",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pest-control",
+      "destination": "/pest-control",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pest-control/",
+      "destination": "/pest-control",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pest-control.html",
+      "destination": "/pest-control",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pest-control.html/",
+      "destination": "/pest-control",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pressure-washing",
+      "destination": "/pressure-washing",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pressure-washing/",
+      "destination": "/pressure-washing",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pressure-washing.html",
+      "destination": "/pressure-washing",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/pressure-washing.html/",
+      "destination": "/pressure-washing",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/uco-management",
+      "destination": "/uco-management",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/uco-management/",
+      "destination": "/uco-management",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/uco-management.html",
+      "destination": "/uco-management",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/uco-management.html/",
+      "destination": "/uco-management",
+      "permanent": true
+    },
+    {
+      "source": "/blog_labor_day_2026",
+      "destination": "/labor-day-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog_labor_day_2026/",
+      "destination": "/labor-day-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog_labor_day_2026.html",
+      "destination": "/labor-day-2026",
+      "permanent": true
+    },
+    {
+      "source": "/blog_labor_day_2026.html/",
+      "destination": "/labor-day-2026",
+      "permanent": true
+    },
     {
       "source": "/kitchen-exhaust-cleaning-atlanta-ga",
       "destination": "/hood-cleaning-atlanta-ga",
