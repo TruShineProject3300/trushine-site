@@ -301,9 +301,9 @@ async function submitForm(e) {
     industry: document.getElementById('f-industry').value,
   };
   try {
-    await fetch('https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl', {
+    var tsLeadRes = await fetch('https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl', {
       method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)
-    });
+    });try{if(tsLeadRes&&tsLeadRes.ok&&window.tsTrack&&window.tsTrack.formSubmit)window.tsTrack.formSubmit({form_id:'dPdE5irmCkay76sedBDl',lead_confirm:'http-ok',guard:'widget-json'});}catch(tsLeadErr){}
   } catch(e) {}
   document.getElementById('ts-form').style.display = 'none';
   document.getElementById('ts-confirm').style.display = 'block';
