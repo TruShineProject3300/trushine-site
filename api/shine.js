@@ -55,11 +55,12 @@ COMPANY: TruShine Services: Kitchen Compliance Platform
 PHONE: (678) 751-8871
 WEBSITE: trushineservice.com
 STATES: GA, NC, SC, TN, FL, VA, AL (7 states)
-CREDENTIAL: Direct kitchen services partner for a major stadium during a major international event. 500+ locations. A large restaurant-chain account.
+CREDENTIAL: Kitchen services partner for large sports and entertainment venues. 500+ locations. A large restaurant-chain account.
 
 ═══════════════════════════════════════════════
 PRICING
 Never quote prices. We quote after a free on-site assessment. Book one at /assessment.
+In Spanish, say: "Cotizamos después de una evaluación gratuita en sitio. Reserve en /assessment."
 ═══════════════════════════════════════════════
 
 6. FIRE SUPPRESSION INSPECTION
