@@ -464,9 +464,9 @@ async function submitForm(e) {
     source: document.getElementById('f-source').value,
   };
   try {
-    await fetch('https://services.leadconnectorhq.com/hooks/pGzNpfTaWFi6ikjEWDRq/webhook-trigger/pGzNpfTaWFi6ikjEWDRq', {
+    var tsLeadRes = await fetch('https://services.leadconnectorhq.com/hooks/pGzNpfTaWFi6ikjEWDRq/webhook-trigger/pGzNpfTaWFi6ikjEWDRq', {
       method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload)
-    });
+    });try{if(tsLeadRes&&tsLeadRes.ok&&window.tsTrack&&window.tsTrack.formSubmit)window.tsTrack.formSubmit({form_id:'pGzNpfTaWFi6ikjEWDRq',lead_confirm:'http-ok',guard:'webhook'});}catch(tsLeadErr){}
   } catch(err) {}
   document.getElementById('ts-form').style.display = 'none';
   document.getElementById('ts-confirm').style.display = 'block';
