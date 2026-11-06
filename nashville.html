@@ -473,9 +473,9 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 <a href="/solutions/janitorial"><span class="dd-ic" style="background:rgba(244,114,182,.08)"><svg viewBox="0 0 24 24" stroke="#F472B6"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></span>Janitorial Program</a>
 <a href="/solutions/drain-jetting"><span class="dd-ic" style="background:rgba(96,165,250,.08)"><svg viewBox="0 0 24 24" stroke="#60A5FA"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Drain Jetting</a>
 <div class="dd-div"></div>
-<a href="#bottom-form" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Full Compliance Package</a>
-</div></div><a href="#services">Services</a><a href="#areas">Service Areas</a><a href="#bottom-form">Contact</a></div>
-<div class="nav-r"><a href="#bottom-form" class="nav-btn">Get Protected</a></div>
+<a href="tel:+16787518871" style="color:#40C8E0;font-weight:700"><span class="dd-ic" style="background:rgba(64,200,224,.12)"><svg viewBox="0 0 24 24" stroke="#40C8E0"><polyline points="20 6 9 17 4 12"/></svg></span>Call (678) 751-8871</a>
+</div></div><a href="#services">Services</a><a href="#areas">Service Areas</a><a href="tel:+16787518871">Call (678) 751-8871</a></div>
+<div class="nav-r"><a href="tel:+16787518871" class="nav-btn">Call (678) 751-8871</a></div>
 </div></nav>
 
 <header class="hero">
@@ -485,9 +485,10 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
 <div>
 <nav class="bread" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/locations/atlanta">Locations</a><span>›</span><span class="cur">Nashville, TN</span></nav>
 <h1>Middle Tennessee Kitchens Deserve the Same Standard Protecting Major <em>Commercial Venues.</em></h1>
+<div class="ts-out-of-area" id="service-area-note" style="margin:18px 0 0;padding:16px 18px;border:1px solid rgba(64,200,224,.45);border-radius:12px;background:rgba(64,200,224,.08);text-align:left"><strong style="display:block;margin-bottom:6px;color:var(--cyan,#40C8E0);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase">Service area update</strong><p style="margin:0;color:inherit;font-size:15px;line-height:1.55">TruShine does not currently serve Nashville or Middle Tennessee. We serve commercial kitchens within about a 3-hour drive of our Norcross, GA and Winston-Salem, NC offices. For questions about coverage in Georgia or Alabama, call <a href="tel:+16787518871" style="color:var(--cyan,#40C8E0)">(678) 751-8871</a>.</p></div>
 <p class="hero-desc">The same crews, systems, and compliance standards protecting major stadiums and 500+ commercial kitchens across 7 states are now serving the Nashville market. Tennessee fire marshal, health department, and local fire codes don't lower the bar for the Nashville metro, and neither do we. Eight service lines. One vendor. Total kitchen compliance for every restaurant in the region.</p>
 <div class="hero-ctas">
-<a href="#bottom-form" class="btn btn-p">Schedule Nashville Assessment →</a>
+<a href="tel:+16787518871" class="btn btn-p">Call (678) 751-8871</a>
 <a href="#services" class="btn btn-g">View All Services</a>
 </div>
 <div class="stakes">
@@ -715,7 +716,7 @@ function scSubmit(){
   d.append('formId','dPdE5irmCkay76sedBDl'); d.append('full_name',name); d.append('email',email);
   d.append('business_name',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
   d.append('message','Score: '+score+'/10: '+lvl+' | Biz: '+biz);
-  fetch('https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl',{method:'POST',body:d,mode:'no-cors'}).then(function(){try{window.tsTrack&&window.tsTrack.formSubmit&&window.tsTrack.formSubmit({form_id:'dPdE5irmCkay76sedBDl',lead_confirm:'opaque',guard:'scorecard'});}catch(e){}}).catch(function(){});
+  fetch('about:blank',{method:'POST',body:d,mode:'no-cors'}).then(function(){try{window.tsTrack&&window.tsTrack.formSubmit&&window.tsTrack.formSubmit({form_id:'dPdE5irmCkay76sedBDl',lead_confirm:'opaque',guard:'scorecard'});}catch(e){}}).catch(function(){});
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
 }
@@ -749,7 +750,7 @@ function scShowResults(score, name, biz){
     +'<div style="font-size:11px;color:#40C8E0;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Next Step</div>'
     +'<h3 style="font-family:\'Oswald\',sans-serif;font-size:26px;font-weight:800;margin-bottom:10px">Close Every Gap: Free On-Site Assessment</h3>'
     +'<p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:20px">A TruShine compliance specialist will walk your kitchen, document every gap, and deliver a complete remediation plan, no cost, no commitment.</p>'
-    +'<a href="#bottom-form" style="display:inline-block;background:'+col+';color:'+(score>=8?'#060E1F':'#fff')+';border-radius:8px;padding:14px 32px;font-size:14px;font-weight:700;text-decoration:none">Schedule Free Assessment →</a>'
+    +'<a href="tel:+16787518871" style="display:inline-block;background:'+col+';color:'+(score>Call (678) 751-8871</a>'
     +'<div style="font-size:11px;color:rgba(255,255,255,.3);margin-top:10px">We respond the same business day. Available 7 days</div></div>';
   document.getElementById('sc-results').innerHTML=html;
   document.getElementById('sc-results').style.display='block';
@@ -760,13 +761,11 @@ function scShowResults(score, name, biz){
 
 <section class="bottom-cta" id="bottom-form" data-contact="true">
 <div class="bcta-inner">
-<div><div class="ey">Get Started in Nashville</div><h2 class="st" style="font-size:36px">Your Middle Tennessee Kitchen Could Be Inspection-Ready Within 48 Hours.</h2><p class="sd" style="margin-top:16px">Schedule a free facility assessment. We walk your kitchen, identify every compliance gap, and deliver transparent pricing. No obligation.</p></div>
+<div><div class="ey">Service area</div><h2 class="st" style="font-size:36px">Outside our current service area</h2><p class="sd" style="margin-top:16px">TruShine does not currently serve Nashville or Middle Tennessee. Online quote requests for this market are turned off. For questions about coverage in Georgia or Alabama, call (678) 751-8871.</p></div>
 <div class="bcta-form" id="ts-form-wrap" data-source="TruShine Website - Nashville">
-<h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Request Your Free Assessment</h2>
-<p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">Takes 30 seconds. We respond the same business day.</p>
-<div style="min-height:884px">
-<iframe src="https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl" style="width:100%;height:884px;border:none;border-radius:8px" id="inline-dPdE5irmCkay76sedBDl-hero" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-name="TruShine Website - Nashville" data-height="884" data-layout-iframe-id="inline-dPdE5irmCkay76sedBDl-hero" data-form-id="dPdE5irmCkay76sedBDl" title="Request Your Free Assessment"></iframe>
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<h2 style="font-size:22px;font-weight:700;color:var(--w);margin-bottom:6px">Outside our current service area</h2>
+<p style="font-size:14px;color:var(--m);margin-bottom:20px;line-height:1.6">TruShine does not currently serve Nashville or Middle Tennessee. Online quotes for this market are turned off.</p>
+<div class="ts-out-of-area-form" style="padding:28px 22px;background:var(--panel,rgba(255,255,255,.04));border:1px solid var(--line,rgba(255,255,255,.12));border-radius:16px;text-align:left"><h2 style="margin:0 0 10px;font-size:22px">Outside our current service area</h2><p style="margin:0 0 14px;line-height:1.55">TruShine does not currently serve Nashville or Middle Tennessee. Online quote requests for this market are turned off so we do not take leads we cannot fulfill.</p><p style="margin:0;line-height:1.55">We serve commercial kitchens within about a 3-hour drive of our Norcross, GA and Winston-Salem, NC offices. For questions about coverage in Georgia or Alabama, call <a href="tel:+16787518871" style="color:var(--cyan,#40C8E0)">(678) 751-8871</a>.</p></div>
 </div>
 <div style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:12px;color:var(--ts-dim)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Free walkthrough · No obligation · same-business-day response</div>
 </div>
@@ -777,29 +776,10 @@ function scShowResults(score, name, biz){
 <section style="padding:60px 24px;background:rgba(27,75,160,.08);border-top:1px solid rgba(255,255,255,.1)">
 <div style="max-width:700px;margin:0 auto">
 <div style="text-align:center;margin-bottom:24px">
-<h2 style="font-size:24px;font-weight:700;color:#fff;margin:0 0 6px">Request Your Free Assessment</h2>
-<p style="color:rgba(255,255,255,.5);font-size:13px;margin:0">Takes 30 seconds. We respond the same business day.</p>
+<h2 style="font-size:24px;font-weight:700;color:#fff;margin:0 0 6px">Outside our current service area</h2>
+<p style="color:rgba(255,255,255,.5);font-size:13px;margin:0">TruShine does not currently serve Nashville or Middle Tennessee. Online quotes for this market are turned off.</p>
 </div>
-<div style="min-height:884px">
-<iframe
-    src="https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl"
-    style="width:100%;height:100%;border:none;border-radius:1px"
-    id="inline-dPdE5irmCkay76sedBDl" 
-    data-layout="{'id':'INLINE'}"
-    data-trigger-type="alwaysShow"
-    data-trigger-value=""
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="Shine Chatbot Lead Capture 8.12.2026"
-    data-height="884"
-    data-layout-iframe-id="inline-dPdE5irmCkay76sedBDl"
-    data-form-id="dPdE5irmCkay76sedBDl"
-    title="Request Your Free Assessment"
-        >
-</iframe>
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<div class="ts-out-of-area-form" style="padding:28px 22px;background:var(--panel,rgba(255,255,255,.04));border:1px solid var(--line,rgba(255,255,255,.12));border-radius:16px;text-align:left"><h2 style="margin:0 0 10px;font-size:22px">Outside our current service area</h2><p style="margin:0 0 14px;line-height:1.55">TruShine does not currently serve Nashville or Middle Tennessee. Online quote requests for this market are turned off so we do not take leads we cannot fulfill.</p><p style="margin:0;line-height:1.55">We serve commercial kitchens within about a 3-hour drive of our Norcross, GA and Winston-Salem, NC offices. For questions about coverage in Georgia or Alabama, call <a href="tel:+16787518871" style="color:var(--cyan,#40C8E0)">(678) 751-8871</a>.</p></div>
 </div>
 </div>
 </section>
@@ -807,20 +787,20 @@ function scShowResults(score, name, biz){
 <div><a href="/" class="logo"><span class="logo-tru">Tru</span><span class="logo-shine">Shine</span></a><p class="foot-desc">The kitchen compliance management platform. One system. Eight services. Total protection.</p></div>
 <div class="foot-col"><h4>Solutions</h4><a href="/solutions/hood-cleaning">Hood Cleaning</a><a href="/solutions/fire-suppression">Fire Suppression</a><a href="/solutions/grease-trap">Grease Trap</a><a href="/solutions/uco-management">UCO Management</a><a href="/solutions/deep-cleaning">Deep Cleaning</a><a href="/solutions/janitorial">Janitorial</a><a href="/solutions/drain-jetting">Drain Jetting</a></div>
 <div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta">Atlanta, GA</a><a href="/locations/charlotte">Nashville, TN</a><a href="/locations/nashville">Nashville, TN</a><a href="/locations/raleigh">Raleigh, NC</a><a href="/locations/jacksonville">Jacksonville, FL</a></div>
-<div class="foot-col"><h4>Company</h4><a href="/solutions/hood-cleaning">About TruShine</a><a href="/solutions/hood-cleaning">Compliance Center</a><a href="#bottom-form">Careers</a><a href="#bottom-form">Contact</a></div>
+<div class="foot-col"><h4>Company</h4><a href="/solutions/hood-cleaning">About TruShine</a><a href="/solutions/hood-cleaning">Compliance Center</a><a href="/careers">Careers</a><a href="tel:+16787518871">Call (678) 751-8871</a></div>
 </div>
 <div class="foot-btm"><p>© 2026 TruShine Services, LLC. All rights reserved.</p><div class="foot-addr">6500 McDonough Dr, Suite A-4, Norcross, GA 30093 · tn@trushineservice.com · <a href="tel:+16787518871">(678) 751-8871</a></div></div>
 </footer>
 
 <div class="mob-call">
 <a href="tel:+16787518871" class="mob-call-ph"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
-<a href="#bottom-form" class="mob-call-fm"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Get Protected</a>
+<a href="tel:+16787518871" class="mob-call-fm">Call (678) 751-8871</a>
 </div>
 
 <script>
 function goStep2(){var n=document.getElementById('f-name').value;var p=document.getElementById('f-phone').value;var e=document.getElementById('f-email').value;var b=document.getElementById('f-biz').value;if(!n||!p||!e||!b){alert('Please fill in all required fields.');return;}document.getElementById('ts-step1').style.display='none';document.getElementById('ts-step2').style.display='block';document.getElementById('step-bar-2').style.background='#40C8E0';}
 function goStep1(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-step1').style.display='block';document.getElementById('step-bar-2').style.background='rgba(64,200,224,.12)';}
-function submitForm(){var btn=document.getElementById('ts-submit-btn');btn.textContent='Sending...';btn.disabled=true;var d=new FormData();d.append('formId','dPdE5irmCkay76sedBDl');d.append('full_name',document.getElementById('f-name').value);d.append('phone',document.getElementById('f-phone').value);d.append('email',document.getElementById('f-email').value);d.append('business_name',document.getElementById('f-biz').value);d.append('address1',document.getElementById('f-addr').value);d.append('city',document.getElementById('f-city').value);d.append('state',document.getElementById('f-state').value);d.append('message',document.getElementById('f-details').value);d.append('source','TruShine Website - Nashville');d.append('page_url',window.location.href);var sv=document.getElementById('f-service');if(sv.value)d.append('service_needed',sv.value);fetch('https://api.leadconnectorhq.com/widget/form/dPdE5irmCkay76sedBDl',{method:'POST',body:d,mode:'no-cors'}).then(function(){try{window.tsTrack&&window.tsTrack.formSubmit&&window.tsTrack.formSubmit({form_id:'dPdE5irmCkay76sedBDl',lead_confirm:'opaque',guard:'quote'});}catch(e){}document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';}).catch(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';});}
+function submitForm(){var btn=document.getElementById('ts-submit-btn');btn.textContent='Sending...';btn.disabled=true;var d=new FormData();d.append('formId','dPdE5irmCkay76sedBDl');d.append('full_name',document.getElementById('f-name').value);d.append('phone',document.getElementById('f-phone').value);d.append('email',document.getElementById('f-email').value);d.append('business_name',document.getElementById('f-biz').value);d.append('address1',document.getElementById('f-addr').value);d.append('city',document.getElementById('f-city').value);d.append('state',document.getElementById('f-state').value);d.append('message',document.getElementById('f-details').value);d.append('source','TruShine Website - Nashville');d.append('page_url',window.location.href);var sv=document.getElementById('f-service');if(sv.value)d.append('service_needed',sv.value);fetch('about:blank',{method:'POST',body:d,mode:'no-cors'}).then(function(){try{window.tsTrack&&window.tsTrack.formSubmit&&window.tsTrack.formSubmit({form_id:'dPdE5irmCkay76sedBDl',lead_confirm:'opaque',guard:'quote'});}catch(e){}document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';}).catch(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';});}
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const answer=item.querySelector('.faq-a');const arrow=q.querySelector('.arrow');const isOpen=answer.style.display==='block';if(isOpen){answer.style.display='none';arrow.textContent='+';}else{answer.style.display='block';arrow.textContent='−';}});});
 </script>
 <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1baecb7645b2ba9a1b4d71"></script>
