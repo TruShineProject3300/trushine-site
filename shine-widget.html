@@ -235,7 +235,7 @@
     if (service === "Pest Control (Coming Soon)") { leadSent = true; return; }
     fetch("https://api.leadconnectorhq.com/widget/form/9WDMt3dYlSyiUfC7k2IN", {
       method: "POST", body: fd, mode: "no-cors"
-    });
+    }).then(function(){try{window.tsTrack&&window.tsTrack.formSubmit&&window.tsTrack.formSubmit({form_id:'9WDMt3dYlSyiUfC7k2IN',lead_confirm:'opaque',guard:'shine'});}catch(e){}}).catch(function(){});
 
     leadSent = true;
     document.getElementById("shine-captured").classList.add("show");

@@ -3,6 +3,7 @@
 <head>
 <!-- Google Tag Manager -->
 <script>window.dataLayer=window.dataLayer||[];window.dataLayer.push({'page_branch':'CAR-001'});</script>
+<script>window.dataLayer=window.dataLayer||[];window.dataLayer.push({branch:'car-001'});</script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NQMGW4B');</script>
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
@@ -453,6 +454,7 @@ input:focus,textarea:focus,select:focus{background:rgba(255,255,255,.12)!importa
   }
 }
 </script>
+<script src="/js/ts-tracking.js" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -713,7 +715,7 @@ function scSubmit(){
   d.append('formId','pGzNpfTaWFi6ikjEWDRq'); d.append('full_name',name); d.append('email',email);
   d.append('business_name',biz); d.append('phone',phone); d.append('source','Compliance Scorecard');
   d.append('message','Score: '+score+'/10: '+lvl+' | Biz: '+biz);
-  fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).catch(function(){});
+  fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).then(function(){try{window.tsTrack&&window.tsTrack.formSubmit&&window.tsTrack.formSubmit({form_id:'pGzNpfTaWFi6ikjEWDRq',lead_confirm:'opaque',guard:'scorecard'});}catch(e){}}).catch(function(){});
   document.getElementById('sc-gate').style.display='none';
   scShowResults(score, name, biz);
 }
@@ -819,7 +821,7 @@ function scShowResults(score, name, biz){
 <div class="foot-col"><h4>Locations</h4><a href="/locations/atlanta">Atlanta, GA</a><a href="/locations/charlotte">Charlotte, NC</a><a href="/locations/greenville">Greenville, SC</a><a href="/locations/nashville">Columbia, SC</a><a href="/locations/jacksonville">Jacksonville, FL</a></div>
 <div class="foot-col"><h4>Company</h4><a href="/solutions/hood-cleaning">About TruShine</a><a href="/solutions/hood-cleaning">Compliance Center</a><a href="#bottom-form">Careers</a><a href="#bottom-form">Contact</a></div>
 </div>
-<div class="foot-btm"><p>© 2026 TruShine Services, LLC. All rights reserved.</p><div class="foot-addr">1136 Louise Rd, Ste 115, Winston-Salem, NC 27107 · sc@trushineservice.com · (704) 970-7290</div></div>
+<div class="foot-btm"><p>© 2026 TruShine Services, LLC. All rights reserved.</p><div class="foot-addr">1136 Louise Rd, Ste 115, Winston-Salem, NC 27107 · sc@trushineservice.com · <a href="tel:+17049707290">(704) 970-7290</a></div></div>
 </footer>
 
 <div class="mob-call">
@@ -830,7 +832,7 @@ function scShowResults(score, name, biz){
 <script>
 function goStep2(){var n=document.getElementById('f-name').value;var p=document.getElementById('f-phone').value;var e=document.getElementById('f-email').value;var b=document.getElementById('f-biz').value;if(!n||!p||!e||!b){alert('Please fill in all required fields.');return;}document.getElementById('ts-step1').style.display='none';document.getElementById('ts-step2').style.display='block';document.getElementById('step-bar-2').style.background='#40C8E0';}
 function goStep1(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-step1').style.display='block';document.getElementById('step-bar-2').style.background='rgba(64,200,224,.12)';}
-function submitForm(){var btn=document.getElementById('ts-submit-btn');btn.textContent='Sending...';btn.disabled=true;var d=new FormData();d.append('formId','pGzNpfTaWFi6ikjEWDRq');d.append('full_name',document.getElementById('f-name').value);d.append('phone',document.getElementById('f-phone').value);d.append('email',document.getElementById('f-email').value);d.append('business_name',document.getElementById('f-biz').value);d.append('address1',document.getElementById('f-addr').value);d.append('city',document.getElementById('f-city').value);d.append('state',document.getElementById('f-state').value);d.append('message',document.getElementById('f-details').value);d.append('source','TruShine Website - Greenville');d.append('page_url',window.location.href);var sv=document.getElementById('f-service');if(sv.value)d.append('service_needed',sv.value);fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).then(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';}).catch(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';});}
+function submitForm(){var btn=document.getElementById('ts-submit-btn');btn.textContent='Sending...';btn.disabled=true;var d=new FormData();d.append('formId','pGzNpfTaWFi6ikjEWDRq');d.append('full_name',document.getElementById('f-name').value);d.append('phone',document.getElementById('f-phone').value);d.append('email',document.getElementById('f-email').value);d.append('business_name',document.getElementById('f-biz').value);d.append('address1',document.getElementById('f-addr').value);d.append('city',document.getElementById('f-city').value);d.append('state',document.getElementById('f-state').value);d.append('message',document.getElementById('f-details').value);d.append('source','TruShine Website - Greenville');d.append('page_url',window.location.href);var sv=document.getElementById('f-service');if(sv.value)d.append('service_needed',sv.value);fetch('https://api.leadconnectorhq.com/widget/form/pGzNpfTaWFi6ikjEWDRq',{method:'POST',body:d,mode:'no-cors'}).then(function(){try{window.tsTrack&&window.tsTrack.formSubmit&&window.tsTrack.formSubmit({form_id:'pGzNpfTaWFi6ikjEWDRq',lead_confirm:'opaque',guard:'quote'});}catch(e){}document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';}).catch(function(){document.getElementById('ts-step2').style.display='none';document.getElementById('ts-success').style.display='block';});}
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const answer=item.querySelector('.faq-a');const arrow=q.querySelector('.arrow');const isOpen=answer.style.display==='block';if(isOpen){answer.style.display='none';arrow.textContent='+';}else{answer.style.display='block';arrow.textContent='−';}});});
 </script>
 <script src="https://beta.leadconnectorhq.com/loader.js" data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a1baecb7645b2ba9a1b4d71"></script>
@@ -961,5 +963,7 @@ render();
 })();
 </script>
 
+<a href="tel:+17049707290" class="ts-sticky-call" data-track="sticky-call">Call Now</a>
+<style>.ts-sticky-call{display:none}@media(max-width:768px){.ts-sticky-call{display:inline-flex;align-items:center;justify-content:center;position:fixed;z-index:80;left:12px;bottom:172px;white-space:nowrap;min-height:44px;padding:12px 16px;border-radius:999px;background:#40C8E0;color:#050B18;font:700 14px/1 'DM Sans',system-ui,sans-serif;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.35)}.ts-sticky-call:focus{outline:2px solid #fff;outline-offset:3px}}</style>
 </body>
 </html>
