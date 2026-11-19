@@ -3,6 +3,13 @@
   "cleanUrls": false,
   "routes": [
     {
+      "src": "^/(?:contact|contact-us|contactus|contact_us)/?(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/assessment"
+      },
+      "status": 308
+    },
+    {
       "src": "^/service-areas/?(?:\\.html)?/?$",
       "headers": {
         "Location": "/locations"
