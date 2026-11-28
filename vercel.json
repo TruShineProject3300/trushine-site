@@ -10,6 +10,13 @@
       "status": 308
     },
     {
+      "src": "^/hood-cleaning-atlanta(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/hood-cleaning-atlanta-ga"
+      },
+      "status": 301
+    },
+    {
       "src": "^/service-areas/?(?:\\.html)?/?$",
       "headers": {
         "Location": "/locations"
